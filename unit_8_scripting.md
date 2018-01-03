@@ -10,6 +10,10 @@ How pipeline management tools are used within the industry and how to create eff
 
 Shell Scripting
 -------------
+para
+
+### Languages
+
 
 Python
 -------------
