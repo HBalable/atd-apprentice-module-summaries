@@ -27,9 +27,6 @@ para
 ### texture & shader design
 para
 
-### Environments
-para
-
 Step 3: Shot Specific Work
 -------------
 Brief overview.
