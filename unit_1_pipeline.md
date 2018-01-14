@@ -6,7 +6,9 @@ The pipeline is a term used to describe a system, made up of many different step
 - The type of work expected. (e.g. Feature films, TV, Adverts..)
 
 A typical VFX pipeline:
+
 ![A Pipeline (Representation by Andrew Whitehurst)](./images/andrew_whitehurst_pipeline.png)
+
 *image: Andrew Whitehurst*
 
 Collaboration between artists all working with different software packages and file formats introduces the need for a new area, in companies large enough to afford them: the pipeline department. They are responsible for creating and managing custom infrastructure that aims to make interactions between different departments more efficient. 
