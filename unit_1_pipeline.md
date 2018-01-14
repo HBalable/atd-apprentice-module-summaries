@@ -44,4 +44,4 @@ There may be some very specific tools that a show requires, or some general work
 In some cases, production may ask pipeline for specific tools to more easily meet their demands. 
 
 ### Meeting Production Demands
-As in any business role, When faced with an issue, Pipeline TDs have to find a balance between the practical solution and the idyllic one. There can pressure to complete a script, or push some renders through as soon as possible. The TD needs to have a good enough understanding of the production, creative & technical processes at the company to realise the consequences of his actions, which he would use to inform his decisions.
+As in any business role, when faced with an issue, Pipeline TDs have to find a balance between the practical solution and the idyllic one. There can pressure to complete a script, or push some renders through as soon as possible. The TD needs to have a good enough understanding of the production, creative & technical processes at the company to realise the consequences of his actions, which he would use to inform his decisions.
