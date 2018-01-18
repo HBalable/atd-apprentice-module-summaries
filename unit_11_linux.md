@@ -28,3 +28,19 @@ Topic 5: Security and File Permissions (weight: 7)
 5.3 Managing File Permissions and Ownership
 5.4 Special Directories and Files
 -->
+
+
+Linux is an open source, UNIX-like operating system kernel designed to work on many different platforms. It has an active community developing it, so many distros (Linux distributions) are constantly evolving. It is impossible to count the available distos to try out, as people are free to modify existing source code and compile their own, thoug a quick search for "Linux distros" on *DistroWatch\**, a popular database of open source distros, returns over 800 results.
+
+
+Open Source
+-----------
+Open source is a term used to describe software that has publicly available source code, meaning that developers/enthusiastasts can modify and compile the package themselves. Software licensed under an open source license can usually be modified and redistributed by anyone who has acquired a copy of the software.
+
+Here is the definition currently on the OSI's (Open Source Initiative) website:
+
+>Generally, open source software is software that can be freely accessed, used, changed, and shared (in modified or unmodified form) by anyone. Open source software is made by many people, and distributed under licenses that comply with the The Open Source Definition.
+
+Though Linux is not OSI licensed, it's rights are owned by the FSF (Free Software Foundation), an organisation founded by ri
+
+\* https://distrowatch.com
