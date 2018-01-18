@@ -49,7 +49,7 @@ Step 4: 2D
 brief overview
 
 ### Roto / Prep
-para
+Roto artists are responsible for creating alpha mattes from client scans which isolate certain features
 
 ### Comp
 para
