@@ -103,7 +103,7 @@ Prep have the job of cleaning up scans, ready for comp, mainly by painting. Pain
 
 *image: Iloura*
 
-A Comper's role is to combine the work of all of the earlier artists departments into a final shot. This involves combining any CG elements, DMP (Digital Matte Painting) work, prep elements and roto mattes with live action scans, in a way that looks believable enough to fool a viewer that it was shot once, through the lens of a single real camera.
+A comper's role is to combine the work of all of the earlier artists departments into a final shot. This involves combining any CG elements, DMP (Digital Matte Painting) work, prep elements and roto mattes with live action scans, in a way that looks believable enough to fool a viewer that it was shot once, through the lens of a single real camera.
 
 An Organised Example of a Nuke node graph:
 
