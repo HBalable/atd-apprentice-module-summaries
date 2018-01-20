@@ -50,7 +50,7 @@ Brief overview.
 
 ### Animation
 
-![Matchmove pic](./images/matchmove.jpg)
+![Matchmove pic](./images/anim_poses.jpg)
 
 *image: Digital Domain*
 
@@ -77,7 +77,7 @@ brief overview
 
 ### Roto
 
-![roto example](./images/roto_before_after.png)
+![roto example](./images/roto_before_after.jpg)
 
 *image + in-depth tutorial: https://pirayaganjanakulnon.wordpress.com/2016/01/12/module-01-assignment-01-rotoscope-shot/*
 
@@ -85,7 +85,7 @@ Roto artists are responsible for creating alpha mattes from scans which isolate 
 
 ### Prep/Paint
 
-![prep example](./images/prep_before_after.png)
+![prep example](./images/prep_before_after.jpg)
 
 *image: http://www.btlnews.com/crafts/visual-fx/level-256-produces-126-vfx-shots-for-the-bourne-legacy/*
 
@@ -107,7 +107,7 @@ A Comper's role is to combine the work of all of the earlier artists departments
 
 An Organised Example of a Nuke node graph:
 
-![Example Node Graph](./images/nuke_node_graph.png)
+![Example Node Graph](./images/nuke_node_graph.jpg)
 
 *image: http://www.jinguanghuang.com/compositing*
 

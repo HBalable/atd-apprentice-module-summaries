@@ -7,7 +7,7 @@ The pipeline is a term used to describe a system, made up of many different step
 
 A typical VFX pipeline:
 
-![A Pipeline (Representation by Andrew Whitehurst)](./images/andrew_whitehurst_pipeline.png)
+![A Pipeline (Representation by Andrew Whitehurst)](./images/andrew_whitehurst_pipeline.jpg)
 
 *image: Andrew Whitehurst*
 
