@@ -29,18 +29,20 @@ Topic 5: Security and File Permissions (weight: 7)
 5.4 Special Directories and Files
 -->
 
+*To clarify, by the term "Linux" I am in fact referring to what Richard Stallman, Founder of the GNU project, calls GNU/Linux: a combination of Linus Torvald's "Linux" kernel and the GNU operating system that is found in virtually all "Linux" systems today.*
 
-Linux is an open source, UNIX-like operating system kernel designed to work on many different platforms. It has an active community developing it, so many distros (Linux distributions) are constantly evolving. It is impossible to count the available distos to try out, as people are free to modify existing source code and compile their own, thoug a quick search for "Linux distros" on *DistroWatch\**, a popular database of open source distros, returns over 800 results.
-
+Linux is an open source, UNIX-like operating system kernel designed to work on many different platforms. It has an active community developing it, so many distros (Linux distributions) are constantly evolving. It is impossible to count the available distos to try out, as people are free to modify existing source code and compile their own, though a quick search for "Linux distros" on *DistroWatch\**, a popular database of open source distros, returns over 800 results.
 
 Open Source
 -----------
-Open source is a term used to describe software that has publicly available source code, meaning that developers/enthusiastasts can modify and compile the package themselves. Software licensed under an open source license can usually be modified and redistributed by anyone who has acquired a copy of the software.
+Open source is a term used to describe software that has publicly available source code, meaning that developers/enthusiasts can modify and compile the package themselves. Software licensed under an open source license can usually be modified and redistributed by anyone who has acquired a copy of the software.
 
 Here is the definition currently on the OSI's (Open Source Initiative) website:
 
 >Generally, open source software is software that can be freely accessed, used, changed, and shared (in modified or unmodified form) by anyone. Open source software is made by many people, and distributed under licenses that comply with the The Open Source Definition.
 
-Though Linux is not OSI licensed, it's rights are owned by the FSF (Free Software Foundation), an organisation founded by ri
+Though Linux is not OSI licensed. It is 
+
+
 
 \* https://distrowatch.com
