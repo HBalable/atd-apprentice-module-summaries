@@ -26,25 +26,24 @@ In this section I will cover the main departments involved in asset design.
 
 Modellers create pretty much all of the 3d assets (with the exception of 3d geometry created by FX TDs) required by a project. They have to meet not just artistic goals set by a combination of client notes and reference, but also technical specifications, some likely examples being:
 
-#### Correct and consistent detail level (or LOD for Level of Detail)
+##### Correct and consistent detail level (or LOD for Level of Detail)
 
 Models will often be created with a number of LODS, so that the full detailed object doesn't always need to be rendered when it isn't required, for example when it is in the far distance of a shot. One workflow for creating these models is by starting from reference (or, if fortunate enough, a LIDAR scan) and, starting from a simple shape, building in progressively more detail, so that the highest LOD is the last to be created.
 
-#### Efficient UVs, so that the ratio between UV space area and 3D surface area is consistent throughout the model.
+##### Efficient UVs, so that the ratio between UV space area and 3D surface area is consistent throughout the model.
 
 Unless some parts of the model are more likely to have attention paid to than other parts. e.g. character models, where faces often have higher resolution textures.
 
-#### Efficient mesh topology, so its structure deforms well.
+##### Efficient mesh topology, so its structure deforms well.
 
 This is very important in the games industry. They don't have the luxury of being able to sub-divide their meshes until they deform well, as the resource cost is exponentially expensive with each iteration.
 
 
 #### Types of Modelling
 
-Modelling is normally split into two catagories: Hard surface and organic modelling.
+Modelling is normally split into two categories: Hard surface and organic modelling.
 
-
-Organic modelling encompasses anything with an irregular shape, or something that is mathamatically hard to express. Some examples include plants, poop and most characters & animals. Sculpting is the preferred modelling method for organic modelling, which means using a program with specialised brushes that push, pull or otherwise deform parts of a model. ZBrush and Mudbox are both popular software packages that are used at studios.
+Organic modelling encompasses anything with an irregular shape, or something that is mathematically hard to express. Some examples include plants, poop and most characters & animals. Sculpting is the preferred modelling method for organic modelling, which means using a program with specialised brushes that push, pull or otherwise deform parts of a model. ZBrush and Mudbox are both popular software packages that are used at studios.
 
 Hard surface modelling is the skill of creating models that are *not too difficult to express mathematically*\*. But this does not in any way mean that they are any more difficult create than organic models. Hard surface modelling tasks include buildings, rigid props from bottles to mobile phones, and most furniture. These shapes can be created using the more traditional and mathematical modelling tools, such as extruding and adding edge loops. Programs used to create these models include Autodesk Maya and SideFX Houdini.
 
@@ -58,11 +57,7 @@ These models are then passed of to texturing and rigging (if they are to be anim
 
 *image: James Ball - http://ballzy247saeblog.blogspot.co.uk/2015/02/*
 
-A Rigger, sometimes called a Rigging TD, builds controllable rigs for models that require animation, such as vehicles and characters. For characters, this can involve building a skeleton which they bind to the mesh. Per-vertex weights are then painted for each skeletal bone, which define how much influence that bone has on the vertex. These bones are normally hidden and more user-friendly controls are created.
-
-<!-- A VFX Rigger is responsible for creating the “skeleton” of a 3D model, ensuring that all the joints and muscles work correctly and accurately so the animators can start to position the models creatively.
-
-This process is done by using a 3D Animation software like Maya or 3D Studio Max. You create the skeleton by manipulating a model and placing joints where necessary, making sure everything fits and looks natural as you do so. A rigger will have to work closely with the modeller to make sure the model’s design allows for the type of movement a rigger will seek to implement. -->
+A Rigger, sometimes called a Rigging TD, builds controllable rigs for models that require animation, such as vehicles and characters. For characters, this can involve building a skeleton which they bind to the mesh. Per-vertex weights are then painted for each skeletal bone, which define how much influence that bone has on the vertex. These bones are normally hidden and more user-friendly controls are created. The most commonly used software package for this is Autodesk Maya.
 
 ### texture & shader design
 
