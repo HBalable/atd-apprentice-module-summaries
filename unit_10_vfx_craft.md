@@ -31,6 +31,7 @@ The models they produce need to meet the creative requirements of the Production
 ### rigging
 
 ![Portal Rig](./images/portal_rig.jpg)
+
 *image: James Ball - http://ballzy247saeblog.blogspot.co.uk/2015/02/*
 
 <!-- A VFX Rigger is responsible for creating the “skeleton” of a 3D model, ensuring that all the joints and muscles work correctly and accurately so the animators can start to position the models creatively.
