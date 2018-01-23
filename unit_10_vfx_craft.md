@@ -73,7 +73,7 @@ Brief overview.
 
 ### Matchmove
 
-![Matchmove pic](./images/matchmove.jpg)
+![Matchmove geometry over scan](./images/matchmove.jpg)
 
 *image: QLBEANS*
 
@@ -99,7 +99,7 @@ In principle, the role of Animator is the same for all techniques of animation. 
 
 *image: Carlos Parmentier*
 
-FX TDs (short for Effects Technical Directors) are
+FX TDs (short for Effects Technical Directors) are responsible for using simulations in order to create creative 3D geometry
 
 <!--
 Effects Technical Directors (FX TDs) are the digital versions of the traditional on-set special effects crew. They are in charge of creating things that are too complex to animate manually, and need to be run as computer simulations instead, including fire, destruction, dust, water, cloth, smoke and magic. They take animation and geometry data from other departments, and set up simulations to interact with them, for example bringing in a building model and destroying it, or taking a roto animated (sometimes called ‘body tracked’) model of a character casting a spell and adding the magic swirls that will then be rendered and composited over footage of the real actor. The data produced by the simulations is sometimes lit and rendered out by the FX department, but is usually sent to the Lighting Artists/TDs to create the final images.
@@ -112,6 +112,10 @@ Sometimes the simulations are carefully designed to mirror the laws of physics, 
 ![Lighting Before/After](./images/lighting_before_after.jpg)
 
 *image: Dylan Sisson*
+
+A lighting TDs main role is to light 3D geometry in a way that matches another plate/scans lighting. This can be done either by using lots of different types of cg lights to create a rig, or also by using a HDRi. HDRis (High Dynamic Range images) describe 360 degree images created by stitching together images of an environment taken from the same nodal point, at multiple exposure levels. This results in an image that ideally has data from all light sources from the darkest blacks to the brightest whites, with no clipping values, to realistically simulate the original environment's lighting conditions.
+
+Another important responsibility of a lighting TD is make sure there is consistency in the lighting in all of the elements in the shot. This sometimes mean that the most realistic solution is not always the best, but it should always 
 
 <!-- A lighter's role is to ignite stuff
 
