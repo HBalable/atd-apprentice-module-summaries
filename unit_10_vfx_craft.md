@@ -57,9 +57,15 @@ These models are then passed of to texturing and rigging (if they are to be anim
 
 *image: James Ball - http://ballzy247saeblog.blogspot.co.uk/2015/02/*
 
-A Rigger, sometimes called a Rigging TD, builds controllable rigs for models that require animation, such as vehicles and characters. For characters, this can involve building a skeleton which they bind to the mesh. Per-vertex weights are then painted for each skeletal bone, which define how much influence that bone has on the vertex. These bones are normally hidden and more user-friendly controls are created. The most commonly used software package for this is Autodesk Maya.
+A Rigger, sometimes called a Rigging TD, builds controllable rigs for models that require animation, such as vehicles and characters. For characters, this can involve building a skeleton which they bind to the mesh. Per-vertex weights are then painted for each skeletal bone, which define how much influence that bone has on the vertex. These bones are normally hidden and more user-friendly controls are created.
 
-### texture & shader design
+It takes a lot of attention to detail and experience to make photorealistic, believable deformation. One challenge is the issue of volume preservation. With a skeleton of joints, as described above, even the most accurate painted weights will not maintain a consistent volume with the most complex animation, as the system has no concept of matter under the skin.
+
+Riggers also work with muscle systems, which enable a more complex way of deforming an animal/living character. Shapes, defining individual muscles, are to be created and connected to the skeleton rig. This results in more realistic definition in the skin, and can helps with volume preservation problem.
+
+The most commonly used software package for this (in VFX) is Autodesk Maya, though other 3D packages, such as SideFX Houdini and Autodesk 3DSMax also have their own rigging systems.
+
+### Texture & Shader design
 
 ![Logan Ref/Lookdev](./images/logan_lookdev.jpg)
 
@@ -77,6 +83,10 @@ Brief overview.
 
 *image: QLBEANS*
 
+Matchmoving is a massively important technique in visual effects which enables CG elements to have matching translation, rotation and scale values to elements shot in the live-action scan. The most common way this is done is by indivually tracking a number of 2D points in a scan, at different depths in real-world space, and by reconstructing a 3d camera a using complex .
+
+Paragraph about bodytrack
+
 <!-- Match Moving or Camera Tracking is a technique that allows the integration of computer generated (CGI) VFX into live action footage. The process allows for the correct position, scale, orientation, and motion of the CGI relative to the real world captured in the shot.
 
 Although Match Moving is traditionally an entry level job into 3D VFX, it is a crucial part of the 3D/CGI pipeline. Matchmoving describing the world inside a computer in 3D, what the original live action camera saw. -->
@@ -87,7 +97,7 @@ Although Match Moving is traditionally an entry level job into 3D VFX, it is a c
 
 *image: Digital Domain*
 
-<!-- Computer Animators produce images which, when recorded in sequence and projected, create the illusion of movement.
+<!-- Computer Animators produce imagges which, when recorded in sequence and projected, create the illusion of movement.
 
 In character animation, they may be cast, like actors, for their special talents - comedy, dialogue, song and dance, action, men, women, children, animals, simplicity, etc. On other projects, they may be selected for their particular technical skills and ability.
 
@@ -99,7 +109,7 @@ In principle, the role of Animator is the same for all techniques of animation. 
 
 *image: Carlos Parmentier*
 
-FX TDs (short for Effects Technical Directors) are responsible for using simulations in order to create creative 3D geometry
+FX TDs (short for Effects Technical Directors) are responsible for using simulations in order to create creative 3D geometry caches.
 
 <!--
 Effects Technical Directors (FX TDs) are the digital versions of the traditional on-set special effects crew. They are in charge of creating things that are too complex to animate manually, and need to be run as computer simulations instead, including fire, destruction, dust, water, cloth, smoke and magic. They take animation and geometry data from other departments, and set up simulations to interact with them, for example bringing in a building model and destroying it, or taking a roto animated (sometimes called ‘body tracked’) model of a character casting a spell and adding the magic swirls that will then be rendered and composited over footage of the real actor. The data produced by the simulations is sometimes lit and rendered out by the FX department, but is usually sent to the Lighting Artists/TDs to create the final images.
@@ -113,9 +123,11 @@ Sometimes the simulations are carefully designed to mirror the laws of physics, 
 
 *image: Dylan Sisson*
 
-A lighting TDs main role is to light 3D geometry in a way that matches another plate/scans lighting. This can be done either by using lots of different types of cg lights to create a rig, or also by using a HDRi. HDRis (High Dynamic Range images) describe 360 degree images created by stitching together images of an environment taken from the same nodal point, at multiple exposure levels. This results in an image that ideally has data from all light sources from the darkest blacks to the brightest whites, with no clipping values, to realistically simulate the original environment's lighting conditions.
+A lighting TDs main role is to light 3D geometry in a way that matches another plate/scans lighting. This can be done either by using lots of different types of cg lights to create a rig, or also by using a HDRI (High Dynamic Range Image). HDRIs describe 360 degree images created by stitching together images of an environment taken from the same nodal point, at multiple exposure levels. This results in an image that ideally has data from all light sources from the darkest blacks to the brightest whites, with no clipping values, to realistically simulate the original environment's lighting conditions.
 
-Another important responsibility of a lighting TD is make sure there is consistency in the lighting in all of the elements in the shot. This sometimes mean that the most realistic solution is not always the best, but it should always 
+Another important responsibility of a lighting TD is make sure there is consistency in the lighting in all of the elements in the shot. This sometimes mean that the most physically realistic solution is not always the best.
+
+Render configuration and efficiency, managing motion blur and noise, and writing/editing custom shaders might also be included in a lighting TD's responsibilities.
 
 <!-- A lighter's role is to ignite stuff
 
@@ -127,7 +139,6 @@ They match technical skill with aesthetic judgement to create images that not on
 
 Step 4: 2D
 -------------
-brief overview
 
 ### Roto
 
