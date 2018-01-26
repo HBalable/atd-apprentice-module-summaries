@@ -83,13 +83,9 @@ Brief overview.
 
 *image: QLBEANS*
 
-Matchmoving is a massively important technique in visual effects which enables CG elements to have matching translation, rotation and scale values to elements shot in the live-action scan. The most common way this is done is by indivually tracking a number of 2D points in a scan, at different depths in real-world space, and by reconstructing a 3d camera a using complex .
+Matchmoving is a massively important technique in visual effects which enables CG elements to have matching translation, rotation and scale values to elements shot in the live-action scan. The most common way this is done is by indivually tracking a number of 2D points in a scan, at different depths in real-world space, and by reconstructing a 3d camera a using complex math. This is the core of how the tracking system working in popular matchmoving software such as 3DEqualizer and PFTrack, though this system can sometimes struggle with footage that doesn't have many high-contrast, easy to track points. Another method, used in mocha Pro, that manages this issue quite well, is planar tracking, which aims to tracks whole surfaces, rather than individual points, though it doesn't work so well when there are no flat 2d planes, so there is no all-round best solution. Similar techniques to these can also be used to reconstruct 3D geometry and textures too.
 
-Paragraph about bodytrack
-
-<!-- Match Moving or Camera Tracking is a technique that allows the integration of computer generated (CGI) VFX into live action footage. The process allows for the correct position, scale, orientation, and motion of the CGI relative to the real world captured in the shot.
-
-Although Match Moving is traditionally an entry level job into 3D VFX, it is a crucial part of the 3D/CGI pipeline. Matchmoving describing the world inside a computer in 3D, what the original live action camera saw. -->
+Bodytracking is another important matchmove task, which is the skill of matching a CG digi-double's animation to an actor in a live-action plate. This geometry can then be cached out and used later down the line by other departments, for example by lighting, if a full-CG replacement is required, or by FX if they need a simulation to react with the actors body.
 
 ### Animation
 
@@ -97,11 +93,11 @@ Although Match Moving is traditionally an entry level job into 3D VFX, it is a c
 
 *image: Digital Domain*
 
-<!-- Computer Animators produce imagges which, when recorded in sequence and projected, create the illusion of movement.
+3D animators make the characters passed down by modelling and rigged by rigging TDs come to life through keyframe animation, which is a technique I explain below. The goal of animators is to create a believeable performance from 
 
-In character animation, they may be cast, like actors, for their special talents - comedy, dialogue, song and dance, action, men, women, children, animals, simplicity, etc. On other projects, they may be selected for their particular technical skills and ability.
+#### Keyframe Animation
 
-In principle, the role of Animator is the same for all techniques of animation. The differences are in the tools used, and in some of the skills required. -->
+All of the rigging controls will have at least some channels, possibly for controlling translation and/or rotation. These channels are then assigned certain values at specific frames, creating a keyframe. The channel's value between these keyframes are interporlated, either linearly or through using bezier splines. These channels can be normally be edited by moving the handles in the viewport of your 3D program, or by manually editing the curves in the program's animation editor (sometimes called a graph editor), which will show you an interactive graphic visualisation of the animation curves.
 
 ### FX
 
