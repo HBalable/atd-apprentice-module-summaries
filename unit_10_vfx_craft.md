@@ -93,7 +93,7 @@ Bodytracking is another important matchmove task, which is the skill of matching
 
 *image: Digital Domain*
 
-3D animators make the characters passed down by modelling and rigged by rigging TDs come to life through keyframe animation, which is a technique I explain below. The goal of animators is to create a believeable performance from 
+3D animators make the characters passed down by modelling and rigged by rigging TDs come to life through keyframe animation, which is a technique I explain below. The goal of animators is to create a believeable performance using a combination of reference and animation theory.
 
 #### Keyframe Animation
 
@@ -105,7 +105,9 @@ All of the rigging controls will have at least some channels, possibly for contr
 
 *image: Carlos Parmentier*
 
-FX TDs (short for Effects Technical Directors) are responsible for using simulations in order to create creative 3D geometry caches.
+FX TDs (short for Effects Technical Directors) are responsible for using simulations in order to create creative 3D geometry caches which might model explosions, fire, desctruction or fracturing of shapes, or any other abstract or complex animation that doesn't easily fit into the role of other departments.
+
+There is also another branch of FX
 
 <!--
 Effects Technical Directors (FX TDs) are the digital versions of the traditional on-set special effects crew. They are in charge of creating things that are too complex to animate manually, and need to be run as computer simulations instead, including fire, destruction, dust, water, cloth, smoke and magic. They take animation and geometry data from other departments, and set up simulations to interact with them, for example bringing in a building model and destroying it, or taking a roto animated (sometimes called ‘body tracked’) model of a character casting a spell and adding the magic swirls that will then be rendered and composited over footage of the real actor. The data produced by the simulations is sometimes lit and rendered out by the FX department, but is usually sent to the Lighting Artists/TDs to create the final images.
