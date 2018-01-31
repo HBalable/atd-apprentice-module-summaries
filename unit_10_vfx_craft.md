@@ -71,6 +71,8 @@ The most commonly used software package for this (in VFX) is Autodesk Maya, thou
 
 *image: Image Engine*
 
+A texture artist designs the look of the surface of the model, by creating 2d maps, based on the model's UVs, that are "wrapped around" the model.
+
 <!-- Texture artists use a variety of software, platforms, and rendering environments to create textures for environments, characters, objects, and props for animated films, television shows, and video games. Some of the most common types of software, platforms, and rendering environments used in animation include Photoshop, 3D Paint, UV Layout/Editing, RenderMan, Mental Ray, Maya, Shaders, and Houdini. Texture artists also use digital matte painting techniques to create textures and they work with advanced surface types, subsurface scattering, and global illumination. -->
 
 Step 3: Shot Specific Work
