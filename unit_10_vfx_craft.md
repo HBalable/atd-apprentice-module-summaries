@@ -4,7 +4,9 @@ Unit 10: VFX CRAFT
 The processes and art of a particular department, such as animation, lighting, FX or rigging
 The particular standards of a department and the challenges they face
 -->
+
 From my experience at Double Negative, I haven't worked very closely with any one *creative* department in particular, but instead I have picked up a more basic (although broader) understanding of the challenges and responsibilities of a wide range of departments. So here I will give a brief overview of each of major roles, which will exist in almost every large VFX house.
+
 
 Step 1: Concept Design
 -------------
@@ -14,9 +16,11 @@ Concept artists might be involved from the client side, the VFX house or even bo
 
 Artists in this area are able to have a lot of creative impact, as concept work will be used time and time again as reference in the work of many other artists.
 
+
 Step 2: Build (Asset Specific Work)
 -------------
 In this section I will cover the main departments involved in asset design.
+
 
 ### Modelling
 
@@ -38,7 +42,6 @@ Unless some parts of the model are more likely to have attention paid to than ot
 
 This is very important in the games industry. They don't have the luxury of being able to sub-divide their meshes until they deform well, as the resource cost is exponentially expensive with each iteration.
 
-
 #### Types of Modelling
 
 Modelling is normally split into two categories: Hard surface and organic modelling.
@@ -50,6 +53,7 @@ Hard surface modelling is the skill of creating models that are *not too difficu
 These models are then passed of to texturing and rigging (if they are to be animated).
 
 \**Not an exact definition, but this was the result of reading lots of artists' individual opinions*
+
 
 ### Rigging
 
@@ -65,19 +69,45 @@ Riggers also work with muscle systems, which enable a more complex way of deform
 
 The most commonly used software package for this (in VFX) is Autodesk Maya, though other 3D packages, such as SideFX Houdini and Autodesk 3DSMax also have their own rigging systems.
 
+
 ### Texture & Shader design
 
 ![Logan Ref/Lookdev](./images/logan_lookdev.jpg)
 
 *image: Image Engine*
 
-A texture artist designs the look of the surface of the model, by creating 2d maps, based on the model's UVs, that are "wrapped around" the model.
+A texture artist designs the look of the surface of the model, by creating 2d maps, based on the model's UVs, that are "wrapped around" the model. These can be drawn digitally in a 2d program such as Adobe Photoshop, or artists can use more specialized texturing software such as Autodesk Mudbox and The Foundry's Mari, which provide lots of useful utilities which allow you paint directly on the model, and export textures afterward\*. This is advantageous as it means the texturer does not need to worry about issues related to making textures line up at seams (seams being the edges of seperate UV shells that correspond to the same edge on the model).
 
-<!-- Texture artists use a variety of software, platforms, and rendering environments to create textures for environments, characters, objects, and props for animated films, television shows, and video games. Some of the most common types of software, platforms, and rendering environments used in animation include Photoshop, 3D Paint, UV Layout/Editing, RenderMan, Mental Ray, Maya, Shaders, and Houdini. Texture artists also use digital matte painting techniques to create textures and they work with advanced surface types, subsurface scattering, and global illumination. -->
+![Door Texture Examples](./images/door_texture_examples.png)
+
+Examples of maps that a texture artist might have to produce:
+
+#### Diffuse Maps
+
+These maps show the colour light that an object reflects. Ideally with no lighting effects baked in (such as reflections or specular highlights), these define the main colours of a model.
+
+#### Bump Maps (or Height maps)
+
+Bump maps are generally monochrome maps which shows displacement of a texture perpendicular to the object. This is calculated by the value at a point of a bump map being multiplied by a constant, with a value of 0 being the most "pushed-in" point and 1 being the most "sticky-outy" (technical term). Though It is simply a lighting trick, and adds no detail to the geometry.
+
+##### Normal Maps
+
+These bump maps can then be used in the process generate normal maps, a more accurate type of bump map. These are RGB maps that store the direction of the surface normals of a texture in a clever way. The R G & B channels respectively correspond with the X Y and Z channels effectively giving you a 3D vector for each pixel of the UV map. These are then used to more realistically calculate the shading of a model.
+
+#### Specular Maps
+
+These are RGB maps that define the "shinyness" and specular colour of an object. The pixel intensity is proportial to the amount of light reflected from the point, and the RGB colour defines the colour of the reflection.
+
+#### Displacement Maps
+
+As far as I can tell, these are identical to bump maps, in the way that they are monochrome maps that store perpendicular depth data. Though the difference is that displacement maps are actually used to deform the mesh, usually after being subdivided. I can only assume that these are used because working with super-high poly models is very computer-resource intensive, whereas working with 2d monochrome images isn't.
+
+\**I should mention that Photoshop had the ability for painting onto models for a number of years, but it's 2D compositing capabilities are more common and much stronger*
+
 
 Step 3: Shot Specific Work
 -------------
-Brief overview.
+
 
 ### Matchmove
 
@@ -88,6 +118,7 @@ Brief overview.
 Matchmoving is a massively important technique in visual effects which enables CG elements to have matching translation, rotation and scale values to elements shot in the live-action scan. The most common way this is done is by indivually tracking a number of 2D points in a scan, at different depths in real-world space, and by reconstructing a 3d camera a using complex math. This is the core of how the tracking system working in popular matchmoving software such as 3DEqualizer and PFTrack, though this system can sometimes struggle with footage that doesn't have many high-contrast, easy to track points. Another method, used in mocha Pro, that manages this issue quite well, is planar tracking, which aims to tracks whole surfaces, rather than individual points, though it doesn't work so well when there are no flat 2d planes, so there is no all-round best solution. Similar techniques to these can also be used to reconstruct 3D geometry and textures too.
 
 Bodytracking is another important matchmove task, which is the skill of matching a CG digi-double's animation to an actor in a live-action plate. This geometry can then be cached out and used later down the line by other departments, for example by lighting, if a full-CG replacement is required, or by FX if they need a simulation to react with the actors body.
+
 
 ### Animation
 
@@ -101,6 +132,7 @@ Bodytracking is another important matchmove task, which is the skill of matching
 
 All of the rigging controls will have at least some channels, possibly for controlling translation and/or rotation. These channels are then assigned certain values at specific frames, creating a keyframe. The channel's value between these keyframes are interporlated, either linearly or through using bezier splines. These channels can be normally be edited by moving the handles in the viewport of your 3D program, or by manually editing the curves in the program's animation editor (sometimes called a graph editor), which will show you an interactive graphic visualisation of the animation curves.
 
+
 ### FX
 
 ![Houdini FX Sim](./images/fx.jpg)
@@ -109,15 +141,10 @@ All of the rigging controls will have at least some channels, possibly for contr
 
 FX TDs (short for Effects Technical Directors) are responsible for using simulations in order to create creative 3D geometry caches which might model explosions, fire, destruction or fracturing shapes, or any other abstract or complex animation that doesn't easily fit into the role of other departments.
 
-There is also another branch of FX, sometimes known as creature FX, who are responsible for using simulations upon animated geometry of characters, in order to make them seem more real. The kind of tasks these artists might have to simulate could include character hair (also called a groom), skin & muscles, and costumes. 
+There is also another branch of FX, sometimes known as creature FX, who are responsible for using simulations upon animated geometry of characters, in order to make them seem more real. The kind of tasks these artists might have to simulate could include character hair (also called a groom), skin & muscles, and costumes.
 
 There are always new simulation methods being published, and many well-known techniques are implemented and developed upon in software such as Autodesk Maya and SideFX Houdini.
 
-<!--
-Effects Technical Directors (FX TDs) are the digital versions of the traditional on-set special effects crew. They are in charge of creating things that are too complex to animate manually, and need to be run as computer simulations instead, including fire, destruction, dust, water, cloth, smoke and magic. They take animation and geometry data from other departments, and set up simulations to interact with them, for example bringing in a building model and destroying it, or taking a roto animated (sometimes called ‘body tracked’) model of a character casting a spell and adding the magic swirls that will then be rendered and composited over footage of the real actor. The data produced by the simulations is sometimes lit and rendered out by the FX department, but is usually sent to the Lighting Artists/TDs to create the final images.
-
-Sometimes the simulations are carefully designed to mirror the laws of physics, and sometimes a more creative approach to reality is called for, depending on the effect needed. Because of this an FX TD needs to be able to adapt, and not get stuck in only one way of approaching a problem. As with all aspects of filmmaking, the director and VFX supervisor need to gauge the balance of achieving realism versus cinematic impact.
--->
 
 ### Lighting
 
@@ -131,16 +158,10 @@ Another important responsibility of a lighting TD is make sure there is consiste
 
 Render configuration and efficiency, managing motion blur and noise, and writing/editing custom shaders might also be included in a lighting TD's responsibilities.
 
-<!-- A lighter's role is to ignite stuff
-
-Lighting TDs/Lighters make sure there is consistency in lighting, colour balance and mood between the various elements of a shot or scene. When appropriate, they ensure the computer-generated imagery looks photorealistic to match the live action plates.
-
-Lighting TDs/Lighters add the lighting that creates atmosphere, increasing realism, tone and depth in a scene and clarifying location, weather and time of day. They balance individual elements to enable the compositors to produce a convincing image. They refer to the production designs and apply that visual style as faithfully as possible, taking care to maintain continuity.
-
-They match technical skill with aesthetic judgement to create images that not only look good but are easy to render (i.e. output; translating computer data into images). -->
 
 Step 4: 2D
 -------------
+
 
 ### Roto
 
@@ -149,6 +170,7 @@ Step 4: 2D
 *image + in-depth tutorial: https://pirayaganjanakulnon.wordpress.com/2016/01/12/module-01-assignment-01-rotoscope-shot/*
 
 Roto artists are responsible for creating alpha mattes from scans which isolate certain features. Ideally, a key would be easier and more efficient, but it is not always possible or practical to shoot in front of an evenly lit screen. The most common way this is done is by trying to break down the movement of the desired element in a way it can be defined by as few 2d spline-shapes as possible. Then these shapes are transformed and translated to follow the movement in the scan. Compositors can then take these elements and layer them over CG elements or combine them with other scans.
+
 
 ### Prep/Paint
 
