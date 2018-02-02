@@ -76,7 +76,7 @@ The most commonly used software package for this (in VFX) is Autodesk Maya, thou
 
 *image: Image Engine*
 
-A texture artist designs the look of the surface of the model, by creating 2d maps, based on the model's UVs, that are "wrapped around" the model. These can be drawn digitally in a 2d program such as Adobe Photoshop, or artists can use more specialized texturing software such as Autodesk Mudbox and The Foundry's Mari, which provide lots of useful utilities which allow you paint directly on the model, and export textures afterward\*. This is advantageous as it means the texturer does not need to worry about issues related to making textures line up at seams (seams being the edges of seperate UV shells that correspond to the same edge on the model).
+A texture artist designs the look of the surface of the model, by creating 2d maps, based on the model's UVs, that are "wrapped around" the model. These can be drawn digitally in a 2d program such as Adobe Photoshop, or artists can use more specialized texturing software such as Autodesk Mudbox and The Foundry's Mari, which provide lots of useful utilities which allow you paint directly on the model, and export textures afterwards\*. This is advantageous as it means the texturer does not need to worry about issues related to making textures line up at seams (seams being the edges of seperate UV shells that correspond to the same edge on the model).
 
 ![Door Texture Examples](./images/door_texture_examples.png)
 
