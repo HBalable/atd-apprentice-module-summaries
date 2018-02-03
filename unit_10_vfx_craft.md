@@ -83,7 +83,7 @@ Brief overview.
 
 *image: QLBEANS*
 
-Matchmoving is a massively important technique in visual effects which enables CG elements to have matching translation, rotation and scale values to elements shot in the live-action scan. The most common way this is done is by indivually tracking a number of 2D points in a scan, at different depths in real-world space, and by reconstructing a 3d camera a using complex math. This is the core of how the tracking system working in popular matchmoving software such as 3DEqualizer and PFTrack, though this system can sometimes struggle with footage that doesn't have many high-contrast, easy to track points. Another method, used in mocha Pro, that manages this issue quite well, is planar tracking, which aims to tracks whole surfaces, rather than individual points, though it doesn't work so well when there are no flat 2d planes, so there is no all-round best solution. Similar techniques to these can also be used to reconstruct 3D geometry and textures too.
+Matchmoving is a massively important technique in visual effects which enables CG elements to have matching translation, rotation and scale values to elements shot in the live-action scan. The most common way this is done is by individually tracking a number of 2D points in a scan, at different depths in real-world space, and by reconstructing a 3d camera a using complex math. This is the core of how the tracking system working in popular matchmoving software such as 3DEqualizer and PFTrack, though this system can sometimes struggle with footage that doesn't have many high-contrast, easy to track points. Another method, used in mocha Pro, that manages this issue quite well, is planar tracking, which aims to tracks whole surfaces, rather than individual points, though it doesn't work so well when there are no flat 2d planes, so there is no all-round best solution. Similar techniques to these can also be used to reconstruct 3D geometry and textures too.
 
 Bodytracking is another important matchmove task, which is the skill of matching a CG digi-double's animation to an actor in a live-action plate. This geometry can then be cached out and used later down the line by other departments, for example by lighting, if a full-CG replacement is required, or by FX if they need a simulation to react with the actors body.
 
@@ -93,11 +93,11 @@ Bodytracking is another important matchmove task, which is the skill of matching
 
 *image: Digital Domain*
 
-3D animators make the characters passed down by modelling and rigged by rigging TDs come to life through keyframe animation, which is a technique I explain below. The goal of animators is to create a believeable performance from 
+3D animators make the characters passed down by modelling and rigged by rigging TDs come to life through keyframe animation, which is a technique I explain below. The goal of animators is to create a believable performance from 
 
 #### Keyframe Animation
 
-All of the rigging controls will have at least some channels, possibly for controlling translation and/or rotation. These channels are then assigned certain values at specific frames, creating a keyframe. The channel's value between these keyframes are interporlated, either linearly or through using bezier splines. These channels can be normally be edited by moving the handles in the viewport of your 3D program, or by manually editing the curves in the program's animation editor (sometimes called a graph editor), which will show you an interactive graphic visualisation of the animation curves.
+All rig controls will have at least some channels, possibly for controlling translation and/or rotation. These channels are then assigned certain values at specific frames, creating a keyframe. The channel's value between these keyframes are interpolated, either linearly or through using Bezier splines. These channels can be normally be edited by moving the handles in the viewport of your 3D program, or by manually editing the curves in the program's animation editor (sometimes called a graph editor), which will show you an interactive graphic visualisation of the animation curves.
 
 ### FX
 
