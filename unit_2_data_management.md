@@ -24,7 +24,16 @@ Offline storage is any data not accessible from a network. This includes any sto
 Backups / Archiving
 --------------
 
-After a 
+Backups are copies of files that are safely stored for use in an event of the live data being lost, infected or corrupted.
+
+This are a vitally important risk-prevention measure for any modern company. In some cases, losing data leads to lost money, from not only the cost of creating that data but also any costs of missing contracted deadlines, not to mention the loss of a client's trust, which is perhaps more valuable. For example, in the context of VFX, a small 3mb Maya scene file would be very cheap to back up, though if it were corrupted, the loss could be a whole weeks work of a talented animator.
+
+Snapshots systems are one method of backing up data. This is when copies of 
+
+<!-- 
+Data archiving is the process of moving data that is no longer actively used to a separate storage device for long-term retention. Archive data consists of older data that is still important to the organization and may be needed for future reference, as well as data that must be retained for regulatory compliance. Data archives are indexed and have search capabilities so files and parts of files can be easily located and retrieved.
+
+Data archives are often confused with data backups, which are copies of data. Data backups are used as a data recovery mechanism that can be used to restore data in the event it is corrupted or destroyed. In contrast, data archives protect older information that is not needed for everyday operations but may have to be accessed occasionally. The data archives serve as a way of reducing primary storage consumption and related costs, rather than acting as a data recovery mechanism. Some data archives treat archive data as read-only to protect it from modification, while other data archiving products treat data as read / write. Data archiving is most suitable for data that must be retained due to operational or regulatory requirements, such as document files, email messages and possibly old database records. -->
 
 Data Security
 --------------
