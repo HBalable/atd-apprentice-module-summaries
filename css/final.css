@@ -412,7 +412,8 @@ img{
     display:block;
     margin:0px auto;
     padding:0px;
-    max-width:100%
+    max-width:100%;
+    align-items: center;
 }
 figcaption{
     margin:5px 10px 5px 30px

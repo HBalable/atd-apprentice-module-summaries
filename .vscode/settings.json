@@ -1,4 +1,29 @@
 {
     "editor.quickSuggestions": false,
-    "pandoc.htmlOptString": "-s -f markdown_github -t html5 --css=css/style.css"
+    "pandoc.htmlOptString": "-s -f markdown_github -t html5 --css=css/style.css",
+    "cSpell.enabledLanguageIds": [
+        "c",
+        "cpp",
+        "csharp",
+        "css",
+        "go",
+        "handlebars",
+        "html",
+        "jade",
+        "javascript",
+        "javascriptreact",
+        "json",
+        "latex",
+        "less",
+        "markdown",
+        "php",
+        "plaintext",
+        "pub",
+        "restructuredtext",
+        "scss",
+        "text",
+        "typescript",
+        "typescriptreact",
+        "yml"
+    ]
 }
