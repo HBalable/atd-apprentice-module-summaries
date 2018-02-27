@@ -52,32 +52,42 @@ Linux is praised for having the ability to be incredibly lightweight, in the way
 ### Useful commands
 
 
-#### cd
+#### cd *args* *filepath*
 Changes the CWD (current working directory) to the given path.
 
-#### ls
+#### ls *args* *filepath*
 Lists all files in the given path. (or ./ by default)
 
-#### touch
+#### touch *args* *filepath*
 Creates a file with the given name.
 
-#### mkdir
-Creates a directory, given a name and a path
+#### mkdir *args* *filepath*
+Creates a directory, given a name and a desired path.
 
-#### cp
+Example:
+```
+[Hasan ~]>>> ls                                                     
+Desktop  Downloads
+[Hasan ~]>>> mkdir ./my_folder                                         
+[Hasan ~]>>> ls                                                        
+Desktop  Downloads  my_folder   
+```
+
+
+#### cp *args* *source filepath* *target filepath*
 Copies a given file to the given destination.
 
-#### rm
+#### rm *args* *filepath/s*
 Removes (deletes) a given file.
 
 #### mv
-The same as cp but deletes the original file. (moves it)
+The same as cp but deletes the original file, meaning that it effectively moves it.
 
 #### alias
-Assigns a given command/script to a given alias
+Assigns a given command/script to a given alias.
 
 #### find
-Returns a list of files that satisfy a given query, or executes them given the -exec flag
+Returns a list of files that satisfy a given query, or executes them given the -exec flag.
 
 #### grep
 Returns a list of lines, given an input, that match a given pattern
