@@ -51,49 +51,151 @@ Linux is praised for having the ability to be incredibly lightweight, in the way
 
 ### Useful commands
 
+Here I wont explain everything that these commands can do as there is already enough documentation out there available to read. But I will cover the basic commands I use on a daily basis to get around Linux.
 
-#### cd *args* *filepath*
-Changes the CWD (current working directory) to the given path.
+#### cd
+Changes the Current Working Directory (CWD) to the given path.
 
-#### ls *args* *filepath*
-Lists all files in the given path. (or ./ by default)
+#### ls
+Lists files in the given path (or ./ by default). Using the -a argument also shows hidden files and the -l arguement shows files in a list format.
 
-#### touch *args* *filepath*
-Creates a file with the given name.
+For example:
 
-#### mkdir *args* *filepath*
+```
+~ >>> cd Downloads/
+~/Downloads >>> ls                                              
+file1.txt  file2.mp4  my_book.epub 
+~/Downloads >>> ls -a                                             
+.  ..  .hidden_file  file1.txt  file2.mp4  my_book.epub
+~/Downloads >>> ls -l                                           
+total 0                                                                         
+-rw-rw-r-- 1 sysadmin sysadmin 0 Mar  1 20:00 file1.txt                         
+-rw-rw-r-- 1 sysadmin sysadmin 0 Mar  1 20:00 file2.mp4                         
+-rw-rw-r-- 1 sysadmin sysadmin 0 Mar  1 20:00 my_book.epub   
+```
+
+*Note: on Linux, '~' means your home directory, '.'' is the current directory, and '..' refers to the parent directory*
+
+
+#### touch
+Creates a new file with the given name.
+
+```
+~/Downloads >>> touch new_file.md                               
+~/Downloads >>> ls                                              
+file1.txt  file2.mp4  my_book.epub  new_file.md  
+```
+
+#### mkdir
 Creates a directory, given a name and a desired path.
 
-Example:
 ```
-[Hasan ~]>>> ls                                                     
+~/Downloads >>> cd ..
+~ >>> ls                                                     
 Desktop  Downloads
-[Hasan ~]>>> mkdir ./my_folder                                         
-[Hasan ~]>>> ls                                                        
-Desktop  Downloads  my_folder   
+~ >>> mkdir ./my_folder                                         
+~ >>> ls                                                        
+Desktop  Downloads  my_folder
 ```
 
+#### cp
+Copies a given file to the given destination. If you are copying a directory, you can use the -r flag to recusively copy the contents too.
 
-#### cp *args* *source filepath* *target filepath*
-Copies a given file to the given destination.
-
-#### rm *args* *filepath/s*
-Removes (deletes) a given file.
+```
+~ >>> cp ./Downloads/new_file.md ./copied_file.md 
+~ >>> ls
+Desktop  Downloads  my_folder  copied_file.md
+```
 
 #### mv
-The same as cp but deletes the original file, meaning that it effectively moves it.
+The same as cp but deletes the original file. You can technically use it to rename a file too.
+
+```
+~ >>> mv copied_file.md my_folder/moved_file.md
+~ >>> ls
+Desktop  Downloads  my_folder
+~ >>> ls my_folder
+moved_file.md
+```
+
+#### rm
+Removes (deletes) a given file. The -r (recursive) flag can be used to remove directories.
+
+```
+~ >>> rm -r my_folder
+~ >>> ls
+Desktop  Downloads
+```
 
 #### alias
 Assigns a given command/script to a given alias.
 
+```
+~ >>> alias m mkdir
+~ >>> m my_new_folder
+~ >>> ls
+Desktop  Downloads  my_new_folder
+```
+
+#### tree
+This script looks recursively through child folders and draws an easy to read folder structure diagram.
+
+```
+~ >>> tree .
+.                                                                               
+|-- Desktop                                                                     
+|-- Downloads                                                                   
+|   |-- file1.txt                                                               
+|   |-- file2.mp4                                                               
+|   `-- my_book.epub                                                            
+`-- my_new_folder                                                               
+                                                                                
+3 directories, 3 files   
+```
+
 #### find
-Returns a list of files that satisfy a given query, or executes them given the -exec flag.
+Searches recursively from the given directory for list of files that satisfy a given query, and can execute them all, given the -exec flag. One useful way to find files is by name. So by using the -name flag, you can pass the script a pattern to look for in the names of files. You can also find files by date, size, owner and many other attributes.
+
+```
+~ >>> find . -name "*book*"                                       
+./Downloads/my_book.epub
+~ >>> find . -name "*b*"                                          
+./.bash_logout                                                                  
+./.bashrc                                                                       
+./Downloads/my_book.epub   
+```
+
+#### cat
+"cat", short for concatonate, displays the contents of text files.
+
+```
+~ >>> cat Downloads/file1.txt
+one two                                                                         
+three four                                                                      
+five six                                                                        
+seven eight                                                                     
+dog can                                                                         
+six elephants                                                                 
+lamp keyboard                                                                   
+
+```
 
 #### grep
-Returns a list of lines, given an input, that match a given pattern
+Returns a list of lines, given an input, that match a given pattern. It searches for lines inside given files, so in combination with find, you can easily search recursively for files containing specific strings, which can be very useful.
+
+```
+~ >>> cat Downloads/file1.txt | grep six
+five six                                                                        
+six elephants
+~ >>> grep six Downloads/file1.txt
+five six                                                                        
+six elephants
+```
 
 #### man
 Opens up a documentation page for a given command. These pages are generally not  _info_ is a similar command included in the GNU project, which was intended to encourage a more long-form type of documentation. It has support for hyperlinks for referencing different chapters or files from within the docs.
+
+
 
 
 
