@@ -166,7 +166,7 @@ Searches recursively from the given directory for list of files that satisfy a g
 ```
 
 #### cat
-"cat", short for concatonate, displays the contents of text files.
+"cat", short for concatenate, displays the contents of text files.
 
 ```
 ~ >>> cat Downloads/file1.txt
@@ -177,7 +177,6 @@ seven eight
 dog can                                                                         
 six elephants                                                                 
 lamp keyboard                                                                   
-
 ```
 
 #### grep
@@ -191,6 +190,8 @@ six elephants
 five six                                                                        
 six elephants
 ```
+
+*Note: The '|' character in the example above passes the output of the first command (cat) to the grep command*
 
 #### man
 Opens up a documentation page for a given command. These pages are generally not  _info_ is a similar command included in the GNU project, which was intended to encourage a more long-form type of documentation. It has support for hyperlinks for referencing different chapters or files from within the docs.
