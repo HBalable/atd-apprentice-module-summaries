@@ -232,6 +232,8 @@ And we can uncompress it just as easily, by using the gunzip (g- unzip) command:
 Desktop  Downloads  hasans_file.txt  my_folder
 ```
 
+Linux also comes with another compression tool, called *bzip2*, which is used in the same way as *gzip*, but uses more complex algorithms, meaning that it can take a little longer to compress/uncompress data, but can also reduce it to a smaller size than is possible with *gzip*. *bunzip2* works in the same way as gunzip for uncompressing files. The conventional file extentions for files compressed with *bzip2* are .bz and .bz2. 
+
 #### Archival
 
 Archives combines multiple individual files into one single file. This could be useful if you wanted to compress this data together, as you would only have to compress this one file, which, depending on the algorithms used, might even be more time efficient than compressing them seperately. The standard UNIX utility for this is *tar* (short for tape-archive). In Linux there is a GNU rewrite which replaces this, also called *tar*.
@@ -256,7 +258,7 @@ total 568K
 -rw-rw-r-- 1 sysadmin sysadmin 280K Mar  2 19:32 my_archive.tar
 ```
 
-You can see here that the archive is equal (roughly) to the sum of the files it was created from's individual sizes. This is because this archive is completely uncompressed. We could use the *gzip* command if we wanted to compress it, or we could use *tar*'s -z flag, which creates a gzip-compressed tar archive. The convention for compressed individual files is to append the .gz file extension to the end of the file. Let me show you an example:
+You can see here that the archive is equal (roughly) to the sum of the files it was created from's individual sizes. This is because this archive is completely uncompressed. We could use the *gzip* command if we wanted to compress it, or we could use *tar*'s -z flag, which creates a gzip-compressed tar archive. The -j argument exists for bzip2 compression too. The convention for compressed individual files is to append the .gz/.bz file extension to the end of the file. Let me show you an example:
 
 ```
 ~/my_folder >>> tar -czf my_archive.tar.gz ./*
@@ -275,6 +277,10 @@ This created a vastly smaller filer as a result. The gzip-compressed tar is 34 t
 ./hasans_file_4.txt
 ./hasans_file_5.txt
 ```
+
+### Security
+
+Linux adopts UNIX's "Everything is a file" feature, meaning that data from devices and periphirals such as printers, keyboards, disk drives and networked machines are all accessible via the file system. This is done by using virtual filesystems which are all mounted so that they are visible as one file heirarchy. ... TODO
 
 \* https://distrowatch.com
 
