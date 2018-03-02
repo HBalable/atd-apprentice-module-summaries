@@ -2,18 +2,18 @@ Unit 11: LINUX
 =============
 
 <!--
-Introduction to the Linux OS.
-Topic 1:The Linux Community and a Career in Open Source
-1.1 Linux Evolution and Popular Operating Systems
-1.2 Major Open Source Applications
-1.3 Understanding Open Source Software and Licensing
-1.4 ICT Skills and Working in Linux
-Topic 2: Finding Your Way on a Linux System
-2.1 Command Line Basics
-2.2 Using the Command Line to Get Help
-2.3 Using Directories and Listing Files
-2.4 Creating, Moving and Deleting Files
-Topic 3: The Power of the Command Line (weight: 10)
+# Introduction to the Linux OS.
+# Topic 1:The Linux Community and a Career in Open Source
+# 1.1 Linux Evolution and Popular Operating Systems
+# 1.2 Major Open Source Applications
+# 1.3 Understanding Open Source Software and Licensing
+# 1.4 ICT Skills and Working in Linux
+# Topic 2: Finding Your Way on a Linux System
+# 2.1 Command Line Basics
+# 2.2 Using the Command Line to Get Help
+# 2.3 Using Directories and Listing Files
+# 2.4 Creating, Moving and Deleting Files
+# Topic 3: The Power of the Command Line (weight: 10)
 3.1 Archiving Files on the Command Line
 3.2 Searching and Extracting Data from Files
 3.3 Turning Commands into a Script
@@ -58,20 +58,25 @@ Changes the Current Working Directory (CWD) to the given path.
 
 #### ls
 Lists files in the given path (or ./ by default). Using the -a argument also shows hidden files and the -l arguement shows files in a list format.
+Other useful arguements include:
+- -h: Shows human-readable file sizes (rather than diplaying gile sizes in bytes)
+- -d: Shows directories only
+- -s: Sorts files by filesize
+- -R: lists files recursively, meaning that it lists files that are contained in any subfolders of the directory.
 
 For example:
 
 ```
 ~ >>> cd Downloads/
-~/Downloads >>> ls                                              
-file1.txt  file2.mp4  my_book.epub 
-~/Downloads >>> ls -a                                             
+~/Downloads >>> ls
+file1.txt  file2.mp4  my_book.epub
+~/Downloads >>> ls -a
 .  ..  .hidden_file  file1.txt  file2.mp4  my_book.epub
-~/Downloads >>> ls -l                                           
-total 0                                                                         
--rw-rw-r-- 1 sysadmin sysadmin 0 Mar  1 20:00 file1.txt                         
--rw-rw-r-- 1 sysadmin sysadmin 0 Mar  1 20:00 file2.mp4                         
--rw-rw-r-- 1 sysadmin sysadmin 0 Mar  1 20:00 my_book.epub   
+~/Downloads >>> ls -l
+total 0
+-rw-rw-r-- 1 sysadmin sysadmin 0 Mar  1 20:00 file1.txt
+-rw-rw-r-- 1 sysadmin sysadmin 0 Mar  1 20:00 file2.mp4
+-rw-rw-r-- 1 sysadmin sysadmin 0 Mar  1 20:00 my_book.epub
 ```
 
 *Note: on Linux, '~' means your home directory, '.'' is the current directory, and '..' refers to the parent directory*
@@ -81,9 +86,9 @@ total 0
 Creates a new file with the given name.
 
 ```
-~/Downloads >>> touch new_file.md                               
-~/Downloads >>> ls                                              
-file1.txt  file2.mp4  my_book.epub  new_file.md  
+~/Downloads >>> touch new_file.md
+~/Downloads >>> ls
+file1.txt  file2.mp4  my_book.epub  new_file.md
 ```
 
 #### mkdir
@@ -91,10 +96,10 @@ Creates a directory, given a name and a desired path.
 
 ```
 ~/Downloads >>> cd ..
-~ >>> ls                                                     
+~ >>> ls
 Desktop  Downloads
-~ >>> mkdir ./my_folder                                         
-~ >>> ls                                                        
+~ >>> mkdir ./my_folder
+~ >>> ls
 Desktop  Downloads  my_folder
 ```
 
@@ -102,7 +107,7 @@ Desktop  Downloads  my_folder
 Copies a given file to the given destination. If you are copying a directory, you can use the -r flag to recusively copy the contents too.
 
 ```
-~ >>> cp ./Downloads/new_file.md ./copied_file.md 
+~ >>> cp ./Downloads/new_file.md ./copied_file.md
 ~ >>> ls
 Desktop  Downloads  my_folder  copied_file.md
 ```
@@ -142,27 +147,27 @@ This script looks recursively through child folders and draws an easy to read fo
 
 ```
 ~ >>> tree .
-.                                                                               
-|-- Desktop                                                                     
-|-- Downloads                                                                   
-|   |-- file1.txt                                                               
-|   |-- file2.mp4                                                               
-|   `-- my_book.epub                                                            
-`-- my_new_folder                                                               
-                                                                                
-3 directories, 3 files   
+.
+|-- Desktop
+|-- Downloads
+|   |-- file1.txt
+|   |-- file2.mp4
+|   `-- my_book.epub
+`-- my_new_folder
+
+3 directories, 3 files
 ```
 
 #### find
 Searches recursively from the given directory for list of files that satisfy a given query, and can execute them all, given the -exec flag. One useful way to find files is by name. So by using the -name flag, you can pass the script a pattern to look for in the names of files. You can also find files by date, size, owner and many other attributes.
 
 ```
-~ >>> find . -name "*book*"                                       
+~ >>> find . -name "*book*"
 ./Downloads/my_book.epub
-~ >>> find . -name "*b*"                                          
-./.bash_logout                                                                  
-./.bashrc                                                                       
-./Downloads/my_book.epub   
+~ >>> find . -name "*b*"
+./.bash_logout
+./.bashrc
+./Downloads/my_book.epub
 ```
 
 #### cat
@@ -170,36 +175,96 @@ Searches recursively from the given directory for list of files that satisfy a g
 
 ```
 ~ >>> cat Downloads/file1.txt
-one two                                                                         
-three four                                                                      
-five six                                                                        
-seven eight                                                                     
-dog can                                                                         
-six elephants                                                                 
-lamp keyboard                                                                   
+one two
+three four
+five six
+seven eight
+dog can
+six elephants
+lamp keyboard
 ```
 
 #### grep
+
 Returns a list of lines, given an input, that match a given pattern. It searches for lines inside given files, so in combination with find, you can easily search recursively for files containing specific strings, which can be very useful.
 
 ```
 ~ >>> cat Downloads/file1.txt | grep six
-five six                                                                        
+five six
 six elephants
 ~ >>> grep six Downloads/file1.txt
-five six                                                                        
+five six
 six elephants
 ```
 
 *Note: The '|' character in the example above passes the output of the first command (cat) to the grep command*
 
 #### man
-Opens up a documentation page for a given command. These pages are generally not  _info_ is a similar command included in the GNU project, which was intended to encourage a more long-form type of documentation. It has support for hyperlinks for referencing different chapters or files from within the docs.
 
+Opens up a documentation page for a given command. These pages are generally not  _info_ is a similar command included in the GNU project, which was intended to encourage a more long-form type of documentation. It has support for hyperlinks for referencing different chapters or files from within the docs. Many commands also have a -h or --help arguement which shows you a quick summary of the main functions of tool.
 
+### Compressing/Archiving Files
 
+Inactive or old data, for example logs or files from completed projects, can quickly build up on disks. So these files often need to compressed or archived, to free up some space for new data. I explained a little more about this in Unit 2.
 
+# Compression on Linux
 
+*gzip*, is a GNU tool for lossless file compression and decompression. Lossless refers to the type of compression is uses, which means that the original uncompressed file can be reproduced exaclty from the compressed *gzip* (*gzip* is also the name of the file format). Lossy compression is when the some of the information from the original file is lost in the compression process, usually as the cost of further reducing the compressed file's size. This type of compression might not be completely suitable for plaintext files, for obvious reasons, but is very useful for compressing image data, which, in many cases, doesn't need to be so precise.
+
+How easy it is compress a file with gzip:
+
+```
+~ >>> ls
+Desktop  Downloads  hasans_file.txt  my_folder
+~ >>> gzip hasans_file.txt
+~ >>> ls
+Desktop  Downloads  hasans_file.txt.gz  my_folder
+~ >>> gzip -l hasans_file.txt.gz
+         compressed        uncompressed  ratio uncompressed_name
+               5632               47044  88.1% hasans_file.txt
+```
+
+And we can uncompress it just as easily, by using the gunzip (g- unzip) command:
+
+```
+~ >>> gunzip hasans_file.txt.gz
+~ >>> ls
+Desktop  Downloads  hasans_file.txt  my_folder
+```
+
+# Archival
+
+Archives combines multiple individual files into one single file. This could be useful if you wanted to compress this data together, as you would only have to compress this one file, which, depending on the algorithms used, might even be more time efficient than compressing them seperately. The standard UNIX utility for this is *tar* (short for tape-archive). In Linux there is a GNU rewrite which replaces this, also called *tar*.
+
+You can use tar to create, extract and browse .tar files (sometimes called tarballs). To create a tar file, you have to use the -c argument to enable create "mode" and the -f argument to tell it to write to a given filename.
+
+Here I create a new archive containing my text files:
+
+```
+~/my_folder >>> ls
+hasans_file.txt    hasans_file_2.txt  hasans_file_4.txt
+hasans_file_1.txt  hasans_file_3.txt  hasans_file_5.txt
+~/my_folder >>> tar -cf my_archive.tar ./*
+~/my_folder >>> ls -lh                                          
+total 568K                                                                      
+-rw-rw-r-- 1 sysadmin sysadmin  46K Mar  2 18:28 hasans_file.txt                
+-rw-rw-r-- 1 sysadmin sysadmin  46K Mar  2 19:02 hasans_file_1.txt              
+-rw-rw-r-- 1 sysadmin sysadmin  46K Mar  2 19:03 hasans_file_2.txt              
+-rw-rw-r-- 1 sysadmin sysadmin  46K Mar  2 19:03 hasans_file_3.txt              
+-rw-rw-r-- 1 sysadmin sysadmin  46K Mar  2 19:03 hasans_file_4.txt              
+-rw-rw-r-- 1 sysadmin sysadmin  46K Mar  2 19:03 hasans_file_5.txt              
+-rw-rw-r-- 1 sysadmin sysadmin 280K Mar  2 19:32 my_archive.tar  
+```
+
+You can see here that the archive is equal (roughly) to the sum of the files it was created from's individual sizes. This is because this archive is completely uncompressed. We could use the *gzip* command if we wanted to compress it, or we could use *tar*'s -z flag, which creates a gzip-compressed tar archive. The convention for compressed individual files is to append the .gz file extension to the end of the file. Let me show you an example:
+
+```
+~/my_folder >>> tar -czf my_archive.tar.gz ./*                  
+~/my_folder >>> ls -lh my_archive.tar.gz                        
+-rw-rw-r-- 1 sysadmin sysadmin 8.2K Mar  2 19:49 my_archive.tar.gz 
+```
+
+This created a vastly smaller filer as a result.
 
 \* https://distrowatch.com
 
