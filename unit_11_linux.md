@@ -207,7 +207,7 @@ Opens up a documentation page for a given command. These pages are generally not
 
 Inactive or old data, for example logs or files from completed projects, can quickly build up on disks. So these files often need to compressed or archived, to free up some space for new data. I explained a little more about this in Unit 2.
 
-# Compression on Linux
+#### Compression on Linux
 
 *gzip*, is a GNU tool for lossless file compression and decompression. Lossless refers to the type of compression is uses, which means that the original uncompressed file can be reproduced exaclty from the compressed *gzip* (*gzip* is also the name of the file format). Lossy compression is when the some of the information from the original file is lost in the compression process, usually as the cost of further reducing the compressed file's size. This type of compression might not be completely suitable for plaintext files, for obvious reasons, but is very useful for compressing image data, which, in many cases, doesn't need to be so precise.
 
@@ -232,7 +232,7 @@ And we can uncompress it just as easily, by using the gunzip (g- unzip) command:
 Desktop  Downloads  hasans_file.txt  my_folder
 ```
 
-# Archival
+#### Archival
 
 Archives combines multiple individual files into one single file. This could be useful if you wanted to compress this data together, as you would only have to compress this one file, which, depending on the algorithms used, might even be more time efficient than compressing them seperately. The standard UNIX utility for this is *tar* (short for tape-archive). In Linux there is a GNU rewrite which replaces this, also called *tar*.
 
