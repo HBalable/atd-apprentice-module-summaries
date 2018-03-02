@@ -245,26 +245,36 @@ Here I create a new archive containing my text files:
 hasans_file.txt    hasans_file_2.txt  hasans_file_4.txt
 hasans_file_1.txt  hasans_file_3.txt  hasans_file_5.txt
 ~/my_folder >>> tar -cf my_archive.tar ./*
-~/my_folder >>> ls -lh                                          
-total 568K                                                                      
--rw-rw-r-- 1 sysadmin sysadmin  46K Mar  2 18:28 hasans_file.txt                
--rw-rw-r-- 1 sysadmin sysadmin  46K Mar  2 19:02 hasans_file_1.txt              
--rw-rw-r-- 1 sysadmin sysadmin  46K Mar  2 19:03 hasans_file_2.txt              
--rw-rw-r-- 1 sysadmin sysadmin  46K Mar  2 19:03 hasans_file_3.txt              
--rw-rw-r-- 1 sysadmin sysadmin  46K Mar  2 19:03 hasans_file_4.txt              
--rw-rw-r-- 1 sysadmin sysadmin  46K Mar  2 19:03 hasans_file_5.txt              
--rw-rw-r-- 1 sysadmin sysadmin 280K Mar  2 19:32 my_archive.tar  
+~/my_folder >>> ls -lh
+total 568K
+-rw-rw-r-- 1 sysadmin sysadmin  46K Mar  2 18:28 hasans_file.txt
+-rw-rw-r-- 1 sysadmin sysadmin  46K Mar  2 19:02 hasans_file_1.txt
+-rw-rw-r-- 1 sysadmin sysadmin  46K Mar  2 19:03 hasans_file_2.txt
+-rw-rw-r-- 1 sysadmin sysadmin  46K Mar  2 19:03 hasans_file_3.txt
+-rw-rw-r-- 1 sysadmin sysadmin  46K Mar  2 19:03 hasans_file_4.txt
+-rw-rw-r-- 1 sysadmin sysadmin  46K Mar  2 19:03 hasans_file_5.txt
+-rw-rw-r-- 1 sysadmin sysadmin 280K Mar  2 19:32 my_archive.tar
 ```
 
 You can see here that the archive is equal (roughly) to the sum of the files it was created from's individual sizes. This is because this archive is completely uncompressed. We could use the *gzip* command if we wanted to compress it, or we could use *tar*'s -z flag, which creates a gzip-compressed tar archive. The convention for compressed individual files is to append the .gz file extension to the end of the file. Let me show you an example:
 
 ```
-~/my_folder >>> tar -czf my_archive.tar.gz ./*                  
-~/my_folder >>> ls -lh my_archive.tar.gz                        
--rw-rw-r-- 1 sysadmin sysadmin 8.2K Mar  2 19:49 my_archive.tar.gz 
+~/my_folder >>> tar -czf my_archive.tar.gz ./*
+~/my_folder >>> ls -lh my_archive.tar.gz
+-rw-rw-r-- 1 sysadmin sysadmin 8.2K Mar  2 19:49 my_archive.tar.gz
 ```
 
-This created a vastly smaller filer as a result.
+This created a vastly smaller filer as a result. The gzip-compressed tar is 34 times smaller than the original, the only tradeoff being that you have to uncompress it before you can read it, which is not a major issue if these are files aren't expecting much use. You can uncompress and read them with the *tar* command too, with the -t flag to enable "browse files" mode and the -z flag again to uncompress the data first with *gunzip*:
+
+```
+~/my_folder >>> tar -tzf my_archive.tar.gz
+./hasans_file.txt
+./hasans_file_1.txt
+./hasans_file_2.txt
+./hasans_file_3.txt
+./hasans_file_4.txt
+./hasans_file_5.txt
+```
 
 \* https://distrowatch.com
 
