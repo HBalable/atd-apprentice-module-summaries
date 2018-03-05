@@ -201,7 +201,7 @@ six elephants
 
 #### man
 
-Opens up a documentation page for a given command. These pages are generally not  _info_ is a similar command included in the GNU project, which was intended to encourage a more long-form type of documentation. It has support for hyperlinks for referencing different chapters or files from within the docs. Many commands also have a -h or --help arguement which shows you a quick summary of the main functions of tool.
+Opens up a documentation page for a given command. These pages are generally not  ```info``` is a similar command included in the GNU project, which was intended to encourage a more long-form type of documentation. It has support for hyperlinks for referencing different chapters or files from within the docs. Many commands also have a -h or --help arguement which shows you a quick summary of the main functions of tool.
 
 ### Compressing/Archiving Files
 
@@ -209,7 +209,7 @@ Inactive or old data, for example logs or files from completed projects, can qui
 
 #### Compression on Linux
 
-*gzip*, is a GNU tool for lossless file compression and decompression. Lossless refers to the type of compression is uses, which means that the original uncompressed file can be reproduced exaclty from the compressed *gzip* (*gzip* is also the name of the file format). Lossy compression is when the some of the information from the original file is lost in the compression process, usually as the cost of further reducing the compressed file's size. This type of compression might not be completely suitable for plaintext files, for obvious reasons, but is very useful for compressing image data, which, in many cases, doesn't need to be so precise.
+```gzip```, is a GNU tool for lossless file compression and decompression. Lossless refers to the type of compression is uses, which means that the original uncompressed file can be reproduced exaclty from the compressed ```gzip``` (```gzip``` is also the name of the file format). Lossy compression is when the some of the information from the original file is lost in the compression process, usually as the cost of further reducing the compressed file's size. This type of compression might not be completely suitable for plaintext files, for obvious reasons, but is very useful for compressing image data, which, in many cases, doesn't need to be so precise.
 
 How easy it is compress a file with gzip:
 
@@ -232,11 +232,11 @@ And we can uncompress it just as easily, by using the gunzip (g- unzip) command:
 Desktop  Downloads  hasans_file.txt  my_folder
 ```
 
-Linux also comes with another compression tool, called *bzip2*, which is used in the same way as *gzip*, but uses more complex algorithms, meaning that it can take a little longer to compress/uncompress data, but can also reduce it to a smaller size than is possible with *gzip*. *bunzip2* works in the same way as gunzip for uncompressing files. The conventional file extentions for files compressed with *bzip2* are .bz and .bz2. 
+Linux also comes with another compression tool, called ```bzip2```, which is used in the same way as ```gzip```, but uses more complex algorithms, meaning that it can take a little longer to compress/uncompress data, but can also reduce it to a smaller size than is possible with ```gzip```. ```bunzip2``` works in the same way as gunzip for uncompressing files. The conventional file extentions for files compressed with ```bzip2``` are .bz and .bz2.
 
 #### Archival
 
-Archives combines multiple individual files into one single file. This could be useful if you wanted to compress this data together, as you would only have to compress this one file, which, depending on the algorithms used, might even be more time efficient than compressing them seperately. The standard UNIX utility for this is *tar* (short for tape-archive). In Linux there is a GNU rewrite which replaces this, also called *tar*.
+Archives combines multiple individual files into one single file. This could be useful if you wanted to compress this data together, as you would only have to compress this one file, which, depending on the algorithms used, might even be more time efficient than compressing them seperately. The standard UNIX utility for this is ```tar``` (short for tape-archive). In Linux there is a GNU rewrite which replaces this, also called ```tar```.
 
 You can use tar to create, extract and browse .tar files (sometimes called tarballs). To create a tar file, you have to use the -c argument to enable create "mode" and the -f argument to tell it to write to a given filename.
 
@@ -258,7 +258,7 @@ total 568K
 -rw-rw-r-- 1 sysadmin sysadmin 280K Mar  2 19:32 my_archive.tar
 ```
 
-You can see here that the archive is equal (roughly) to the sum of the files it was created from's individual sizes. This is because this archive is completely uncompressed. We could use the *gzip* command if we wanted to compress it, or we could use *tar*'s -z flag, which creates a gzip-compressed tar archive. The -j argument exists for bzip2 compression too. The convention for compressed individual files is to append the .gz/.bz file extension to the end of the file. Let me show you an example:
+You can see here that the archive is equal (roughly) to the sum of the files it was created from's individual sizes. This is because this archive is completely uncompressed. We could use the ```gzip``` command if we wanted to compress it, or we could use ```tar```'s -z flag, which creates a gzip-compressed tar archive. The -j argument exists for bzip2 compression too. The convention for compressed individual files is to append the .gz/.bz file extension to the end of the file. Let me show you an example:
 
 ```
 ~/my_folder >>> tar -czf my_archive.tar.gz ./*
@@ -266,7 +266,7 @@ You can see here that the archive is equal (roughly) to the sum of the files it 
 -rw-rw-r-- 1 sysadmin sysadmin 8.2K Mar  2 19:49 my_archive.tar.gz
 ```
 
-This created a vastly smaller filer as a result. The gzip-compressed tar is 34 times smaller than the original, the only tradeoff being that you have to uncompress it before you can read it, which is not a major issue if these are files aren't expecting much use. You can uncompress and read them with the *tar* command too, with the -t flag to enable "browse files" mode and the -z flag again to uncompress the data first with *gunzip*:
+This created a vastly smaller filer as a result. The gzip-compressed tar is 34 times smaller than the original, the only tradeoff being that you have to uncompress it before you can read it, which is not a major issue if these are files aren't expecting much use. You can uncompress and read them with the *tar* command too, with the -t flag to enable "browse files" mode and the -z flag again to uncompress the data first with ```gunzip```:
 
 ```
 ~/my_folder >>> tar -tzf my_archive.tar.gz
@@ -280,7 +280,55 @@ This created a vastly smaller filer as a result. The gzip-compressed tar is 34 t
 
 ### Security
 
-Linux adopts UNIX's "Everything is a file" feature, meaning that data from devices and periphirals such as printers, keyboards, disk drives and networked machines are all accessible via the file system. This is done by using virtual filesystems which are all mounted so that they are visible as one file heirarchy. ... TODO
+Linux adopts UNIX's "Everything is a file" feature, meaning that data from devices and periphirals such as printers, keyboards, disk drives and networked machines are all accessible via the file system. This is done by using virtual filesystems which are all mounted so that they are visible as one file heirarchy.
+
+#### Users/Groups
+
+User and group permissions are used to control access in Linux. To create a new user, you can use the ```useradd``` and ```passwd``` commands:
+
+```
+~ >>> useradd hasan -d /home/hasan
+```
+
+The ```-d``` flag sets the home (```~```) directory.
+
+```
+~ >>> passwd hasan
+Enter new UNIX password:
+Retype new UNIX password:
+passwd: password updated successfully
+```
+
+Creating new groups and adding a user to them is just as simple, using the ```groupadd``` and ```usermod``` commands:
+
+```
+~ >>> useradd
+~ >>> groupadd gods
+~ >>> groupadd kings
+~ >>> usermod -G gods,kings hasan
+```
+
+And, finally, we can see what groups a user is assigned to by using the ```id``` command.
+
+```
+~ >>> id hasan
+uid=1002(hasan) gid=0(root) groups=1002(gods),1003(kings)
+```
+
+The default,```root``` , automatically has access to every file, with no regard for permissions.
+
+#### File Permissions
+
+Every file in Linux file system has its own permission level set, which is used to restrict access to certain files and directories. There are three types of access you can to a file: read, write and execute. An easy way to see a file's current permissions is to use the command ```ls -l```.
+
+```
+~ >>> ls -lh
+-rw-r--r-- 1 root root 2.3K Mar  5 20:49 hasans_medical_records.csv
+```
+
+TODO
+
+
 
 \* https://distrowatch.com
 
