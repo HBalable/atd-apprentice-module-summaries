@@ -315,7 +315,7 @@ And, finally, we can see what groups a user is assigned to by using the ```id```
 uid=1002(hasan) gid=0(root) groups=1002(gods),1003(kings)
 ```
 
-The default,```root``` , automatically has access to every file, with no regard for permissions.
+The default, ```root```, automatically has access to every file, with no regard for permissions.
 
 #### File Permissions
 
