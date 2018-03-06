@@ -123,6 +123,15 @@ Desktop  Downloads  my_folder
 moved_file.md
 ```
 
+#### ln
+This command is used to create file links, which are similar to what shorcuts are in the Windows OS. There are type types of links you can create with this command: Hard links (the default option) which all point to the same file on disk, whereas soft links (sometimes called symbolic links, created with the ```-s``` argument), effectively create a new file which is a pointer to the original file.
+
+```
+~ >>> ln  my_file.md ./Downloads -s
+~ >>> ls -l /Downloads
+-rw-rw-r-- 2 sysadmin sysadmin    0 Mar  6 20:50 my_file.md -> my_file.md
+```
+
 #### rm
 Removes (deletes) a given file. The -r (recursive) flag can be used to remove directories.
 
@@ -315,20 +324,40 @@ And, finally, we can see what groups a user is assigned to by using the ```id```
 uid=1002(hasan) gid=0(root) groups=1002(gods),1003(kings)
 ```
 
-The default, ```root```, automatically has access to every file, with no regard for permissions.
+The default user, ```root```, automatically has access to every file, with no regard for permissions.
 
 #### File Permissions
 
-Every file in Linux file system has its own permission level set, which is used to restrict access to certain files and directories. There are three types of access you can to a file: read, write and execute. An easy way to see a file's current permissions is to use the command ```ls -l```.
+Every file in Linux file system has its own properties, one of which being its own permission levels, which is used to restrict access to certain files and directories. There are three types of access you can to a file: read, write and execute. An easy way to see a file's attributes is to use the command ```ls -l```.
 
 ```
 ~ >>> ls -lh
 -rw-r--r-- 1 root root 2.3K Mar  5 20:49 hasans_medical_records.csv
 ```
 
-TODO
+Here we can see multiple columns each with different data about the file. In order, these columns describe, in this order:
 
+- Filetype + Permission level.
+- Number of hard links pointing to file.
+- File's  owner.
+- File's group.
+- File size.
+- Last edit: date and time.
 
+The file type + permission level is not immediately intuitive, so I will explain what it means. The first character dictates the type of file that this is. In most cases, this will be either ```-```, for standard files, ```d``` for directories and ```l``` for links. The second part is made up of nine permission bits, with 3 bits controlling read, write and execute access for the file owner, group and other users.
+
+There are two common ways for these permissions to be written. One, as you can see in the ```ls``` examples above, is to use ```r```, ```w``` and ```x``` (read, write and execute) in place of their respective bits to show that the access that has been granted, and ```-``` in place of bits that are not enabled. With this example, a file with ```rwxr--r--``` has read, write and execute access for the owner, but anyone else will only have read access. Another way to write these permissions would be to use a number in place of each set of 3 bits (```rwx```). 111, in binary, is equal to 7 in denary, so we can use the digits 0-7 to represent every possible ```rwx``` combination. With this logic, 220 would equal ```-w--w----``` and 775 would equal ```rwxrwxr-x```.
+
+The ```chmod``` command can be used to modify a files permissions, if you happen to have write access to the file. The 0-7 digit method is the easiest method to use with this command.
+
+```
+~ >>> chmod 000
+~ >>> ls -l
+---------- 1 root root 2.3K Mar  5 20:49 hasans_medical_records.csv
+~ >>> chmod 777
+~ >>> ls -l
+-rwxrwxrwx 1 root root 2.3K Mar  5 20:49 hasans_medical_records.csv
+```
 
 \* https://distrowatch.com
 
