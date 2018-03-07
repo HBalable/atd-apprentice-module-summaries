@@ -267,7 +267,7 @@ total 568K
 -rw-rw-r-- 1 sysadmin sysadmin 280K Mar  2 19:32 my_archive.tar
 ```
 
-You can see here that the archive is equal (roughly) to the sum of the files it was created from's individual sizes. This is because this archive is completely uncompressed. We could use the ```gzip``` command if we wanted to compress it, or we could use ```tar```'s ```-z``` flag, which creates a gzip-compressed tar archive. The ```-j``` argument exists for bzip2 compression too. The convention for compressed individual files is to append the .gz/.bz file extension to the end of the file. Let me show you an example:
+You can see here that the archive is equal (roughly) to the sum of the files it was created from's individual sizes. This is because this archive is completely uncompressed. We could use the ```gzip``` command if we wanted to compress it, or we could use ```tar```'s ```-z``` flag, which creates a gzip-compressed tar archive. The ```-j``` argument exists for ```bzip2``` compression too. The convention for compressed individual files is to append the ```.gz```/```.bz``` file extension to the end of the file. Let me show you an example:
 
 ```
 ~/my_folder >>> tar -czf my_archive.tar.gz ./*
@@ -275,7 +275,7 @@ You can see here that the archive is equal (roughly) to the sum of the files it 
 -rw-rw-r-- 1 sysadmin sysadmin 8.2K Mar  2 19:49 my_archive.tar.gz
 ```
 
-This created a vastly smaller filer as a result. The gzip-compressed tar is 34 times smaller than the original, the only tradeoff being that you have to uncompress it before you can read it, which is not a major issue if these are files aren't expecting much use. You can uncompress and read them with the *tar* command too, with the ```-t``` flag to enable "browse files" mode and the ```-z``` flag again to uncompress the data first with ```gunzip```:
+This created a vastly smaller filer as a result. The ```gzip```-compressed tar is 34 times smaller than the original, the only tradeoff being that you have to uncompress it before you can read it, which is not a major issue if these are files aren't expecting much use. You can uncompress and read them with the *tar* command too, with the ```-t``` flag to enable "browse files" mode and the ```-z``` flag again to uncompress the data first with ```gunzip```:
 
 ```
 ~/my_folder >>> tar -tzf my_archive.tar.gz
@@ -359,6 +359,5 @@ The ```chmod``` command can be used to modify a files permissions, if you happen
 -rwxrwxrwx 1 root root 2.3K Mar  5 20:49 hasans_medical_records.csv
 ```
 
-
-
 \* https://distrowatch.com
+
