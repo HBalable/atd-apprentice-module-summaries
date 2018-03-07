@@ -57,12 +57,12 @@ Here I wont explain everything that these commands can do as there is already en
 Changes the Current Working Directory (CWD) to the given path.
 
 #### ls
-Lists files in the given path (or ./ by default). Using the -a argument also shows hidden files and the -l arguement shows files in a list format.
+Lists files in the given path (or ./ by default). Using the ```-a``` argument also shows hidden files and the ```-l``` arguement shows files in a list format.
 Other useful arguements include:
-- -h: Shows human-readable file sizes (rather than diplaying gile sizes in bytes)
-- -d: Shows directories only
-- -s: Sorts files by filesize
-- -R: lists files recursively, meaning that it lists files that are contained in any subfolders of the directory.
+- ```-h```: Shows human-readable file sizes (rather than diplaying gile sizes in bytes)
+- ```-d```: Shows directories only
+- ```-s```: Sorts files by filesize
+- ```-R```: lists files recursively, meaning that it lists files that are contained in any subfolders of the directory.
 
 For example:
 
@@ -104,7 +104,7 @@ Desktop  Downloads  my_folder
 ```
 
 #### cp
-Copies a given file to the given destination. If you are copying a directory, you can use the -r flag to recusively copy the contents too.
+Copies a given file to the given destination. If you are copying a directory, you can use the ```-r``` flag to recusively copy the contents too.
 
 ```
 ~ >>> cp ./Downloads/new_file.md ./copied_file.md
@@ -133,7 +133,7 @@ This command is used to create file links, which are similar to what shorcuts ar
 ```
 
 #### rm
-Removes (deletes) a given file. The -r (recursive) flag can be used to remove directories.
+Removes (deletes) a given file. The ```-r``` (recursive) flag can be used to remove directories.
 
 ```
 ~ >>> rm -r my_folder
@@ -168,7 +168,7 @@ This script looks recursively through child folders and draws an easy to read fo
 ```
 
 #### find
-Searches recursively from the given directory for list of files that satisfy a given query, and can execute them all, given the -exec flag. One useful way to find files is by name. So by using the -name flag, you can pass the script a pattern to look for in the names of files. You can also find files by date, size, owner and many other attributes.
+Searches recursively from the given directory for list of files that satisfy a given query, and can execute them all, given the ```-exec``` flag. One useful way to find files is by name. So by using the ```-name``` flag, you can pass the script a pattern to look for in the names of files. You can also find files by date, size, owner and many other attributes.
 
 ```
 ~ >>> find . -name "*book*"
@@ -210,7 +210,7 @@ six elephants
 
 #### man
 
-Opens up a documentation page for a given command. These pages are generally not  ```info``` is a similar command included in the GNU project, which was intended to encourage a more long-form type of documentation. It has support for hyperlinks for referencing different chapters or files from within the docs. Many commands also have a -h or --help arguement which shows you a quick summary of the main functions of tool.
+Opens up a documentation page for a given command. These pages are generally not  ```info``` is a similar command included in the GNU project, which was intended to encourage a more long-form type of documentation. It has support for hyperlinks for referencing different chapters or files from within the docs. Many commands also have a ```-h``` or --help arguement which shows you a quick summary of the main functions of tool.
 
 ### Compressing/Archiving Files
 
@@ -247,7 +247,7 @@ Linux also comes with another compression tool, called ```bzip2```, which is use
 
 Archives combines multiple individual files into one single file. This could be useful if you wanted to compress this data together, as you would only have to compress this one file, which, depending on the algorithms used, might even be more time efficient than compressing them seperately. The standard UNIX utility for this is ```tar``` (short for tape-archive). In Linux there is a GNU rewrite which replaces this, also called ```tar```.
 
-You can use tar to create, extract and browse .tar files (sometimes called tarballs). To create a tar file, you have to use the -c argument to enable create "mode" and the -f argument to tell it to write to a given filename.
+You can use tar to create, extract and browse .tar files (sometimes called tarballs). To create a tar file, you have to use the ```-c``` argument to enable create "mode" and the ```-f``` argument to tell it to write to a given filename.
 
 Here I create a new archive containing my text files:
 
@@ -267,7 +267,7 @@ total 568K
 -rw-rw-r-- 1 sysadmin sysadmin 280K Mar  2 19:32 my_archive.tar
 ```
 
-You can see here that the archive is equal (roughly) to the sum of the files it was created from's individual sizes. This is because this archive is completely uncompressed. We could use the ```gzip``` command if we wanted to compress it, or we could use ```tar```'s -z flag, which creates a gzip-compressed tar archive. The -j argument exists for bzip2 compression too. The convention for compressed individual files is to append the .gz/.bz file extension to the end of the file. Let me show you an example:
+You can see here that the archive is equal (roughly) to the sum of the files it was created from's individual sizes. This is because this archive is completely uncompressed. We could use the ```gzip``` command if we wanted to compress it, or we could use ```tar```'s ```-z``` flag, which creates a gzip-compressed tar archive. The ```-j``` argument exists for bzip2 compression too. The convention for compressed individual files is to append the .gz/.bz file extension to the end of the file. Let me show you an example:
 
 ```
 ~/my_folder >>> tar -czf my_archive.tar.gz ./*
@@ -275,7 +275,7 @@ You can see here that the archive is equal (roughly) to the sum of the files it 
 -rw-rw-r-- 1 sysadmin sysadmin 8.2K Mar  2 19:49 my_archive.tar.gz
 ```
 
-This created a vastly smaller filer as a result. The gzip-compressed tar is 34 times smaller than the original, the only tradeoff being that you have to uncompress it before you can read it, which is not a major issue if these are files aren't expecting much use. You can uncompress and read them with the *tar* command too, with the -t flag to enable "browse files" mode and the -z flag again to uncompress the data first with ```gunzip```:
+This created a vastly smaller filer as a result. The gzip-compressed tar is 34 times smaller than the original, the only tradeoff being that you have to uncompress it before you can read it, which is not a major issue if these are files aren't expecting much use. You can uncompress and read them with the *tar* command too, with the ```-t``` flag to enable "browse files" mode and the ```-z``` flag again to uncompress the data first with ```gunzip```:
 
 ```
 ~/my_folder >>> tar -tzf my_archive.tar.gz
@@ -328,7 +328,7 @@ The default user, ```root```, automatically has access to every file, with no re
 
 #### File Permissions
 
-Every file in Linux file system has its own properties, one of which being its own permission levels, which is used to restrict access to certain files and directories. There are three types of access you can to a file: read, write and execute. An easy way to see a file's attributes is to use the command ```ls -l```.
+Every file in Linux file system has its own properties, one of which being its own permission levels, which is used to restrict access to certain files and directories. There are three types of access you can to a file: read, write and execute. An easy way to see a file's attributes is to use the command ```ls ```-l``````.
 
 ```
 ~ >>> ls -lh
@@ -359,5 +359,6 @@ The ```chmod``` command can be used to modify a files permissions, if you happen
 -rwxrwxrwx 1 root root 2.3K Mar  5 20:49 hasans_medical_records.csv
 ```
 
-\* https://distrowatch.com
 
+
+\* https://distrowatch.com
