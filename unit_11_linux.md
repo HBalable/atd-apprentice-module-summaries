@@ -360,4 +360,3 @@ The ```chmod``` command can be used to modify a files permissions, if you happen
 ```
 
 \* https://distrowatch.com
-
