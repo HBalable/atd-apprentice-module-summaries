@@ -180,7 +180,7 @@ Searches recursively from the given directory for list of files that satisfy a g
 ```
 
 #### cat
-"cat", short for concatenate, displays the contents of text files.
+```cat```, short for concatenate, displays the contents of text files.
 
 ```
 ~ >>> cat Downloads/file1.txt
@@ -220,7 +220,7 @@ Inactive or old data, for example logs or files from completed projects, can qui
 
 ```gzip```, is a GNU tool for lossless file compression and decompression. Lossless refers to the type of compression is uses, which means that the original uncompressed file can be reproduced exaclty from the compressed ```gzip``` (```gzip``` is also the name of the file format). Lossy compression is when the some of the information from the original file is lost in the compression process, usually as the cost of further reducing the compressed file's size. This type of compression might not be completely suitable for plaintext files, for obvious reasons, but is very useful for compressing image data, which, in many cases, doesn't need to be so precise.
 
-How easy it is compress a file with gzip:
+How easy it is compress a file with ```gzip```:
 
 ```
 ~ >>> ls
@@ -233,7 +233,7 @@ Desktop  Downloads  hasans_file.txt.gz  my_folder
                5632               47044  88.1% hasans_file.txt
 ```
 
-And we can uncompress it just as easily, by using the gunzip (g- unzip) command:
+And we can uncompress it just as easily, by using the ```gunzip``` (g- unzip) command:
 
 ```
 ~ >>> gunzip hasans_file.txt.gz
@@ -241,13 +241,13 @@ And we can uncompress it just as easily, by using the gunzip (g- unzip) command:
 Desktop  Downloads  hasans_file.txt  my_folder
 ```
 
-Linux also comes with another compression tool, called ```bzip2```, which is used in the same way as ```gzip```, but uses more complex algorithms, meaning that it can take a little longer to compress/uncompress data, but can also reduce it to a smaller size than is possible with ```gzip```. ```bunzip2``` works in the same way as gunzip for uncompressing files. The conventional file extentions for files compressed with ```bzip2``` are .bz and .bz2.
+Linux also comes with another compression tool, called ```bzip2```, which is used in the same way as ```gzip```, but uses more complex algorithms, meaning that it can take a little longer to compress/uncompress data, but can also reduce it to a smaller size than is possible with ```gzip```. ```bunzip2``` works in the same way as ```gunzip``` for uncompressing files. The conventional file extentions for files compressed with ```bzip2``` are ```.bz``` and ```.bz2```.
 
 #### Archival
 
 Archives combines multiple individual files into one single file. This could be useful if you wanted to compress this data together, as you would only have to compress this one file, which, depending on the algorithms used, might even be more time efficient than compressing them seperately. The standard UNIX utility for this is ```tar``` (short for tape-archive). In Linux there is a GNU rewrite which replaces this, also called ```tar```.
 
-You can use tar to create, extract and browse .tar files (sometimes called tarballs). To create a tar file, you have to use the ```-c``` argument to enable create "mode" and the ```-f``` argument to tell it to write to a given filename.
+You can use tar to create, extract and browse tar files (sometimes called tarballs). To create a tar file, you have to use the ```-c``` argument to enable create "mode" and the ```-f``` argument to tell it to write to a given filename.
 
 Here I create a new archive containing my text files:
 
@@ -275,7 +275,7 @@ You can see here that the archive is equal (roughly) to the sum of the files it 
 -rw-rw-r-- 1 sysadmin sysadmin 8.2K Mar  2 19:49 my_archive.tar.gz
 ```
 
-This created a vastly smaller filer as a result. The ```gzip```-compressed tar is 34 times smaller than the original, the only tradeoff being that you have to uncompress it before you can read it, which is not a major issue if these are files aren't expecting much use. You can uncompress and read them with the *tar* command too, with the ```-t``` flag to enable "browse files" mode and the ```-z``` flag again to uncompress the data first with ```gunzip```:
+This created a vastly smaller filer as a result. The ```gzip```-compressed tar is 34 times smaller than the original, the only tradeoff being that you have to uncompress it before you can read it, which is not a major issue if these are files aren't expecting much use. You can uncompress and read them with the ```tar``` command too, with the ```-t``` flag to enable "browse files" mode and the ```-z``` flag again to uncompress the data first with ```gunzip```:
 
 ```
 ~/my_folder >>> tar -tzf my_archive.tar.gz
