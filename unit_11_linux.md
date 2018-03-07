@@ -79,7 +79,7 @@ total 0
 -rw-rw-r-- 1 sysadmin sysadmin 0 Mar  1 20:00 my_book.epub
 ```
 
-*Note: on Linux, '~' means your home directory, '.'' is the current directory, and '..' refers to the parent directory*
+*Note: on Linux, ```~``` means your home directory, ```.``` is the current directory, and ```..``` refers to the parent directory*
 
 
 #### touch
@@ -206,7 +206,7 @@ five six
 six elephants
 ```
 
-*Note: The '|' character in the example above passes the output of the first command (cat) to the grep command*
+*Note: The ```|``` character in the example above passes the output of the first command (```cat```) to the grep command*
 
 #### man
 
