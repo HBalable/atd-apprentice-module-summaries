@@ -1,6 +1,5 @@
 Unit 8: SCRIPTING
 =============
-abstract
 
 <!-- Python scripting language
 Shell scripting
