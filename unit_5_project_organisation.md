@@ -1,6 +1,5 @@
 Unit 5: PROJECT ORGANISATION
 =============
-abstract
 
 <!-- 
 The importance of naming conventions and version control
