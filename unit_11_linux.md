@@ -30,7 +30,10 @@ Topic 5: Security and File Permissions (weight: 7)
 -->
 
 
-Linux is an open source, UNIX-like operating system kernel designed to work on many different platforms. It has an active community developing it, so many distros (Linux distributions) are constantly evolving. It is impossible to count the available distos to try out, as people are free to modify existing source code and compile their own, thoug a quick search for "Linux distros" on *DistroWatch\**, a popular database of open source distros, returns over 800 results.
+Linux is an open source, UNIX-like operating system kernel designed to work on many different platforms. It has an active community developing it, so many distros (Linux distributions) are constantly evolving. It is impossible to count the available distos to try out, as people are free to modify existing source code and compile their own, though a quick search for "Linux distros" on *DistroWatch*, a popular database of open source distros, returns over 800 results. 
+
+<!--\**DistroWatch: https://distrowatch.com*
+-->
 
 The most common distros are a particular flavour of Linux, called GNU/Linux, which is a combination of the Linux kernel and an assortment software from the GNU project, a collaborative development project with the goal to give people the freedom and encourage them to modify and share software. Richard Stallman, the founder of this project, wrote the first GNU General Public License (GPL) which enforces the aims of the the project by requiring that any adaptations and redistributions are bound by the same license. Licenses with this ruling are given the name *Copyleft*, as they impose restrictions which are protected by copyright law, but still allow for the modification and sharing of the work, something that is normally prohibited outside of "fair-use" for most copyrighted material.
 
@@ -47,7 +50,9 @@ Though Linux is not OSI licensed, it is licensed under GPL v2, a license written
 Using Linux
 ----------
 
-Linux is praised for having the ability to be incredibly lightweight, in the way that you can find fully-usable distributions that only use a minimal amount of space (*Damn Small Linux (DSL) is a distro of only 50MB*) and in the sense that it doesn't have to consume a lot of computer resources. Some Linux distros don't even include a GUI (Graphical user interface), and are completely CLI-based (Command-line interface), which means that they are controlled entirely by typing text-based commands and writing scripts. Even for distros with a user-friendly graphical interface, in many cases people find it easier to do certain tasks using commands, so terminal emulators exist in virtually every GUI-based distro so that you can still use the command-line interface.
+Linux is praised for having the ability to be incredibly lightweight, in the way that you can find fully-usable distributions that only use a minimal amount of space (*Damn Small Linux (DSL) is a distro of only 50MB*) and in the sense that it doesn't have to consume a lot of computer resources. Some Linux distros don't even include a GUI (Graphical user interface), and are completely CLI-based (Command-line interface), which means that they are controlled entirely by typing text-based commands and writing scripts. Even for distros with a user-friendly graphical interface, in many cases people find it easier to do certain tasks using commands, so terminal emulators exist in virtually every GUI-based distro so that you can still use the command-line interface. An example of a Linux installation using the MATE desktop environment is pictured below.
+
+![Linux running the MATE desktop environment](./images/mate_desktop_example.png)
 
 ### Useful commands
 
@@ -59,7 +64,8 @@ Changes the Current Working Directory (CWD) to the given path.
 #### ls
 Lists files in the given path (or ./ by default). Using the ```-a``` argument also shows hidden files and the ```-l``` arguement shows files in a list format.
 Other useful arguements include:
-- ```-h```: Shows human-readable file sizes (rather than diplaying gile sizes in bytes)
+
+- ```-h```: Shows human-readable file sizes (rather than diplaying file sizes in bytes)
 - ```-d```: Shows directories only
 - ```-s```: Sorts files by filesize
 - ```-R```: lists files recursively, meaning that it lists files that are contained in any subfolders of the directory.
@@ -206,7 +212,7 @@ five six
 six elephants
 ```
 
-*Note: The ```|``` character in the example above passes the output of the first command (```cat```) to the grep command*
+*Note: The pipe (```|```) character in the example above passes the output of the first command (```cat```) to the grep command*
 
 #### man
 
@@ -358,5 +364,3 @@ The ```chmod``` command can be used to modify a files permissions, if you happen
 ~ >>> ls -l
 -rwxrwxrwx 1 root root 2.3K Mar  5 20:49 hasans_medical_records.csv
 ```
-
-\* https://distrowatch.com

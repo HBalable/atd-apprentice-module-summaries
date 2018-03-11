@@ -1,19 +1,14 @@
 Unit 4: DATABASES
 =============
 
-What is Data?
--------------
-data is blabla
-
-### structured data
+### Structured Data
 Structured data is data that is organised in a context with tags. A database is an collection of structured data. 
 
-### unstructured data
+### Unstructured Data
 Unstructured data is data with no context. This can be in the form of texts, images or any other forms of information.
 
 Ensuring Quality of Data.
 -------------
-para
 
 ### Validation
 Validation is very important when inputting data into a database. It is the act of ensuring that data of the correct type and format is entered, so that it can be sorted and understood and fit in the correct context. For example, a list of dates of birth could be stored in a variety of ways, but having one consistent format makes it much easier to order and query.
