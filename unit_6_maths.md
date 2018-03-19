@@ -1,5 +1,8 @@
-Unit 6: MATHS
-=============
+---
+title: "Unit 6: MATHS"
+date: "March 2018"
+author: "Hasan Balable"
+---
 
 Basic Algebra
 -------------

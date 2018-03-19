@@ -1,6 +1,7 @@
 {
     "editor.quickSuggestions": false,
-    "pandoc.htmlOptString": "-s -f markdown_github -t html5 --css=css/style.css",
+    "pandoc.htmlOptString": "-s -f markdown_github -t html5 --css=css/style.css --highlight-style=haddock --self-contained",
+    "pandoc.pdfOptString": "-fmarkdown-implicit_figures",
     "cSpell.enabledLanguageIds": [
         "c",
         "cpp",

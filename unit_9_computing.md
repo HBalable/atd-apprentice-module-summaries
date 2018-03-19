@@ -1,5 +1,8 @@
-Unit 9: COMPUTING
-=============
+---
+title: "Unit 9: COMPUTING"
+date: "March 2018"
+author: "Hasan Balable"
+---
 
 Internal Structure: Overview
 -------------

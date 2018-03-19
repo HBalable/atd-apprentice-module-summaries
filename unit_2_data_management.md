@@ -1,5 +1,8 @@
-Unit 2: DATA MANAGEMENT
-=============
+---
+title: "Unit 2: DATA MANAGEMENT"
+date: "March 2018"
+author: "Hasan Balable"
+---
 
 <!-- The importance of and techniques for managing large scale on-line and near-line data storage.
 Digital images and manipulation techniques. -->

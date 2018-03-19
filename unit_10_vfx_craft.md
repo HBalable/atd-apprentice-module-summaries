@@ -1,5 +1,11 @@
-Unit 10: VFX CRAFT
-=============
+---
+title: "Unit 10: VFX CRAFT"
+date: "March 2018"
+author: "Hasan Balable"
+geometry: margin=2.54cm
+---
+
+
 <!--Abstract
 The processes and art of a particular department, such as animation, lighting, FX or rigging
 The particular standards of a department and the challenges they face
@@ -114,7 +120,7 @@ Bodytracking is another important matchmove task, which is the skill of matching
 
 ### Animation
 
-![Matchmove pic (*image: Digital Domain*)](./images/anim_poses.jpg)
+![Animation examples (*image: Digital Domain*)](./images/anim_poses.jpg)
 
 3D animators make the characters passed down by modelling and rigged by rigging TDs come to life through keyframe animation, which is a technique I explain below. The goal of animators is to create a believeable performance using a combination of reference and animation theory.
 

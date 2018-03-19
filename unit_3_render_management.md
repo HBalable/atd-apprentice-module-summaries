@@ -1,5 +1,8 @@
-Unit 3: RENDER MANAGEMENT
-=============
+---
+title: "Unit 3: RENDER MANAGEMENT"
+date: "March 2018"
+author: "Hasan Balable"
+---
 
 <!-- 
 Grid computing and its use within VFX render queues - at a basic level
