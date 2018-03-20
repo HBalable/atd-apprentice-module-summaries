@@ -2,6 +2,7 @@
 title: "Unit 2: DATA MANAGEMENT"
 date: "March 2018"
 author: "Hasan Balable"
+geometry: margin=2.54cm
 ---
 
 <!-- The importance of and techniques for managing large scale on-line and near-line data storage.

@@ -2,6 +2,7 @@
 title: "Unit 8: SCRIPTING"
 date: "March 2018"
 author: "Hasan Balable"
+geometry: margin=2.54cm
 ---
 
 <!-- Python scripting language

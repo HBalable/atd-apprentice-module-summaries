@@ -2,6 +2,7 @@
 title: "Unit 1: PIPELINE"
 date: "March 2018"
 author: "Hasan Balable"
+geometry: margin=2.54cm
 ---
 
 The pipeline is a term used to describe a system, made up of many different steps, for producing VFX. They have to be able to be non-linear & versatile and may differ a lot between VFX houses, depending on many different factors, not limited to:
@@ -12,7 +13,7 @@ The pipeline is a term used to describe a system, made up of many different step
 
 A typical VFX pipeline:
 
-![A Pipeline (Representation by Andrew Whitehurst)](./images/andrew_whitehurst_pipeline.jpg)
+![A Pipeline (Representation by Andrew Whitehurst)](./images/andrew_whitehurst_pipeline.png)
 
 *image: Andrew Whitehurst*
 

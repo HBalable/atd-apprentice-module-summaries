@@ -1,5 +1,9 @@
-Unit 7: SOFTWARE DESIGN (& DEVELOPMENT)
-=============
+---
+title: "Unit 7: SOFTWARE DESIGN (& DEVELOPMENT)"
+date: "March 2018"
+author: "Hasan Balable"
+geometry: margin=2.54cm
+---
 <!--
 The software design process and the importance of design before development
 How workflow diagrams, prototyping and presenting to intended users can aid in designing better solutions

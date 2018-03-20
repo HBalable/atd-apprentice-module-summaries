@@ -2,6 +2,7 @@
 title: "Unit 9: COMPUTING"
 date: "March 2018"
 author: "Hasan Balable"
+geometry: margin=2.54cm
 ---
 
 Internal Structure: Overview

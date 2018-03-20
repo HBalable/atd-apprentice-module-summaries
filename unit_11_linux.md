@@ -2,6 +2,7 @@
 title: "Unit 11: LINUX"
 date: "March 2018"
 author: "Hasan Balable"
+geometry: margin=2.54cm
 ---
 
 <!--
@@ -35,8 +36,8 @@ Topic 5: Security and File Permissions (weight: 7)
 
 Linux is an open source, UNIX-like operating system kernel designed to work on many different platforms. It has an active community developing it, so many distros (Linux distributions) are constantly evolving. It is impossible to count the available distos to try out, as people are free to modify existing source code and compile their own, though a quick search for "Linux distros" on *DistroWatch*, a popular database of open source distros, returns over 800 results. 
 
-<!--\**DistroWatch: https://distrowatch.com*
--->
+<!-- [^1]DistroWatch: https://distrowatch.com* -->
+
 
 The most common distros are a particular flavour of Linux, called GNU/Linux, which is a combination of the Linux kernel and an assortment software from the GNU project, a collaborative development project with the goal to give people the freedom and encourage them to modify and share software. Richard Stallman, the founder of this project, wrote the first GNU General Public License (GPL) which enforces the aims of the the project by requiring that any adaptations and redistributions are bound by the same license. Licenses with this ruling are given the name *Copyleft*, as they impose restrictions which are protected by copyright law, but still allow for the modification and sharing of the work, something that is normally prohibited outside of "fair-use" for most copyrighted material.
 

@@ -2,6 +2,7 @@
 title: "Unit 3: RENDER MANAGEMENT"
 date: "March 2018"
 author: "Hasan Balable"
+geometry: margin=2.54cm
 ---
 
 <!-- 
