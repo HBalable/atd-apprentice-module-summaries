@@ -5,6 +5,8 @@ author: "Hasan Balable"
 geometry: margin=2.54cm
 ---
 
+# MATHS
+
 Basic Algebra
 -------------
 Under this very broad subheading, I will give some examples of how to rearrange mathematical statements, that you can use to simplify expressions and solve equations for unknowns.
@@ -59,7 +61,7 @@ Trigonometry
 -------------
 Trigonometry encompasses the studies of ratios including side lengths and angles of triangles. I will cover how to solve a triangle side or angle using trigonometry.
 
-![trig triangle](../images/trig_triangle.png)
+![trig triangle](./images/trig_triangle.png)
 
 There is two trig equations we will be using: the Sine rule and Pythagorus's equation.
 
@@ -90,13 +92,13 @@ We can use rule to calculate lengths and angles of any triangle.
 
 Let's use this rule to solve for x in this triangle.
 
-![trig triangle](../images/trig_triangle_2.png)
+![trig triangle](./images/trig_triangle_2.png)
 
 ###### Substituting known values
 
 First step is to substitute our known values into this rule. It is useful to note that $sin(90)=1$.
 
-$$\frac{1}{15\mathrm{cm}}=\frac{sin(38\degree)}{x\mathrm{cm}}$$
+$$\frac{1}{15\mathrm{cm}}=\frac{sin(38 )}{x\mathrm{cm}}$$
 
 ###### Taking the reciprocal
 
@@ -109,11 +111,11 @@ i.e.
 
 ###### Move known terms to one side
 
-$$15\mathrm{cm}=\frac{x\mathrm{cm}}{sin(38\degree)}$$
+$$15\mathrm{cm}=\frac{x\mathrm{cm}}{sin(38)}$$
 
-We can do this by multiplying each side by $sin(38\degree)$, leaving us with a single expression, $15sin(38\degree)$, which, when evaluated, is equal to $x$.
+We can do this by multiplying each side by $sin(38)$, leaving us with a single expression, $15sin(38)$, which, when evaluated, is equal to $x$.
 
-$$15sin(38\degree)=x\mathrm{cm}=9.235\mathrm{cm}$$
+$$15sin(38)=x\mathrm{cm}=9.235\mathrm{cm}$$
 
 ###### Using the inverse sine function
 
@@ -124,7 +126,7 @@ $$\frac{4}{5}=sin(x)$$
 
 Here we can use the inverse sin function ($sin^{-1}()$) to solve for x:
 
-$$sin^{-1}\left(\frac{4}{5}\right)=53.130\degree$$
+$$sin^{-1}\left(\frac{4}{5}\right)=53.130$$
 
 
 Vectors
@@ -206,9 +208,7 @@ $$\begin{pmatrix}3&-5&2\end{pmatrix}\times
 \begin{pmatrix}2\\1\\1\end{pmatrix}=
 (3\times2)+(-5\times1)+(2\times1)=3$$
 
-$$\begin{pmatrix}3&-5&2\end{pmatrix}\times
-\begin{pmatrix}6\\8\\2\end{pmatrix}=
-(3\times6)+(-5\times8)+(2\times2)=-18$$
+$$\begin{pmatrix}3&-5&2\end{pmatrix}\times\begin{pmatrix}6\\8\\2\end{pmatrix}=(3\times6)+(-5\times8)+(2\times2)=-18$$
 
 ###### The result:
 

@@ -5,6 +5,8 @@ author: "Hasan Balable"
 geometry: margin=2.54cm
 ---
 
+# DATABASES
+
 ### Structured Data
 Structured data is data that is organised in a context with tags. A database is an collection of structured data. 
 

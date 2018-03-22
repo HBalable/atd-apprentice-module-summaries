@@ -5,6 +5,8 @@ author: "Hasan Balable"
 geometry: margin=2.54cm
 ---
 
+# LINUX
+
 <!--
 # Introduction to the Linux OS.
 # Topic 1:The Linux Community and a Career in Open Source
@@ -56,7 +58,7 @@ Using Linux
 
 Linux is praised for having the ability to be incredibly lightweight, in the way that you can find fully-usable distributions that only use a minimal amount of space (*Damn Small Linux (DSL) is a distro of only 50MB*) and in the sense that it doesn't have to consume a lot of computer resources. Some Linux distros don't even include a GUI (Graphical user interface), and are completely CLI-based (Command-line interface), which means that they are controlled entirely by typing text-based commands and writing scripts. Even for distros with a user-friendly graphical interface, in many cases people find it easier to do certain tasks using commands, so terminal emulators exist in virtually every GUI-based distro so that you can still use the command-line interface. An example of a Linux installation using the MATE desktop environment is pictured below.
 
-![Linux running the MATE desktop environment](../images/mate_desktop_example.png)
+![Linux running the MATE desktop environment](./images/mate_desktop_example.png)
 
 ### Useful commands
 
@@ -222,7 +224,8 @@ six elephants
 
 Opens up a documentation page for a given command. These pages are generally not  ```info``` is a similar command included in the GNU project, which was intended to encourage a more long-form type of documentation. It has support for hyperlinks for referencing different chapters or files from within the docs. Many commands also have a ```-h``` or --help arguement which shows you a quick summary of the main functions of tool.
 
-### Compressing/Archiving Files
+Compressing/Archiving Files
+------------------------
 
 Inactive or old data, for example logs or files from completed projects, can quickly build up on disks. So these files often need to compressed or archived, to free up some space for new data. I explained a little more about this in Unit 2.
 
@@ -297,7 +300,8 @@ This created a vastly smaller filer as a result. The ```gzip```-compressed tar i
 ./hasans_file_5.txt
 ```
 
-### Security
+Security
+-----------
 
 Linux adopts UNIX's "Everything is a file" feature, meaning that data from devices and periphirals such as printers, keyboards, disk drives and networked machines are all accessible via the file system. This is done by using virtual filesystems which are all mounted so that they are visible as one file heirarchy.
 
@@ -338,7 +342,7 @@ The default user, ```root```, automatically has access to every file, with no re
 
 #### File Permissions
 
-Every file in Linux file system has its own properties, one of which being its own permission levels, which is used to restrict access to certain files and directories. There are three types of access you can to a file: read, write and execute. An easy way to see a file's attributes is to use the command ```ls ```-l``````.
+Every file in Linux file system has its own properties, one of which being its own permission levels, which is used to restrict access to certain files and directories. There are three types of access you can to a file: read, write and execute. An easy way to see a file's attributes is to use the command ```ls -l```.
 
 ```
 ~ >>> ls -lh

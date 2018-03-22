@@ -5,6 +5,8 @@ author: "Hasan Balable"
 geometry: margin=2.54cm
 ---
 
+# RENDER MANAGEMENT
+
 <!-- 
 Grid computing and its use within VFX render queues - at a basic level
 How to balance resource needs within the company’s physical capacity

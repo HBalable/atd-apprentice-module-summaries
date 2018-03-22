@@ -4,6 +4,9 @@ date: "March 2018"
 author: "Hasan Balable"
 geometry: margin=2.54cm
 ---
+
+# SOFTWARE DESIGN (& DEVELOPMENT)
+
 <!--
 The software design process and the importance of design before development
 How workflow diagrams, prototyping and presenting to intended users can aid in designing better solutions

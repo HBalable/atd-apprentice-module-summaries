@@ -5,6 +5,8 @@ author: "Hasan Balable"
 geometry: margin=2.54cm
 ---
 
+# SCRIPTING
+
 <!-- Python scripting language
 Shell scripting
 Application specific scripting languages e.g. Mel, Vex, Hscript etc. as appropriate
