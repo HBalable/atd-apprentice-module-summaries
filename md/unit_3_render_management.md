@@ -12,7 +12,7 @@ Grid computing and its use within VFX render queues - at a basic level
 How to balance resource needs within the company’s physical capacity
 Render optimisation techniques -->
 
-Rendering high detail, photorealistic images and simulations calls for a lot of computer processing power. VFX houses need to be able to produce these results quickly. To do this, they often have their own in house super-computers, called render farms, which utilize the power of grid computing.
+Rendering high detail, photorealistic images and simulations calls for a lot of computer processing power. VFX houses need to be able to produce these results quickly. To do this, they often have their own in-house super-computers, called render farms, which utilize the power of grid computing.
 
 What is Grid Computing?
 --------------
