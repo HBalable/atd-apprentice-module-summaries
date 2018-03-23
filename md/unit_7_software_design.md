@@ -14,19 +14,19 @@ How workflow diagrams, prototyping and presenting to intended users can aid in d
 
 
 
-Software Design is the process of creating a detailed schematic of a piece of software, that meets the requirements of given a brief. This could be a for building upon a piece of existing software, or 
+Software Design is the process of creating a detailed schematic of a piece of software that meets the requirements of a given brief. This could be a for building upon a piece of existing software, or 
 
 Choosing a Language
 ---------------
 
-If a new piece of software is being designed, there are many different programming languages that you could decide to build it with, each offering different advantages. A good rule of thumb is that the lower the level of language used (The less abstract languages), the more efficient your software can be. For examples you could probably write a relatively fast program in C. But using a higher level language such as C++, Pascal, or Java might mean that the software will be finished faster, as they tend to be faster to write in. Interpreted scripting languages such as Python may also be an option, as the development and support work can happen quickly. Speed and fluidity is not always the number one concern.
+If a new piece of software is being designed, there are many different programming languages that you could decide to build it with, each offering different advantages. A good rule of thumb is that the lower the level of language used (The less abstract languages), the more efficient your software can be. For example, you could probably write a relatively fast program in C. But using a higher level language such as C++, Pascal, or Java might mean that the software will be finished faster, as they tend to be faster to write in. Interpreted scripting languages such as Python may also be an option, as the development and support work can happen quickly. Speed and fluidity is not always the number one concern.
 
-Psuedocode
+Pseudocode
 --------------
 
-Psuedocode is a notation that describes the step-by-step logic behind a particular algorithm, that is used in the planning stage of software development. There is no universal format, so it is subjective and informal. The primary aim of it is to be readable and understandable to other developers who might read it. 
+Pseudocode is a notation that describes the step-by-step logic behind a particular algorithm, that is used in the planning stage of software development. There is no universal format, so it is subjective and informal. The primary aim of it is to be readable and understandable to other developers who might read it. 
 
-It is often used as an intermediate between the planning stage and writing functional code. Here is an example of a function that returns the factorial of given value, in psuedocode.
+It is often used as an intermediate between the planning stage and writing functional code. Here is an example of a function that returns the factorial of given value, in pseudocode.
 
 ```
 FUNCTION get_factorial(value)
@@ -50,13 +50,13 @@ Integration tests are scripts that ensure that different components or modules w
 Version Control
 --------------
 
-The development of software is never a linear process. Often initial decisions on how a tool should work, or what a UI should look like are superceded either feedback from testers or clients, or by unforseen technical limitations or capabilities. So code is constantly being modified, removed and overwritten. This is one reason why tracking development work is critical. It is very cheap to backup old versions of scripts and libraries as are just text files, yet the cost of the time of the developer can be very expensive.
+The development of software is never a linear process. Often initial decisions on how a tool should work, or what a UI should look like are superceded either feedback from testers or clients, or by unforeseen technical limitations or capabilities. Code is constantly being modified, removed, and overwritten. This is one reason why tracking development work is critical. It is very cheap to backup old versions of scripts and libraries as are just text files, yet the cost of the time of the developer can be very expensive.
 
 There are a wide variety of solutions available to manage development and version but I will cover two that are commonly used.
 
 ### Package-Management Systems
 
-Package management systems are often used for building and deploying tools and scripts. These are often centralized systems which stores information about builds of software. Examples of what this information might include are the creator of the build, the time it was built, the compiled build files and information about any dependancies of the software.
+Package management systems are often used for building and deploying tools and scripts. These are often centralized systems which store information about builds of software. Examples of what this information might include are the creator of the build, the time it was built, the compiled build files and information about any dependencies of the software.
 
 ### Git
 
@@ -82,7 +82,7 @@ HEAD is a special pointer, which points to the commit you are currently working 
 
 ##### Upstream & Downstream Repositories
 
-A Git repository can be developed upon remotely, by multiple people, with no need for any centralized servers. The first step to working on a remote repository is by using a process called cloning. Cloning a repository copies the commits from the remote Git directory and configures the remote directory as an upstream repository. By default this upstream will be named ```origin```. The resultant, local repository is then known as a downstream. New commits and tags on the remote can be pulled on demand, and local changes can be pushed to the remote.
+A Git repository can be developed upon remotely, by multiple people, with no need for any centralized servers. The first step to working on a remote repository is by using a process called cloning. Cloning a repository copies the commits from the remote Git directory and configures the remote directory as an upstream repository. By default, this upstream will be named ```origin```. The resultant, local repository is then known as a downstream. New commits and tags on the remote can be pulled on demand, and local changes can be pushed to the remote.
 
 While I mentioned above that Git was a Distributed system, and that there is no need for a centralized server, many workflows do use a centralized server for holding repositories, which developers pull from and push to.
 
@@ -137,7 +137,7 @@ Untracked files:
 nothing added to commit but untracked files present (use "git add" to track)
 ```
 
-You can see that is prompting us to add this file using ```git add``` to stage it for commit. This extra step is useful for when you might want to commit different changes to different files separately. You only stage the files you want commited. Let's stage our file now.
+You can see that is prompting us to add this file using ```git add``` to stage it for commit. This extra step is useful for when you might want to commit different changes to different files separately. You only stage the files you want to be committed. Let's stage our file now.
 
 ```
 >>> git add example_file
@@ -149,7 +149,7 @@ Changes to be committed:
         new file:   example_file
 ```
 
-This file is now staged and ready to be committed. We now just need to use ```git commit``` command to commit it. We'll use the ```-m``` arguement to pass a commit message too. These messages should be short sentences that summarise the changes in the commit.
+This file is now staged and ready to be committed. We now just need to use ```git commit``` command to commit it. We'll use the ```-m``` argument to pass a commit message too. These messages should be short sentences that summarise the changes in the commit.
 
 ```
 >>> git commit -m "added example_file"
@@ -186,6 +186,6 @@ To https://github.com/HBalable/atd-apprentice-module-summaries.git
    6a6fc51..97587c8  master -> master
 ```
 
-And that is how you successfully use Git for development, in it's most simplest form. It is worth mentioning that ```git init``` is the command used for creating a brand new git repository from the current directory, if you are not working from a remote. There are many other commands that prove to be useful, and plenty of information about them is accessible from the ```git --help``` command.
+And that is how you successfully use Git for development, in it's simplest form. It is worth mentioning that ```git init``` is the command used for creating a brand new git repository from the current directory if you are not working from a remote. There are many other commands that prove to be useful, and plenty of information about them is accessible from the ```git --help``` command.
 
 
