@@ -141,7 +141,8 @@ This command is used to create file links, which are similar to what shortcuts a
 ```
 ~ >>> ln  my_file.md ./Downloads -s
 ~ >>> ls -l /Downloads
--rw-rw-r-- 2 sysadmin sysadmin    0 Mar  6 20:50 my_file.md -> my_file.md
+-rw-rw-r-- 2 sysadmin sysadmin    0 Mar  6 20:50 my_file.md -> 
+my_file.md
 ```
 
 #### rm

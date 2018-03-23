@@ -31,7 +31,7 @@ In this section, I will cover the main departments involved in asset design.
 
 ### Modelling
 
-![Model of Motorbike (*image: https://seraphinacorazza.wordpress.com/2012/12/28/*)](./images/wireframe_bike.png){width=50%}
+![Model of Motorbike (*seraphinacorazza.wordpress.com*)](./images/wireframe_bike.png){width=50%}
 
 Modellers create pretty much all of the 3d assets (with the exception of 3d geometry created by FX TDs) required by a project. They have to meet not just artistic goals set by a combination of client notes and reference, but also technical specifications, some likely examples being:
 
@@ -62,7 +62,7 @@ These models are then passed off to texturing and rigging (if they are to be ani
 
 ### Rigging
 
-![Portal Rig *image: James Ball*](./images/portal_rig.png){width=50%}
+![Portal Rig (*James Ball*)](./images/portal_rig.png){width=50%}
 
 A Rigger, sometimes called a Rigging TD, builds controllable rigs for models that require animation, such as vehicles and characters. For characters, this can involve building a skeleton which they bind to the mesh. Per-vertex weights are then painted for each skeletal bone, which defines how much influence that bone has on the vertex. These bones are normally hidden and more user-friendly controls are created.
 
@@ -75,7 +75,7 @@ The most commonly used software package for this (in VFX) is Autodesk Maya, thou
 
 ### Texture & Shader design
 
-![Logan Ref/Lookdev (*image: Image Engine*)](./images/logan_lookdev.png){width=50%}
+![Logan Ref/Lookdev (*Image Engine*)](./images/logan_lookdev.png){width=50%}
 
 A texture artist designs the look of the surface of the model, by creating 2d maps, based on the model's UVs, that are "wrapped around" the model. These can be drawn digitally in a 2d program such as Adobe Photoshop, or artists can use more specialized texturing software such as Autodesk Mudbox and The Foundry's Mari, which provide lots of useful utilities which allow you paint directly on the model, and export textures afterwards\*. This is advantageous as it means the texturer does not need to worry about issues related to making textures line up at seams (seams being the edges of separate UV shells that correspond to the same edge on the model).
 
@@ -112,7 +112,7 @@ Step 3: Shot Specific Work
 
 ### Matchmove
 
-![Matchmove geometry over scan (*image: QLBEANS*)](./images/matchmove.png){width=50%}
+![Matchmove geometry over scan (*QLBEANS*)](./images/matchmove.png){width=50%}
 
 Matchmoving is a massively important technique in visual effects which enables CG elements to have matching translation, rotation, and scale values to elements shot in the live-action scan. The most common way this is done is by individually tracking a number of 2D points in a scan, at different depths in real-world space, and by reconstructing a 3d camera a using complex math. This is the core of how the tracking system working in popular match moving software such as 3DEqualizer and PFTrack, though this system can sometimes struggle with footage that doesn't have many high-contrast, easy to track points. Another method, used in mocha Pro, that manages this issue quite well, is planar tracking, which aims to tracks whole surfaces, rather than individual points, though it doesn't work so well when there are no flat 2d planes, so there is no all-round best solution. Similar techniques to these can also be used to reconstruct 3D geometry and textures too.
 
@@ -121,7 +121,7 @@ Body tracking is another important match move task, which is the skill of matchi
 
 ### Animation
 
-![Animation examples (*image: Digital Domain*)](./images/anim_poses.png){width=50%}
+![Animation Examples (*Digital Domain*)](./images/anim_poses.png){width=60%}
 
 3D animators make the characters passed down by modelling and rigged by rigging TDs come to life through keyframe animation, which is a technique I explain below. The goal of animators is to create a believable performance using a combination of reference and animation theory.
 
@@ -132,7 +132,7 @@ All rig controls will have at least some channels, possibly for controlling tran
 
 ### FX
 
-![Houdini FX Sim (*image: Carlos Parmentier*)](./images/fx.png){width=50%}
+![Houdini FX Sim (*Carlos Parmentier*)](./images/fx.png){width=50%}
 
 FX TDs (short for Effects Technical Directors) are responsible for using simulations in order to create creative 3D geometry caches which might model explosions, fire, destruction or fracturing shapes, or any other abstract or complex animation that doesn't easily fit into the role of other departments.
 
@@ -143,7 +143,7 @@ There are always new simulation methods being published, and many well-known tec
 
 ### Lighting
 
-![Lighting Before/After (*image: Dylan Sisson*)](./images/lighting_before_after.png){width=50%}
+![Lighting Before/After (*Dylan Sisson*)](./images/lighting_before_after.png){width=50%}
 
 A lighting TDs main role is to light 3D geometry in a way that matches another plate/scans lighting. This can be done either by using lots of different types of CG lights to create a rig, or also by using an HDRI (High Dynamic Range Image). HDRIs describe 360-degree images created by stitching together images of an environment taken from the same nodal point, at multiple exposure levels. This results in an image that ideally has data from all light sources from the darkest blacks to the brightest whites, with no clipping values, to realistically simulate the original environment's lighting conditions.
 
@@ -158,16 +158,14 @@ Step 4: 2D
 
 ### Roto
 
-![roto example](./images/roto_before_after.png){width=50%}
-
-*image + in-depth tutorial: https://pirayaganjanakulnon.wordpress.com/2016/01/12/module-01-assignment-01-rotoscope-shot/*
+![Rotoscoping Example](./images/roto_before_after.png){width=50%}
 
 Roto artists are responsible for creating alpha mattes from scans which isolate certain features. Ideally, a key would be easier and more efficient, but it is not always possible or practical to shoot in front of an evenly lit screen. The most common way this is done is by trying to break down the movement of the desired element in a way it can be defined by as few 2d spline-shapes as possible. Then these shapes are transformed and translated to follow the movement in the scan. Compositors can then take these elements and layer them over CG elements or combine them with other scans.
 
 
 ### Prep/Paint
 
-![prep example (*image: http://www.btlnews.com/crafts/visual-fx/level-256-produces-126-vfx-shots-for-the-bourne-legacy/*)]{width=50%}(./images/prep_before_after.png)
+![Prep Before/After (*Level 256 Visual Effects*)](./images/prep_before_after.png){width=50%}
 
 Prep has the job of cleaning up scans, ready for comp, mainly by painting. Painting, in the context of Prep, refers to the skill of believably reconstructing detail in a part of a scan that has been partially or completely occluded, by sampling from similar areas on the same or surrounding frames, or reference images. Some common paint removal tasks are required for:
 
@@ -179,12 +177,12 @@ Prep has the job of cleaning up scans, ready for comp, mainly by painting. Paint
 
 ### Comp
 
-![Mad Max Fury Road Comp (*image: Iloura*)](./images/mad_max_fx.png){width=50%}
+![Mad Max Fury Road Composite (*Iloura*)](./images/mad_max_fx.png){width=50%}
 
 A comper's role is to combine the work of all of the earlier artists departments into a final shot. This involves combining any CG elements, DMP (Digital Matte Painting) work, prep elements and roto mattes with live action scans, in a way that looks believable enough to fool a viewer that it was shot once, through the lens of a single real camera.
 
 An organised example of a Nuke node graph:
 
-![Example Node Graph (*image: http://www.jinguanghuang.com/compositing*)](./images/nuke_node_graph.png){width=50%}
+![Example Node Graph (*jinguanghuang.com*)](./images/nuke_node_graph.png){width=50%}
 
 The most commonly used industry compositing software package is currently Nuke, which has been developed by The Foundry since 2007. It uses a node-based system, rather than the layer-based system found in compositing software such as the also very popular Adobe After Effects. One significant advantage of the node-based workflow is that it makes collaboration much easier. You can easily get an idea of what is happening in a well-organised nuke scene by zooming out and looking at the entire node graph, something that is much more difficult to do in a layer based system, especially when you are dealing with very large scene's (which is very likely in a VFX studio).

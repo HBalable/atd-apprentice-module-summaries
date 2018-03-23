@@ -27,5 +27,6 @@
         "typescriptreact",
         "yml"
     ],
-    "python.linting.pylintEnabled": false
+    "python.linting.pylintEnabled": false,
+    "editor.rulers": [67]
 }

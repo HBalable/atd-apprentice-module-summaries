@@ -38,12 +38,12 @@ def main():
         "--number-sections "
         "--table-of-contents "
         "--toc-depth 2 "
-        "-s "
+        #"-s "
     )
 
     opt = raw_input("1 md -->md\n2 md_compiled-->tex\n3 tex_compiled-->pdf\nall=0\n>>>")
     if opt=="1" or opt=="0":
-        ffmpeg_cmd = 'ffmpeg -y -i ./images_orig/{0} -vf "scale=\'min(500,iw)\':-1" "./images/{1}.png" -sws_flags bilinear'
+        ffmpeg_cmd = 'ffmpeg -y -i ./images_orig/{0} -vf "scale=\'min(600,iw)\':-1" "./images/{1}.png" -sws_flags bilinear'
         for image in images:
             os.popen(ffmpeg_cmd.format(image, image.split(".")[-2]))
 
@@ -51,7 +51,7 @@ def main():
         print "_________________________________ \n" + "\n".join(units)
         
         # -fmarkdown-implicit_figures
-        full_cmd = pandoc_cmd(units, "md", "md", "--wrap=none -fmarkdown-implicit_figures")
+        full_cmd = pandoc_cmd(units, "md", "md", "--wrap=none ")
         print "##### RUNNING SHELL CMD #####\n{0}\n#####".format(full_cmd)
         os.popen(full_cmd)
         print "##########"
@@ -60,10 +60,12 @@ def main():
         full_cmd = pandoc_cmd(["out"], "md", "tex", "--wrap=none")
         print "##### RUNNING SHELL CMD #####\n{0}\n#####".format(full_cmd)
         os.popen(full_cmd)
+        page_breaks("./tex/out.tex")
         print "##########"
 
     if opt=="3" or opt=="0":
-        full_cmd = pandoc_cmd(["out"], "tex", "pdf", extras)
+        # --template ./tex/template.tex
+        full_cmd = pandoc_cmd(["out"], "tex", "pdf", extras + '  -V " geometry:margin=1in "')
         print "##### RUNNING SHELL CMD #####\n{0}\n#####".format(full_cmd)
         os.popen(full_cmd)
         print "##########"
@@ -94,6 +96,41 @@ def fix_tex(path):
                 lines.insert(i+2, "\\end{center}")
                 line_enum.next()
                 continue
+    with open(path, "r+") as fp:
+        fp.truncate()
+        fp.writelines(lines)
+
+def page_breaks(path):
+    lines = []
+    with open(path, "r+") as fp:
+        print "running fix"
+        titles = [
+            "\\title{ATD Apprentice Modules}",
+            "\\author{Hasan Balable}",
+            "\\date{March 2018}"
+        ]
+        lines = fp.readlines()
+        lines = titles + lines
+        line_enum = ((i, line) for i, line in enumerate(lines))
+        for i, line in line_enum:
+            if line.startswith("\section"):
+                print "page break fix from {0}".format(path)
+                lines.insert(i-1, "\\pagebreak")
+                line_enum.next()
+                continue
+        line_enum = ((i, line) for i, line in enumerate(lines))
+        for i, line in line_enum:
+            if line.startswith("\centering"):
+                lines[i] = ""
+        line_enum = ((i, line) for i, line in enumerate(lines))
+        for i, line in line_enum:
+            # pagebreak before initial table (cosmetic fix)
+            if line.startswith("\\begin{longtable}"):
+                print "adding cosmetic \\pagebreak"
+                lines = lines[:i] + ["\n", "\\pagebreak\n", "\n"] + lines[i:]
+                break
+
+            
     with open(path, "r+") as fp:
         fp.truncate()
         fp.writelines(lines)

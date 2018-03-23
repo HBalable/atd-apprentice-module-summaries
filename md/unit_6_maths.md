@@ -61,7 +61,7 @@ Trigonometry
 -------------
 Trigonometry encompasses the studies of ratios including side lengths and angles of triangles. I will cover how to solve a triangle side or angle using trigonometry.
 
-![trig triangle](./images/trig_triangle.png)
+![Labeled triangle](./images/trig_triangle.png){width=70%}
 
 There are two trig equations we will be using: the Sine rule and Pythagoras's equation.
 
@@ -92,7 +92,7 @@ We can use the rule to calculate lengths and angles of any triangle.
 
 Let's use this rule to solve for x in this triangle.
 
-![trig triangle](./images/trig_triangle_2.png)
+![Incomplete triangle](./images/trig_triangle_2.png){width=70%}
 
 ###### Substituting known values
 

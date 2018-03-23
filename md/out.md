@@ -1,9 +1,6 @@
 PIPELINE
 ========
 
-poop
-----
-
 The pipeline is a term used to describe a system, made up of many different steps, for producing VFX. They have to be able to be non-linear & versatile and may differ a lot between VFX houses, depending on many different factors, not limited to:
 
 -   The size of the company.
@@ -12,9 +9,7 @@ The pipeline is a term used to describe a system, made up of many different step
 
 A typical VFX pipeline:
 
-![A Pipeline (Representation by Andrew Whitehurst)](./images/andrew_whitehurst_pipeline.png){width="50%"}
-
-*image: Andrew Whitehurst*
+![An example pipeline (*Andrew Whitehurst*)](./images/andrew_whitehurst_pipeline.png){width="80%"}
 
 Collaboration between artists all working with different software packages and file formats introduces the need for a new area in companies large enough to afford them: the pipeline department. They are responsible for creating and managing custom infrastructures that aim to make interactions between different departments more efficient. With companies such as Double Negative and Cinesite branching into the world of feature animation, new and adventurous routes are being explored, with the ultimate goal of having the most cost-effective (efficient) and functional pipeline.
 
@@ -86,7 +81,7 @@ This is a vitally important risk-prevention measure for any modern company. In s
 
 Snapshot systems are one method of backing up data. This is when changes to a machine's filesystem, called snapshots, are recorded and stored at regular intervals. Retention rules for the snapshots are set, to delete unwanted backups after a set period of time, to limit storage use. An example of how these could be set up: The system may retain one snapshot per hour for the last 24 hours, a snapshot per day for the past 7 days, a snapshot per week for the last 4 weeks, and a snapshot per month for the past 6 months. From this example, you can clearly see how any risk caused by accidental deletion or modification of files is greatly minimized, so long as the issue is spotted quickly.
 
-![Example snapshot directories](./images/snapshot_dirs.png)
+![Example snapshot directories](./images/snapshot_dirs.png){width="60%"}
 
 Archiving is another valuable data-protection measure. This is done when data that is not currently required is stored for the long-term. The main difference between a backup and an archive is that backups are created for live data, where it might be difficult or time-consuming to judge the importance or efficiency of protecting individual files, so they are protected indiscriminately, whereas the process of archiving is not always as time-critical, so files can be indexed and unnecessary data can be pruned.
 
@@ -205,7 +200,11 @@ This shotgun query returns a list of dictionaries containing the `name` attribut
 
     from shotgun.common import conn
     filters = [["sg_status","is","Active"]]
-    active_shows = conn.shn.find("Project", filters, fields = ["name", "sg_status"])
+    active_shows = conn.shn.find(
+        "Project",
+        filters,
+        fields = ["name", "sg_status"]
+    )
     [
         {
             'sg_status': 'Active',
@@ -218,12 +217,6 @@ This shotgun query returns a list of dictionaries containing the `name` attribut
             'type': 'Project',
             'id': 67,
             'name': 'DNEG_SHOW2'
-        },
-        {
-            'sg_status': 'Active',
-            'type': 'Project',
-            'id': 80,
-            'name': 'DNEG_SHOW3'
         },
         # etc...
     ]
@@ -241,7 +234,7 @@ Large-scale VFX projects may require collaboration between hundreds of different
 
 One system that is popular among many VFX studios is *Shotgun*. Shotgun is primarily a project management system designed specifically for animation and VFX production, which includes an integrated asset management and versioning system. It's used by artists and production alike, with one of its major selling points being its all-in-one approach; Production can use it to easily set team milestones and distribute tasks, while artists can use it to keep track of their work and respond to all their latest notes.
 
-![Shotgun tasks view](./images/shotgun_task_view.png)
+![Shotgun's web interface](./images/shotgun_task_view.png){width="80%"}
 
 ### Version Control
 
@@ -313,7 +306,7 @@ Trigonometry
 
 Trigonometry encompasses the studies of ratios including side lengths and angles of triangles. I will cover how to solve a triangle side or angle using trigonometry.
 
-![trig triangle](./images/trig_triangle.png)
+![Labeled triangle](./images/trig_triangle.png){width="70%"}
 
 There are two trig equations we will be using: the Sine rule and Pythagoras's equation.
 
@@ -343,7 +336,7 @@ We can use the rule to calculate lengths and angles of any triangle. ($a$, $A$),
 
 Let's use this rule to solve for x in this triangle.
 
-![trig triangle](./images/trig_triangle_2.png)
+![Incomplete triangle](./images/trig_triangle_2.png){width="70%"}
 
 ###### Substituting known values
 
@@ -525,14 +518,14 @@ And there is our result. Clearly, he isn't a very good throw.
 
 Mechanics are important in everyday work for many visual effects artists, namely artists in the FX department. Something that makes digital performances seem so believable on screen is the way objects move and are interacted with in a physically realistic way. Simulations of particles, fluids, cloth, hair and others are all based on how dynamics in the real world behave. This was just a very basic example.
 
-SOFTWARE DESIGN (& DEVELOPMENT)
-===============================
+SOFTWARE DESIGN
+===============
 
 <!--
 The software design process and the importance of design before development
 How workflow diagrams, prototyping and presenting to intended users can aid in designing better solutions
 -->
-Software Design is the process of creating a detailed schematic of a piece of software that meets the requirements of a given brief. This could be a for building upon a piece of existing software, or
+Software Design is the process of creating a detailed schematic of a piece of software that meets the requirements of a given brief. This could be a for building upon a piece of existing software, or an entirely new project.
 
 Choosing a Language
 -------------------
@@ -608,7 +601,8 @@ All of the text in these documents that you're reading are stored in Git-control
 
 The first step is to clone a remote repository that you wish to work on. This can be done using the `git clone` command and a path or URL to the remote repository.
 
-    >>> git clone https://github.com/HBalable/atd-apprentice-module-summaries.git
+    >>> git clone https://github.com/HBalable/atd-apprentice-module-
+    summaries.git
     Cloning into 'atd-apprentice-module-summaries'...
     remote: Counting objects: 248, done.
     remote: Compressing objects: 100% (93/93), done.
@@ -641,7 +635,8 @@ Now let's add a new file to the repository and see what happens.
 
             example_file
 
-    nothing added to commit but untracked files present (use "git add" to track)
+    nothing added to commit but untracked files present (use "git add" 
+    to track)
 
 You can see that is prompting us to add this file using `git add` to stage it for commit. This extra step is useful for when you might want to commit different changes to different files separately. You only stage the files you want to be committed. Let's stage our file now.
 
@@ -672,7 +667,9 @@ Now we've successfully committed our changes, we can merge them back into the so
 Now, we just need to push our branches back to the upstream repository, `origin`. We can do that using the `git push` command.
 
     >>> git push origin example
-    Total 0 (delta 0), reused 0 (delta 0)                                                                                   To https://github.com/HBalable/atd-apprentice-module-summaries.git                                                         6a6fc51..97587c8  example -> example  
+    Total 0 (delta 0), reused 0 (delta 0)
+    https://github.com/HBalable/atd-apprentice-module-summaries.git
+       6a6fc51..97587c8  example -> example  
 
     >>> git push origin master
     Counting objects: 2, done.
@@ -764,7 +761,7 @@ Another characteristic is that is that you do not need to declare variables unti
 
 Though there is a cost to this freedom that comes with Python coding: execution speed. Given the right task, C++ could outperform Python more than 400 times over. But this is very understandable. This analogy might help:
 
-> Imagine having 2 guests over on a Friday evening for dinner. Guest 1's favourite food is ham/pineapple pizza, so you prepare him some. But you have never met guest 2 before, so you aren't sure what he likes, so you decide to buy a couple other pizza's that he might be into, including separate vegan and vegetarian options, just in case. Guest 1 is the C++ code, the compiler knows exactly what to expect and can prepare for it, and even perform some validation checks to help ensure everything will run smoothly and fast. Guest 2 on the other hand, is the python code. The objects being manipulated could be anything, so most validation would be useless. The interpreter relies on you writing compatible code.
+> Imagine having 2 guests over on a Friday evening for dinner. Guest 1's favourite food is ham/pineapple pizza, so you prepare him some. But you have never met guest 2 before, so you aren't sure what he likes, so you decide to buy a couple other pizza's that he might be into, including separate vegan and vegetarian options, just in case. Guest 1 is the C++ code, the compiler knows exactly what to expect and can prepare for it, and even perform some validation checks to help ensure everything will run smoothly and fast. Guest 2 on the other hand, is the python code. The objects being manipulated could be anything, so most validation would be useless. The interpreter relies on you writing working code.
 
 <!--sorry about the above-->
 It's important to note that the Python interpreter is in fact written in C, a very popular statically-typed compiled language. C is compiled directly into machine code, which is perhaps the lowest level programming language: binary, which is executed directly by the CPU. It's also worth mentioning that interpreted languages are not necessarily slower than compiled languages. ASM (assembly language) is an interpreted language that can in many cases run tasks faster than compiled C, in fact, C was written in assembly language.
@@ -886,7 +883,7 @@ In this section, I will cover the main departments involved in asset design.
 
 ### Modelling
 
-![Model of Motorbike (*image: https://seraphinacorazza.wordpress.com/2012/12/28/*)](./images/wireframe_bike.png){width="50%"}
+![Model of Motorbike (*seraphinacorazza.wordpress.com*)](./images/wireframe_bike.png){width="50%"}
 
 Modellers create pretty much all of the 3d assets (with the exception of 3d geometry created by FX TDs) required by a project. They have to meet not just artistic goals set by a combination of client notes and reference, but also technical specifications, some likely examples being:
 
@@ -916,7 +913,7 @@ These models are then passed off to texturing and rigging (if they are to be ani
 
 ### Rigging
 
-![Portal Rig *image: James Ball*](./images/portal_rig.png){width="50%"}
+![Portal Rig (*James Ball*)](./images/portal_rig.png){width="50%"}
 
 A Rigger, sometimes called a Rigging TD, builds controllable rigs for models that require animation, such as vehicles and characters. For characters, this can involve building a skeleton which they bind to the mesh. Per-vertex weights are then painted for each skeletal bone, which defines how much influence that bone has on the vertex. These bones are normally hidden and more user-friendly controls are created.
 
@@ -928,7 +925,7 @@ The most commonly used software package for this (in VFX) is Autodesk Maya, thou
 
 ### Texture & Shader design
 
-![Logan Ref/Lookdev (*image: Image Engine*)](./images/logan_lookdev.png){width="50%"}
+![Logan Ref/Lookdev (*Image Engine*)](./images/logan_lookdev.png){width="50%"}
 
 A texture artist designs the look of the surface of the model, by creating 2d maps, based on the model's UVs, that are "wrapped around" the model. These can be drawn digitally in a 2d program such as Adobe Photoshop, or artists can use more specialized texturing software such as Autodesk Mudbox and The Foundry's Mari, which provide lots of useful utilities which allow you paint directly on the model, and export textures afterwards\*. This is advantageous as it means the texturer does not need to worry about issues related to making textures line up at seams (seams being the edges of separate UV shells that correspond to the same edge on the model).
 
@@ -963,7 +960,7 @@ Step 3: Shot Specific Work
 
 ### Matchmove
 
-![Matchmove geometry over scan (*image: QLBEANS*)](./images/matchmove.png){width="50%"}
+![Matchmove geometry over scan (*QLBEANS*)](./images/matchmove.png){width="50%"}
 
 Matchmoving is a massively important technique in visual effects which enables CG elements to have matching translation, rotation, and scale values to elements shot in the live-action scan. The most common way this is done is by individually tracking a number of 2D points in a scan, at different depths in real-world space, and by reconstructing a 3d camera a using complex math. This is the core of how the tracking system working in popular match moving software such as 3DEqualizer and PFTrack, though this system can sometimes struggle with footage that doesn't have many high-contrast, easy to track points. Another method, used in mocha Pro, that manages this issue quite well, is planar tracking, which aims to tracks whole surfaces, rather than individual points, though it doesn't work so well when there are no flat 2d planes, so there is no all-round best solution. Similar techniques to these can also be used to reconstruct 3D geometry and textures too.
 
@@ -971,7 +968,7 @@ Body tracking is another important match move task, which is the skill of matchi
 
 ### Animation
 
-![Animation examples (*image: Digital Domain*)](./images/anim_poses.png){width="50%"}
+![Animation Examples (*Digital Domain*)](./images/anim_poses.png){width="60%"}
 
 3D animators make the characters passed down by modelling and rigged by rigging TDs come to life through keyframe animation, which is a technique I explain below. The goal of animators is to create a believable performance using a combination of reference and animation theory.
 
@@ -981,7 +978,7 @@ All rig controls will have at least some channels, possibly for controlling tran
 
 ### FX
 
-![Houdini FX Sim (*image: Carlos Parmentier*)](./images/fx.png){width="50%"}
+![Houdini FX Sim (*Carlos Parmentier*)](./images/fx.png){width="50%"}
 
 FX TDs (short for Effects Technical Directors) are responsible for using simulations in order to create creative 3D geometry caches which might model explosions, fire, destruction or fracturing shapes, or any other abstract or complex animation that doesn't easily fit into the role of other departments.
 
@@ -991,7 +988,7 @@ There are always new simulation methods being published, and many well-known tec
 
 ### Lighting
 
-![Lighting Before/After (*image: Dylan Sisson*)](./images/lighting_before_after.png){width="50%"}
+![Lighting Before/After (*Dylan Sisson*)](./images/lighting_before_after.png){width="50%"}
 
 A lighting TDs main role is to light 3D geometry in a way that matches another plate/scans lighting. This can be done either by using lots of different types of CG lights to create a rig, or also by using an HDRI (High Dynamic Range Image). HDRIs describe 360-degree images created by stitching together images of an environment taken from the same nodal point, at multiple exposure levels. This results in an image that ideally has data from all light sources from the darkest blacks to the brightest whites, with no clipping values, to realistically simulate the original environment's lighting conditions.
 
@@ -1004,15 +1001,13 @@ Step 4: 2D
 
 ### Roto
 
-![roto example](./images/roto_before_after.png){width="50%"}
-
-*image + in-depth tutorial: https://pirayaganjanakulnon.wordpress.com/2016/01/12/module-01-assignment-01-rotoscope-shot/*
+![Rotoscoping Example](./images/roto_before_after.png){width="50%"}
 
 Roto artists are responsible for creating alpha mattes from scans which isolate certain features. Ideally, a key would be easier and more efficient, but it is not always possible or practical to shoot in front of an evenly lit screen. The most common way this is done is by trying to break down the movement of the desired element in a way it can be defined by as few 2d spline-shapes as possible. Then these shapes are transformed and translated to follow the movement in the scan. Compositors can then take these elements and layer them over CG elements or combine them with other scans.
 
 ### Prep/Paint
 
-\[prep example (*image: http://www.btlnews.com/crafts/visual-fx/level-256-produces-126-vfx-shots-for-the-bourne-legacy/*)\]{width=50%}(./images/prep\_before\_after.png)
+![Prep Before/After (*Level 256 Visual Effects*)](./images/prep_before_after.png){width="50%"}
 
 Prep has the job of cleaning up scans, ready for comp, mainly by painting. Painting, in the context of Prep, refers to the skill of believably reconstructing detail in a part of a scan that has been partially or completely occluded, by sampling from similar areas on the same or surrounding frames, or reference images. Some common paint removal tasks are required for:
 
@@ -1023,13 +1018,13 @@ Prep has the job of cleaning up scans, ready for comp, mainly by painting. Paint
 
 ### Comp
 
-![Mad Max Fury Road Comp (*image: Iloura*)](./images/mad_max_fx.png){width="50%"}
+![Mad Max Fury Road Composite (*Iloura*)](./images/mad_max_fx.png){width="50%"}
 
 A comper's role is to combine the work of all of the earlier artists departments into a final shot. This involves combining any CG elements, DMP (Digital Matte Painting) work, prep elements and roto mattes with live action scans, in a way that looks believable enough to fool a viewer that it was shot once, through the lens of a single real camera.
 
 An organised example of a Nuke node graph:
 
-![Example Node Graph (*image: http://www.jinguanghuang.com/compositing*)](./images/nuke_node_graph.png){width="50%"}
+![Example Node Graph (*jinguanghuang.com*)](./images/nuke_node_graph.png){width="50%"}
 
 The most commonly used industry compositing software package is currently Nuke, which has been developed by The Foundry since 2007. It uses a node-based system, rather than the layer-based system found in compositing software such as the also very popular Adobe After Effects. One significant advantage of the node-based workflow is that it makes collaboration much easier. You can easily get an idea of what is happening in a well-organised nuke scene by zooming out and looking at the entire node graph, something that is much more difficult to do in a layer based system, especially when you are dealing with very large scene's (which is very likely in a VFX studio).
 
@@ -1160,7 +1155,8 @@ This command is used to create file links, which are similar to what shortcuts a
 
     ~ >>> ln  my_file.md ./Downloads -s
     ~ >>> ls -l /Downloads
-    -rw-rw-r-- 2 sysadmin sysadmin    0 Mar  6 20:50 my_file.md -> my_file.md
+    -rw-rw-r-- 2 sysadmin sysadmin    0 Mar  6 20:50 my_file.md -> 
+    my_file.md
 
 #### rm
 

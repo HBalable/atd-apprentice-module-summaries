@@ -47,7 +47,11 @@ This shotgun query returns a list of dictionaries containing the ```name``` attr
 ```
 from shotgun.common import conn
 filters = [["sg_status","is","Active"]]
-active_shows = conn.shn.find("Project", filters, fields = ["name", "sg_status"])
+active_shows = conn.shn.find(
+    "Project",
+    filters,
+    fields = ["name", "sg_status"]
+)
 [
     {
         'sg_status': 'Active',
@@ -60,12 +64,6 @@ active_shows = conn.shn.find("Project", filters, fields = ["name", "sg_status"])
         'type': 'Project',
         'id': 67,
         'name': 'DNEG_SHOW2'
-    },
-    {
-        'sg_status': 'Active',
-        'type': 'Project',
-        'id': 80,
-        'name': 'DNEG_SHOW3'
     },
     # etc...
 ]

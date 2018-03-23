@@ -18,7 +18,7 @@ Large-scale VFX projects may require collaboration between hundreds of different
 
 One system that is popular among many VFX studios is *Shotgun*. Shotgun is primarily a project management system designed specifically for animation and VFX production, which includes an integrated asset management and versioning system. It's used by artists and production alike, with one of its major selling points being its all-in-one approach; Production can use it to easily set team milestones and distribute tasks, while artists can use it to keep track of their work and respond to all their latest notes.
 
-![Shotgun tasks view](./images/shotgun_task_view.png)
+![Shotgun's web interface](./images/shotgun_task_view.png){width=80%}
 
 ### Version Control
 

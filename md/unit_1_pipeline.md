@@ -15,9 +15,8 @@ The pipeline is a term used to describe a system, made up of many different step
 
 A typical VFX pipeline:
 
-![A Pipeline (Representation by Andrew Whitehurst)](./images/andrew_whitehurst_pipeline.png){width=50%}
+![An example pipeline (*Andrew Whitehurst*)](./images/andrew_whitehurst_pipeline.png){width=80%}
 
-*image: Andrew Whitehurst*
 
 Collaboration between artists all working with different software packages and file formats introduces the need for a new area in companies large enough to afford them: the pipeline department. They are responsible for creating and managing custom infrastructures that aim to make interactions between different departments more efficient. With companies such as Double Negative and Cinesite branching into the world of feature animation, new and adventurous routes are being explored, with the ultimate goal of having the most cost-effective (efficient) and functional pipeline.
 

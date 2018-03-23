@@ -5,7 +5,7 @@ author: "Hasan Balable"
 geometry: margin=2.54cm
 ---
 
-# SOFTWARE DESIGN (& DEVELOPMENT)
+# SOFTWARE DESIGN
 
 <!--
 The software design process and the importance of design before development
@@ -14,7 +14,7 @@ How workflow diagrams, prototyping and presenting to intended users can aid in d
 
 
 
-Software Design is the process of creating a detailed schematic of a piece of software that meets the requirements of a given brief. This could be a for building upon a piece of existing software, or 
+Software Design is the process of creating a detailed schematic of a piece of software that meets the requirements of a given brief. This could be a for building upon a piece of existing software, or an entirely new project.
 
 Choosing a Language
 ---------------
@@ -95,7 +95,8 @@ All of the text in these documents that you're reading are stored in Git-control
 The first step is to clone a remote repository that you wish to work on. This can be done using the ```git clone``` command and a path or URL to the remote repository.
 
 ```
->>> git clone https://github.com/HBalable/atd-apprentice-module-summaries.git
+>>> git clone https://github.com/HBalable/atd-apprentice-module-
+summaries.git
 Cloning into 'atd-apprentice-module-summaries'...
 remote: Counting objects: 248, done.
 remote: Compressing objects: 100% (93/93), done.
@@ -134,7 +135,8 @@ Untracked files:
 
         example_file
 
-nothing added to commit but untracked files present (use "git add" to track)
+nothing added to commit but untracked files present (use "git add" 
+to track)
 ```
 
 You can see that is prompting us to add this file using ```git add``` to stage it for commit. This extra step is useful for when you might want to commit different changes to different files separately. You only stage the files you want to be committed. Let's stage our file now.
@@ -174,7 +176,9 @@ Now, we just need to push our branches back to the upstream repository, ```origi
 
 ```
 >>> git push origin example
-Total 0 (delta 0), reused 0 (delta 0)                                                                                   To https://github.com/HBalable/atd-apprentice-module-summaries.git                                                         6a6fc51..97587c8  example -> example  
+Total 0 (delta 0), reused 0 (delta 0)
+https://github.com/HBalable/atd-apprentice-module-summaries.git
+   6a6fc51..97587c8  example -> example  
 
 >>> git push origin master
 Counting objects: 2, done.
