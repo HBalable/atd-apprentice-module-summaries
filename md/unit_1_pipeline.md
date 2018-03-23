@@ -19,7 +19,7 @@ A typical VFX pipeline:
 
 *image: Andrew Whitehurst*
 
-Collaboration between artists all working with different software packages and file formats introduces the need for a new area, in companies large enough to afford them: the pipeline department. They are responsible for creating and managing custom infrastructure that aims to make interactions between different departments more efficient. With companies such as Double Negative and Cinesite branching into the world of feature animation, new and adventurous routes are being explored, with the ultimate goal of having the most cost-effective (efficient) and functional pipeline.
+Collaboration between artists all working with different software packages and file formats introduces the need for a new area in companies large enough to afford them: the pipeline department. They are responsible for creating and managing custom infrastructure that aims to make interactions between different departments more efficient. With companies such as Double Negative and Cinesite branching into the world of feature animation, new and adventurous routes are being explored, with the ultimate goal of having the most cost-effective (efficient) and functional pipeline.
 
 I explore the functions of all of the major creative departments you might find in a VFX house in Unit 10 (VFX Craft). So instead, here is a brief summary of what they each might output.
 
