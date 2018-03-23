@@ -26,8 +26,6 @@ Validation is very important when inputting data into a database. It is the act 
 |```30.01.1989```|```06.1.89```      |
 |```05.05.2005```|```5, 5,05```       |
 
-
-
 ### Verification
 Verification is another important practice that is used during data entry. It is to ensure that the correct data is being entered. Obviously, this could be slightly more difficult to check as the client that is being used to enter the data often isn’t clever enough to know whether the data is correct, so verification is mostly used to correct human error. One method that is used is double entry: asking the user to enter the data twice.
 
