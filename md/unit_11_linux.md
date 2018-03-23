@@ -218,7 +218,7 @@ five six
 six elephants
 ```
 
-*Note: The pipe (```|```) character in the example above passes the output of the first command (```cat```) to the grep command*
+*Note: The pipe ($\space\mid\space$) character in the example above passes the output of the first command (```cat```) to the grep command*
 
 #### man
 

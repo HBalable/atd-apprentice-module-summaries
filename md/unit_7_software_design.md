@@ -28,7 +28,7 @@ Pseudocode is a notation that describes the step-by-step logic behind a particul
 
 It is often used as an intermediate between the planning stage and writing functional code. Here is an example of a function that returns the factorial of given value, in pseudocode.
 
-```
+~~~~~~
 FUNCTION get_factorial(value)
     factorial = 1
     FOR i in all integers from 1 to i >= value
@@ -36,7 +36,7 @@ FUNCTION get_factorial(value)
 
     WRITE "Factorial of "+ value +" = " + factorial
     RETURN factorial
-```
+~~~~~~
 
 
 Testing

@@ -4,7 +4,7 @@ def pandoc_cmd(sources, source_type, target_type="tex", extra=""):
     get_path = lambda name, tp: "./{1}/{0}.{1}".format(name,tp)
     sources = [get_path(src, source_type) for src in sources]
     return (
-    "../../scripts/pandoc -i {0} --katex -o {1} {2} --verbose"
+    "../../scripts/pandoc -i {0} --katex -o {1} {2}"
     ).format(" ".join(sources),get_path("out", target_type),extra)
 
 
