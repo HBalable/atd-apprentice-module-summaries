@@ -35,7 +35,7 @@ $$\frac{4x}{y}+\frac{7x}{2}-y$$
 
 #### Rearranging Equations
 
-An equations is a statement in which two mathematical expressions are equal to each other. There is really just one rule that, so long as it is followed, makes rearranging equations simple.
+An equation is a statement in which two mathematical expressions are equal to each other. There is really just one rule that, so long as it is followed, makes rearranging equations simple.
 
 >You can perform mathematical operations on each "side" of the equation, so long as you perform equal operations to all sides.
 
@@ -45,7 +45,7 @@ $$x+\sqrt{4y}=5+x$$
 
 Here, if we wanted to solve for $y$, we could subtract $x$ from each side and we are left with $\sqrt{4y}=5$. Next, we need to get rid of the square root. We can do this by taking a square of both sides. This involves multiplying both sides of the equation with an equal expression, so it still very much follows our one rule. After simplifying $\sqrt{4y}^2=5^2$, we have $4y=25$. Lastly, we can divide all sides by 4, which would leave us with $y=25/4=6.25$.
 
-This was a simple example but the same methodology is used when solving more complex equations such as polynomials. However, unknowns in many equations can not be described by a single value, and instead are be described as an expression which describe a range of possible values. You can craft equations with these which define shapes and curves.
+This was a simple example but the same methodology is used when solving more complex equations such as polynomials. However, unknowns in many equations cannot be described by a single value and instead are being described as an expression which describes a range of possible values. You can craft equations with these which define shapes and curves.
 
 #### The Quadratic Equation
 
@@ -63,11 +63,11 @@ Trigonometry encompasses the studies of ratios including side lengths and angles
 
 ![trig triangle](./images/trig_triangle.png)
 
-There is two trig equations we will be using: the Sine rule and Pythagorus's equation.
+There are two trig equations we will be using: the Sine rule and Pythagoras's equation.
 
 ##### Pythagoras' Theorem
 
-Pythagoras' theorem states that, with a triangle with sides labeled $a$, $b$ and $c$, where $c$ is that triangles hypotenuse:
+Pythagoras' theorem states that with a triangle with sides labelled $a$, $b$ and $c$, where $c$ is that triangles hypotenuse:
 
 $$a^2+b^2=c^2$$
 
@@ -87,7 +87,7 @@ $$b=\sqrt{21^2\mathrm{cm}-13^2\mathrm{cm}}=16.492$$
 
 $$\frac{sin(A)}{a}=\frac{sin(B)}{b}=\frac{sin(C)}{c}$$
 
-We can use rule to calculate lengths and angles of any triangle.
+We can use the rule to calculate lengths and angles of any triangle.
 ($a$, $A$), ($b$, $B$) and ($c$, $C$) refer to length and angle pairs opposite each other, as displayed in the diagram earlier in this section.
 
 Let's use this rule to solve for x in this triangle.
@@ -96,7 +96,7 @@ Let's use this rule to solve for x in this triangle.
 
 ###### Substituting known values
 
-First step is to substitute our known values into this rule. It is useful to note that $sin(90)=1$.
+The first step is to substitute our known values into this rule. It is useful to note that $sin(90)=1$.
 
 $$\frac{1}{15\mathrm{cm}}=\frac{sin(38 )}{x\mathrm{cm}}$$
 
@@ -132,7 +132,7 @@ $$sin^{-1}\left(\frac{4}{5}\right)=53.130$$
 Vectors
 -------------
 
-A vector is a quantity with more than 1 dimension. It has both a direction and a magnitude. In 2D space, we can use vectors to describe the difference between 2 points. For example, if we had 2 points, $a(13.6,\space4.2)$ and $b(-3,\space1.1)$, we could find the vector betweem them by finding the difference between the $x$ and $y$ components of the points. We can describe the vector from $a$ to $b$ as $\vec{ab}$.
+A vector is a quantity with more than 1 dimension. It has both a direction and a magnitude. In 2D space, we can use vectors to describe the difference between 2 points. For example, if we had 2 points, $a(13.6,\space4.2)$ and $b(-3,\space1.1)$, we could find the vector between them by finding the difference between the $x$ and $y$ components of the points. We can describe the vector from $a$ to $b$ as $\vec{ab}$.
 
 $$\vec{ab}=\begin{pmatrix}
 -3-13.6\\1.1-4.2
@@ -141,9 +141,9 @@ $$\vec{ab}=\begin{pmatrix}
 +16.6\\-3.1
 \end{pmatrix}$$
 
-We can now manupulate this vector the similarly to how we would scalar quantities (one-dimensional quantities). 
+We can now manipulate this vector the similarly to how we would scalar quantities (one-dimensional quantities). 
 
-Adding and subtracting vectors is easy. Let me show you an algebraic example with my two 3-dimentional vectors: $\vec{p}$ and $\vec{q}$
+Adding and subtracting vectors is easy. Let me show you an algebraic example with my two 3-dimensional vectors: $\vec{p}$ and $\vec{q}$
 
 $$
 \vec{p}=\begin{pmatrix}
@@ -166,13 +166,13 @@ Matrices
 
 #### Addition
 
-Adding and subtracting matrices from other matrices is only possible for matrices with the same dimentions. Here we will add two 2 by 2 matrices together. It is as simple as just finding the sum of each corresponding value.
+Adding and subtracting matrices from other matrices is only possible for matrices with the same dimensions. Here we will add two 2 by 2 matrices together. It is as simple as just finding the sum of each corresponding value.
 
 $$\begin{pmatrix}3&7\\-9&8\end{pmatrix}+\begin{pmatrix}-1&-3\\5&6\end{pmatrix}=\begin{pmatrix}3-1&7-3\\-9+5&8+6\end{pmatrix}=\begin{pmatrix}2&4\\-4&14\end{pmatrix}$$
 
 #### Multiplication
 
-Multiplication is a little more difficult. The number of rows in  matrix 1 must match the number of columns in the second matrix. You solve them each row/column pair at a time.
+Multiplication is a little more difficult. The number of rows in matrix 1 must match the number of columns in the second matrix. You solve them each row/column pair at a time.
 
 $$\begin{pmatrix}4&2&-1\\3&-5&2\\\end{pmatrix}\times
 \begin{pmatrix}2&6\\1&8\\1&2\end{pmatrix}=$$
@@ -192,7 +192,7 @@ $$
 &\end{pmatrix}
 $$
 
-Let's first try to solve the first value of our new matrix. To do this we need to know how to multiply a row by a column. We just multiply each value from starting from the left of the row, to its corresponding value in the column, counting starting from the top.
+Let's first try to solve the first value of our new matrix. To do this we need to know how to multiply a row by a column. We just multiply each value, starting from the left of the row, to its corresponding value in the column, counting starting from the top.
 
 $$\begin{pmatrix}4&2&-1\end{pmatrix}\times
 \begin{pmatrix}2\\1\\1\end{pmatrix}=
@@ -290,6 +290,6 @@ We just need to substitute in our values:
 $$s_{x}=\frac{1}{2}(0.3\mathrm{m/s}+0.3\mathrm{m/s})\times0.534\mathrm{m}=0.3\mathrm{m/s}\times0.534\mathrm{m}$$
 $$s_{x}=0.160\mathrm{m}=16\mathrm{cm}$$
 
-And there is our result. Clearly he isn't a very good throw.
+And there is our result. Clearly, he isn't a very good throw.
 
-Mechanics is important in everyday work for many visual effects artists, namely artists in the FX department. Something that makes digital performances seem so believeable on screen is the way objects move and are interacted with in a physically realistic way.  Simulations of particles, fluids, cloth, hair and others are all based on how dynamics in the real world behave. This was just a very basic example.
+Mechanics are important in everyday work for many visual effects artists, namely artists in the FX department. Something that makes digital performances seem so believable on screen is the way objects move and are interacted with in a physically realistic way.  Simulations of particles, fluids, cloth, hair and others are all based on how dynamics in the real world behave. This was just a very basic example.
