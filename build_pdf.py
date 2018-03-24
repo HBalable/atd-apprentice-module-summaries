@@ -31,7 +31,7 @@ def main():
     for i in fp_iter:
         if i[0] == "./images_orig":
             images = i[2]
-    print images
+    #print images
 
     extras = (
         "--highlight-style tango "
@@ -41,7 +41,7 @@ def main():
         #"-s "
     )
 
-    opt = raw_input("1 md -->md\n2 md_compiled-->tex\n3 tex_compiled-->pdf\nall=0\n>>>")
+    opt = raw_input("1 md -->md + Shrink Images\n2 md_compiled-->tex  + Run Fixes\n3 tex_compiled-->pdf\n0 Run All\n>>> ")
     if opt=="1" or opt=="0":
         ffmpeg_cmd = 'ffmpeg -y -i ./images_orig/{0} -vf "scale=\'min(600,iw)\':-1" "./images/{1}.png" -sws_flags bilinear'
         for image in images:
