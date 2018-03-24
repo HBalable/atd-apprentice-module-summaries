@@ -21,7 +21,7 @@ This is data that is available to access instantaneously, over a network.
 
 ### Nearline
 
-Nearline storage is an intermediate between "online" and "offline" storage. It includes any data that is only online and available to access on request. It is much more power & cost efficient for data to be nearline than online if it is not in constant use, as any disks that aren't currently in use don't have to be constantly spinning. A potential use might be for short-term backups.
+Nearline storage is an intermediate between "online" and "offline" storage. It includes any data that is only online and available to access once it has been requested. It is much more power & cost efficient for data to be nearline than online if it is not in constant use, as any disks that aren't currently in use don't have to be constantly spinning. A potential use might be for short-term backups.
 
 ### Offline
 
@@ -49,4 +49,4 @@ Data security covers measures that prevent unauthorized access to information. I
 
 ### Encryption
 
-Encryption is one method used everywhere to keep our information secure. To encrypt data, it is put through a mathematical cryptographic algorithm which makes it unreadable to anyone without the right keys that may intercept it. These algorithms are in some way similar to common text cyphers where you might substitute certain characters with others, according to a key shared among the data's owners. However, cyphers in use for electronic data are millions of times more complex and could take hundreds of years to crack with current technology.
+Encryption is one method used everywhere to keep our information secure. To encrypt data, it is put through a mathematical cryptographic algorithm which makes it unreadable to anyone without the right keys that may intercept it. These algorithms are in some way similar to common text cyphers where you might substitute certain characters with others, according to a key shared among the data's owners. However, cyphers for use with electronic data are millions of times more complex and could take hundreds of years to crack with current technology.

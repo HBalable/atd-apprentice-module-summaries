@@ -48,7 +48,7 @@ In some cases, production may ask pipeline for specific tools to more easily mee
 
 ### Meeting Production Demands
 
-As in any business role, when faced with an issue, Pipeline TDs have to find a balance between the practical solution and the idyllic one. There can pressure to complete a script, or push some renders through as soon as possible. The TD needs to have a good enough understanding of the production, creative, & technical processes at the company to realise the consequences of their actions, which they would use to inform their decisions.
+As in any business role, when faced with an issue, Pipeline TDs have to find a balance between the practical solution and the idyllic one. There can be pressure to complete a script, or push some renders through as soon as possible. The TD needs to have a good enough understanding of the production, creative, & technical processes at the company to realise the impact that the decision might have on other projects or the studio.
 
 DATA MANAGEMENT
 ===============
@@ -66,7 +66,7 @@ This is data that is available to access instantaneously, over a network.
 
 ### Nearline
 
-Nearline storage is an intermediate between "online" and "offline" storage. It includes any data that is only online and available to access on request. It is much more power & cost efficient for data to be nearline than online if it is not in constant use, as any disks that aren't currently in use don't have to be constantly spinning. A potential use might be for short-term backups.
+Nearline storage is an intermediate between "online" and "offline" storage. It includes any data that is only online and available to access once it has been requested. It is much more power & cost efficient for data to be nearline than online if it is not in constant use, as any disks that aren't currently in use don't have to be constantly spinning. A potential use might be for short-term backups.
 
 ### Offline
 
@@ -94,7 +94,7 @@ Data security covers measures that prevent unauthorized access to information. I
 
 ### Encryption
 
-Encryption is one method used everywhere to keep our information secure. To encrypt data, it is put through a mathematical cryptographic algorithm which makes it unreadable to anyone without the right keys that may intercept it. These algorithms are in some way similar to common text cyphers where you might substitute certain characters with others, according to a key shared among the data's owners. However, cyphers in use for electronic data are millions of times more complex and could take hundreds of years to crack with current technology.
+Encryption is one method used everywhere to keep our information secure. To encrypt data, it is put through a mathematical cryptographic algorithm which makes it unreadable to anyone without the right keys that may intercept it. These algorithms are in some way similar to common text cyphers where you might substitute certain characters with others, according to a key shared among the data's owners. However, cyphers for use with electronic data are millions of times more complex and could take hundreds of years to crack with current technology.
 
 RENDER MANAGEMENT
 =================
@@ -110,17 +110,17 @@ What is Grid Computing?
 
 This describes a shared pool of computing resources used to solve complex tasks. It is a form of distributed computing, meaning that these tasks utilize the resources of multiple networked machine . In the context of visual effects, there are a number of examples where this can be used.
 
-#### Security
+### Security
 
 In an industry that constantly deals commercially sensitive data, security is a huge priority. For larger studios, having workstations with access to internal servers and the internet can be risky territory as any breach of security due to malicious attacks would have direct access to this sensitive data. One solution to this that has been adopted by multiple studios it to use remote desktop environments provided by a server with internet access. This This adds a layer of protection, as any file transfers between a secure workstation and one of these remote environments is can be heavily controlled, which not only decreases the risk of a harmful malicious attack, but also acts as a deterrent against any leaks that might be caused internally.
 
 There are many frameworks that utilize the efficiency of shared computing resources that enable for this type of remote environment. It would not be efficient to keep a virtual environment that isn't being used open, so after a session has been inactive for a period of time it is closed and resources are redistributed. Though it this isn't necessarily classed as grid computing as there is no distribution between networked machines involved.
 
-#### Working Remotely
+### Working Remotely
 
 These virtual environments are used by many companies, and can be very cost-effective. Nvidia Grid is an example of a technology which enables this virtual desktop infrastructure (VDI) to be powerful to be practical for use in VFX production. Sharing resources over a number of Grid-enabled physical GPUs allows for a customised virtual GPU per user, making is possible to work in GPU intensive 3D programs without the need for multiple physical workstations.
 
-#### Rendering
+### Rendering
 
 Many VFX studios, especially larger ones, have a number of powerful machines dedicated for rendering, which are called *slaves*. Today, these can often be supplemented, or even fully replaced by, a number of remote machines provided by a cloud services such as YellowDog and Google Cloud. Pixar's Tractor is a system we use at DNEG that enables this distributed rendering. Tractor uses a central server and multiple render machines, called blades. It also provides a number of APIs and a web UI.
 
@@ -138,13 +138,13 @@ Job priority levels and limits can also be set too, which enable time-critical j
 
 Chunking is when long sequences are split up into multiple tasks. This is a useful technique which speeds up jobs at the cost of CPUs. This is normally done by either splitting render sequences into smaller chunks of frames (e.g. 1 task per 10 frames), or by rendering different segments of an image as multiple tasks, for example splitting frames in half and rendering them as seperate tasks, before having a script stitch them back together. The latter is usually reserved for especially high resolution images, such as those for marketing stills.
 
-#### Render Wrangling
+### Render Wrangling
 
-##### Erroring Jobs
+#### Erroring Jobs
 
 One responsibility of a render wrangler (sometimes called a render TD) is to debug failing renders. Failing renders are easy to spot in tractor as the job is coloured bright red and reads "error". Any stack traces, errors or warnings should show in a tasks log, which can be access by right-clicking on a red errored task under the errored job in tractor, and selecting "Log" from the context menu. If the stack trace doesn't make much sense, there should be a scene file you can debug directly. First step would be to try and run the task manually step-by-step and see if you encounter any errors.
 
-##### Slow Jobs
+#### Slow Jobs
 
 There are many causes for slow or hanging jobs, and sometimes it can be difficult to diagnose a cause, especially when the log isn't showing any actual errors. Memory issues can often be the cause of hanging jobs, and the there are a few solutions for this. Namely:
 
@@ -157,13 +157,14 @@ For lighting renders, you can speed up the tasks by lowering the number of sampl
 DATABASES
 =========
 
-### Structured Data
+What is Data?
+-------------
 
-Structured data is data that is organised in a context with tags. A database is a collection of structured data.
+Data describes any pieces of information. It can be split into two types:
 
-### Unstructured Data
+-   Structured Data \>Structured data is data that is organised in a context with tags. A database is a collection of structured data.
 
-Unstructured data is data with no context. This can be in the form of texts, images or any other forms of information.
+-   Unstructured Data \>Unstructured data is data with no context. This can be in the form of texts, images or any other forms of information.
 
 Ensuring Quality of Data.
 -------------------------
@@ -192,17 +193,16 @@ Relational databases use multiple tables, and rows (also known as records) in a 
 
 Different tables are usually created for different "object types". For example, in the context of VFX, there might be a table for shots, a table for assets and a table for asset versions. The assets table might include a number of different items that are being worked on for a specific shot. These assets would have a reference to the shot that they belong to's primary key from the shot table.
 
-#### Querying a Database
+### Querying a Database
 
 At DNEG I have written a number of tools which use queries read information from our database and our shotgun database. The tools I have used to interact with both of these are APIs, which add a layer of abstraction and make querying much more user friendly, and also much less dangerous. Deleting and editing data is much more protected than it would be interacting directly with the MySQL and PostgreSQL servers.
 
 This shotgun query returns a list of dictionaries containing the `name` attribute of all projects in the shotgun database whose `sg_status` attribute is "active".
 
     from shotgun.common import conn
-    filters = [["sg_status","is","Active"]]
     active_shows = conn.shn.find(
         "Project",
-        filters,
+        [["sg_status","is","Active"]],
         fields = ["name", "sg_status"]
     )
     [
@@ -245,7 +245,7 @@ On the technical side, this method allows you to look at the history of a tool t
 Plugin/software Production
 --------------------------
 
-While the idea of an all-in-one pipeline solution sounds great, there is always room for development to meet the ever-changing demands of clients and to best suit the studio. For instance, often different clients will use different naming conventions they wish you to follow. Some studios have technical developers crewed to shows, who create and maintain custom tools to aid production. (Explained more in unit 1)
+While the idea of an all-in-one pipeline solution sounds great, there is always room for development to meet the ever-changing demands of clients and to best suit the studio. For instance, often different clients will use different naming conventions they wish you to follow. Some studios have technical developers crewed to shows, who create and maintain custom tools to aid production. *Further explained in unit 1.*
 
 MATHS
 =====
@@ -255,7 +255,7 @@ Basic Algebra
 
 Under this very broad subheading, I will give some examples of how to rearrange mathematical statements, that you can use to simplify expressions and solve equations for unknowns.
 
-#### Simplifying
+### Simplifying
 
 We can collect like terms in equations to make them simpler to express.
 
@@ -277,7 +277,7 @@ So, the simplified expression:
 
 $$\frac{4x}{y}+\frac{7x}{2}-y$$
 
-#### Rearranging Equations
+### Rearranging Equations
 
 An equation is a statement in which two mathematical expressions are equal to each other. There is really just one rule that, so long as it is followed, makes rearranging equations simple.
 
@@ -310,7 +310,7 @@ Trigonometry encompasses the studies of ratios including side lengths and angles
 
 There are two trig equations we will be using: the Sine rule and Pythagoras's equation.
 
-##### Pythagoras' Theorem
+### Pythagoras' Theorem
 
 Pythagoras' theorem states that with a triangle with sides labelled $a$, $b$ and $c$, where $c$ is that triangles hypotenuse:
 
@@ -328,7 +328,7 @@ If we subtract $13^2\mathrm{cm}$, we get $b^2=21^2\mathrm{cm}-13^2\mathrm{cm}$. 
 
 $$b=\sqrt{21^2\mathrm{cm}-13^2\mathrm{cm}}=16.492$$
 
-##### The Sine Rule
+### The Sine Rule
 
 $$\frac{sin(A)}{a}=\frac{sin(B)}{b}=\frac{sin(C)}{c}$$
 
@@ -338,19 +338,19 @@ Let's use this rule to solve for x in this triangle.
 
 ![Incomplete triangle](./images/trig_triangle_2.png){width="70%"}
 
-###### Substituting known values
+#### Substituting known values
 
 The first step is to substitute our known values into this rule. It is useful to note that $sin(90)=1$.
 
 $$\frac{1}{15\mathrm{cm}}=\frac{sin(38 )}{x\mathrm{cm}}$$
 
-###### Taking the reciprocal
+#### Taking the reciprocal
 
 Next, we can take the reciprocal (flip the fraction) of each side. This still fits our one rule as it is the same as raising the expression on each side by a power of $-1$.
 
 i.e. \>$x^{-1}=\frac{1}{x}$ \> \>$\frac{4}{x}^{-1}=\frac{1}{x}\times4=\frac{4}{x}$
 
-###### Move known terms to one side
+#### Move known terms to one side
 
 $$15\mathrm{cm}=\frac{x\mathrm{cm}}{sin(38)}$$
 
@@ -358,7 +358,7 @@ We can do this by multiplying each side by $sin(38)$, leaving us with a single e
 
 $$15sin(38)=x\mathrm{cm}=9.235\mathrm{cm}$$
 
-###### Using the inverse sine function
+#### Using the inverse sine function
 
 When solving for an angle using the sine rule you are left with an unknown in the sine function, after using the standard operators. Here is an example:
 
@@ -402,13 +402,13 @@ $$
 Matrices
 --------
 
-#### Addition
+### Addition
 
 Adding and subtracting matrices from other matrices is only possible for matrices with the same dimensions. Here we will add two 2 by 2 matrices together. It is as simple as just finding the sum of each corresponding value.
 
 $$\begin{pmatrix}3&7\\-9&8\end{pmatrix}+\begin{pmatrix}-1&-3\\5&6\end{pmatrix}=\begin{pmatrix}3-1&7-3\\-9+5&8+6\end{pmatrix}=\begin{pmatrix}2&4\\-4&14\end{pmatrix}$$
 
-#### Multiplication
+### Multiplication
 
 Multiplication is a little more difficult. The number of rows in matrix 1 must match the number of columns in the second matrix. You solve them each row/column pair at a time.
 
@@ -447,7 +447,7 @@ $$\begin{pmatrix}3&-5&2\end{pmatrix}\times
 
 $$\begin{pmatrix}3&-5&2\end{pmatrix}\times\begin{pmatrix}6\\8\\2\end{pmatrix}=(3\times6)+(-5\times8)+(2\times2)=-18$$
 
-###### The result:
+#### The result:
 
 $$\begin{pmatrix}4&2&-1\\3&-5&2\\\end{pmatrix}\times
 \begin{pmatrix}2&6\\1&8\\1&2\end{pmatrix}=\begin{pmatrix}9&38\\3&-18\end{pmatrix}$$
@@ -455,9 +455,14 @@ $$\begin{pmatrix}4&2&-1\\3&-5&2\\\end{pmatrix}\times
 Mechanics
 ---------
 
-##### Equations of motion
+### Equations of motion
 
-$v=at+u$ $s=ut+\frac{1}{2}at^2$ $s=\frac{1}{2}(v+u)t$ $v^2=u^2+2as$ $s=vt-\frac{1}{2}at^2$
+  SUVAT equations
+  ------------------------
+  $v=at+u$
+  $s=ut+\frac{1}{2}at^2$
+  $s=\frac{1}{2}(v+u)t$
+  $v^2=u^2+2as$
 
 These equations of motion, usually called SUVAT equations, can be used to model motion under constant acceleration. The letters $s$, $u$, $v$, $a$ & $t$ are used to form these equations (hence SUVAT). This is what each letter means:
 
@@ -569,35 +574,35 @@ Package management systems are often used for building and deploying tools and s
 
 Git is a distributed version control system (DVCS) that is used to manage source code development. "Distributed" means that there is no centralized server required. A Git repository is created for each project, which is a Git-managed directory in which source code for that project is stored. I will explain all of the main concepts that are essential for working with Git, and then go through the git commands you will most likely be using if you were using a Git workflow.
 
-##### Commits
+#### Commits
 
 Each developer "commits" his development work to Git and Git saves snapshot changes of source code. Over time, this effectively builds long chains of commits that describe modifications, additions and removals of files, an entire history of the source code, from the creation the repository to its current state.
 
-##### Tags
+#### Tags
 
 Tags are pointers to specific commits, which are often used to denote which commit a version was built from. These can be useful when debugging a particular build of the software. Tags are immutable, meaning that they cannot be overwritten, though they can be explicitly removed and a new tag re-added.
 
-##### Branches
+#### Branches
 
 Git also features branching, a way to divide streams of development by the feature being worked on. These branches can then be merged into the source branch after these have been tested and reviewed. The most common way this is utilized is by having a primary branch, normally named *master* or *release*, which contains reviewed and tested code. Most in-use and/or released software will be built have been from this branch. But before feature branches are merged into this primary branch, there is normally an intermediate step, in which some reviewing and testing may take place. A secondary branch, which might be called *develop* or *testing*, is normally used as this step.
 
 Branches are technically pointers to commits, in the same way as tags. What makes branches different is a branch's commit will update as you add/remove commits, while a tag will remain on a specific commit.
 
-##### HEAD
+#### HEAD
 
 HEAD is a special pointer, which points to the commit you are currently working from. All of the files in your repository are a result of all parent commits up to HEAD, therefore HEAD can be thought of as the parent of your next commit. In most cases, it will point the branch you are working on, though there are some cases in which HEAD might not point to a branch's commit. This is called a detached HEAD.
 
-##### Upstream & Downstream Repositories
+#### Upstream & Downstream Repositories
 
 A Git repository can be developed upon remotely, by multiple people, with no need for any centralized servers. The first step to working on a remote repository is by using a process called cloning. Cloning a repository copies the commits from the remote Git directory and configures the remote directory as an upstream repository. By default, this upstream will be named `origin`. The resultant, local repository is then known as a downstream. New commits and tags on the remote can be pulled on demand, and local changes can be pushed to the remote.
 
 While I mentioned above that Git was a Distributed system, and that there is no need for a centralized server, many workflows do use a centralized server for holding repositories, which developers pull from and push to.
 
-#### Working with Git
+### Working with Git
 
 All of the text in these documents that you're reading are stored in Git-controlled markdown files. I show the processes of how contributing to Git projects works using this repository as an example.
 
-##### Cloning
+#### Cloning
 
 The first step is to clone a remote repository that you wish to work on. This can be done using the `git clone` command and a path or URL to the remote repository.
 
@@ -714,7 +719,11 @@ Or Python...
 Python
 ------
 
-Python is an interpreted programming language, which means that it doesn't need to be compiled into machine code before it is run, as opposed to compiled programming languages. One advantage of it is that it reads very similar to pseudocode (explained in module 7), which makes it fairly easy to understand at a glance. Let me show you an example, I will define two identical functions: One in C++ and then one in Python.
+Python is an interpreted programming language, which means that it doesn't need to be compiled into machine code before it is run, as opposed to compiled programming languages. One advantage of it is that it reads very similar to pseudocode (explained in module 7), which makes it fairly easy to understand at a glance.
+
+### Comparision with C++
+
+Let me show you an example, I will define two identical functions: One in C++ and then one in Python,
 
 #### C++ Implemenation
 
@@ -887,17 +896,17 @@ In this section, I will cover the main departments involved in asset design.
 
 Modellers create pretty much all of the 3d assets (with the exception of 3d geometry created by FX TDs) required by a project. They have to meet not just artistic goals set by a combination of client notes and reference, but also technical specifications, some likely examples being:
 
-##### Correct and consistent detail level (or LOD for Level of Detail)
+-   *Correct and consistent detail level (or LOD for Level of Detail)*
 
-Models will often be created with a number of LODS, so that the full detailed object doesn't always need to be rendered when it isn't required, for example when it is in the far distance of a shot. One workflow for creating these models is by starting from reference (or, if fortunate enough, a LIDAR scan) and, starting from a simple shape, building in progressively more detail so that the highest LOD is the last to be created.
+> Models will often be created with a number of LODS, so that the full detailed object doesn't always need to be rendered when it isn't required, for example when it is in the far distance of a shot. One workflow for creating these models is by starting from reference (or, if fortunate enough, a LIDAR scan) and, starting from a simple shape, building in progressively more detail so that the highest LOD is the last to be created.
 
-##### Efficient UVs, so that the ratio between the UV space area and the 3D surface area is consistent throughout the model.
+-   *Efficient UVs, so that the ratio between the UV space area and the 3D surface area is consistent throughout the model.*
 
-Unless some parts of the model are more likely to have attention paid to than other parts. e.g. character models, where faces often have higher resolution textures.
+> Unless some parts of the model are more likely to have attention paid to than other parts. e.g. character models, where faces often have higher resolution textures.
 
-##### Efficient mesh topology, so its structure deforms well.
+-   *Efficient mesh topology, so its structure deforms well.*
 
-This is very important in the games industry. They don't have the luxury of being able to sub-divide their meshes until they deform well, as the resource cost is exponentially expensive with each iteration.
+> This is very important in the games industry. They don't have the luxury of being able to sub-divide their meshes until they deform well, as the resource cost is exponentially expensive with each iteration.
 
 #### Types of Modelling
 
@@ -1331,10 +1340,12 @@ The default user, `root`, automatically has access to every file, with no regard
 
 #### File Permissions
 
-Every file in Linux file system has its own properties, one of which being its own permission levels, which is used to restrict access to certain files and directories. There are three types of access you can to a file: read, write and execute. An easy way to see a file's attributes is to use the command `ls -l`.
+Every file in Linux file system has its own properties, one of which being its own permission levels, which is used to restrict access to certain files and directories. There are three types of access you can to a file: read, write and execute. An easy way to see a file's attributes is to use the command `ls -l`:
 
     ~ >>> ls -lh
     -rw-r--r-- 1 root root 2.3K Mar  5 20:49 hasans_medical_records.csv
+
+![`ls -l` command in a terminal.](./images/terminal_environment.png){width="70%"}
 
 Here we can see multiple columns each with different data about the file. In order, these columns describe, in this order:
 

@@ -47,63 +47,34 @@ def main():
         for image in images:
             os.popen(ffmpeg_cmd.format(image, image.split(".")[-2]))
 
-        print "writing out"
-        print "_________________________________ \n" + "\n".join(units)
+        print "Starting pandoc commands:"
+        print "{0}\n{1}\n{0}".format("_"*20,"\n{0}".join(units))
         
         # -fmarkdown-implicit_figures
         full_cmd = pandoc_cmd(units, "md", "md", "--wrap=none ")
         print "##### RUNNING SHELL CMD #####\n{0}\n#####".format(full_cmd)
         os.popen(full_cmd)
-        print "##########"
+        print "##### SHELL CMD ENDED #####"
 
     if opt=="2" or opt=="0":
         full_cmd = pandoc_cmd(["out"], "md", "tex", "--wrap=none")
         print "##### RUNNING SHELL CMD #####\n{0}\n#####".format(full_cmd)
         os.popen(full_cmd)
         page_breaks("./tex/out.tex")
-        print "##########"
+        print "##### SHELL CMD ENDED #####"
 
     if opt=="3" or opt=="0":
         # --template ./tex/template.tex
-        full_cmd = pandoc_cmd(["out"], "tex", "pdf", extras + '  -V " geometry:margin=1in "')
+        full_cmd = pandoc_cmd(["out"], "tex", "pdf", extras + '  -V "geometry:margin=2.54cm" -V "fontsize:12pt" ')
         print "##### RUNNING SHELL CMD #####\n{0}\n#####".format(full_cmd)
         os.popen(full_cmd)
-        print "##########"
-
-    # full_cmd = pandoc_cmd(unit_name, "md", "tex", extras)
-    # print "##### RUNNING SHELL CMD #####\n{0}\n#####".format(full_cmd)
-    # os.popen(full_cmd)
-    # print "##########"
-
-    # fix_tex("tex/{0}.tex".format(unit_name))
-    
-    # full_cmd = pandoc_cmd(unit_name, "pdf", "tex")
-    # print "##### RUNNING SHELL CMD #####\n{0}\n#####".format(full_cmd)
-    # os.popen(full_cmd)
-    # print "##########"
-
-def fix_tex(path):
-    lines = []
-    with open(path, "r+") as fp:
-        print "running fix"
-        lines = fp.readlines()
-        line_enum = ((i, line) for i, line in enumerate(lines))
-        for i, line in line_enum:
-            if line.startswith("\includegraphics"):
-                print "fixing image from {0}".format(path)
-                lines[i] = "    " + line
-                lines.insert(i-1, "\\begin{center}")
-                lines.insert(i+2, "\\end{center}")
-                line_enum.next()
-                continue
-    with open(path, "r+") as fp:
-        fp.truncate()
-        fp.writelines(lines)
+        print "##### SHELL CMD ENDED #####"
 
 def page_breaks(path):
     lines = []
     with open(path, "r+") as fp:
-        print "running fix"
+        print "Running fix and post-scripts.."
+        # preppend titles to tex
         titles = [
             "\\title{ATD Apprentice Modules}",
             "\\author{Hasan Balable}",
@@ -112,6 +83,7 @@ def page_breaks(path):
         lines = fp.readlines()
         lines = titles + lines
         line_enum = ((i, line) for i, line in enumerate(lines))
+        # page break before each section
         for i, line in line_enum:
             if line.startswith("\section"):
                 print "page break fix from {0}".format(path)
@@ -122,35 +94,32 @@ def page_breaks(path):
         for i, line in line_enum:
             if line.startswith("\centering"):
                 lines[i] = ""
-        line_enum = ((i, line) for i, line in enumerate(lines))
-        for i, line in line_enum:
-            # pagebreak before initial table (cosmetic fix)
-            if line.startswith("\\begin{longtable}"):
-                print "adding cosmetic \\pagebreak"
-                lines = lines[:i] + ["\n", "\\pagebreak\n", "\n"] + lines[i:]
-                break
+        for match_string, offset in (
+            ("\\begin{longtable}", 0),
+            (">>> touch example_file", -1),
+            (">>> def get_factorial(value):", -1),
+            ("~ >>> tree .", -1),
+            ("~/my_folder >>> tar -czf", -1),
+            (">>> git push origin example", -1),
+            ("~ >>> cat Downloads/file1.txt | grep six", -1),
+        ):
+            lines = preppend_page_break(match_string, lines, offset)
 
-            
     with open(path, "r+") as fp:
         fp.truncate()
         fp.writelines(lines)
 
+def preppend_page_break(start_of_line, lines, offset=0):
+    line_enum = ((i, line) for i, line in enumerate(lines))
+    for i, line in line_enum:
+        # pagebreak before initial table (cosmetic fix)
+        if line.startswith(start_of_line):
+            print "adding cosmetic \\pagebreak on line {0} matching pattern \'{1}\'".format(
+                i+offset,start_of_line
+            )
+            lines = lines[:i+offset] + ["\n", "\\pagebreak\n", "\n"] + lines[i+offset:]
+            break
+    return lines
+
 if __name__=="__main__":
     main()
-    #fix_tex("tex/unit_10_vfx_craft.tex")
-
-# -fmarkdown-implicit_figures
-
-"""
-unit_1_pipeline
-unit_2_data_management
-unit_3_render_management
-unit_4_databases
-unit_5_project_organisation
-unit_6_maths
-unit_7_software_design
-unit_8_scripting
-unit_9_computing
-unit_10_vfx_craft
-unit_11_linux
-"""

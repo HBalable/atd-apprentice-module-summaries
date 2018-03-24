@@ -7,11 +7,16 @@ geometry: margin=2.54cm
 
 # DATABASES
 
-### Structured Data
-Structured data is data that is organised in a context with tags. A database is a collection of structured data. 
+What is Data?
+--------------
 
-### Unstructured Data
-Unstructured data is data with no context. This can be in the form of texts, images or any other forms of information.
+Data describes any pieces of information. It can be split into two types:
+
+- Structured Data
+>Structured data is data that is organised in a context with tags. A database is a collection of structured data. 
+
+- Unstructured Data
+>Unstructured data is data with no context. This can be in the form of texts, images or any other forms of information.
 
 Ensuring Quality of Data.
 -------------
@@ -37,7 +42,7 @@ Relational databases use multiple tables, and rows (also known as records) in a 
 
 Different tables are usually created for different "object types". For example, in the context of VFX, there might be a table for shots, a table for assets and a table for asset versions. The assets table might include a number of different items that are being worked on for a specific shot. These assets would have a reference to the shot that they belong to's primary key from the shot table.
 
-#### Querying a Database
+### Querying a Database
 
 At DNEG I have written a number of tools which use queries read information from our database and our shotgun database. The tools I have used to interact with both of these are APIs, which add a layer of abstraction and make querying much more user friendly, and also much less dangerous. Deleting and editing data is much more protected than it would be interacting directly with the MySQL and PostgreSQL servers.
 
@@ -46,10 +51,9 @@ This shotgun query returns a list of dictionaries containing the ```name``` attr
 
 ```
 from shotgun.common import conn
-filters = [["sg_status","is","Active"]]
 active_shows = conn.shn.find(
     "Project",
-    filters,
+    [["sg_status","is","Active"]],
     fields = ["name", "sg_status"]
 )
 [

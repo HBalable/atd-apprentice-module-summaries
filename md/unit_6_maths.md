@@ -11,7 +11,7 @@ Basic Algebra
 -------------
 Under this very broad subheading, I will give some examples of how to rearrange mathematical statements, that you can use to simplify expressions and solve equations for unknowns.
 
-#### Simplifying
+### Simplifying
 
 We can collect like terms in equations to make them simpler to express.
 
@@ -33,7 +33,7 @@ So, the simplified expression:
 
 $$\frac{4x}{y}+\frac{7x}{2}-y$$
 
-#### Rearranging Equations
+### Rearranging Equations
 
 An equation is a statement in which two mathematical expressions are equal to each other. There is really just one rule that, so long as it is followed, makes rearranging equations simple.
 
@@ -65,7 +65,7 @@ Trigonometry encompasses the studies of ratios including side lengths and angles
 
 There are two trig equations we will be using: the Sine rule and Pythagoras's equation.
 
-##### Pythagoras' Theorem
+### Pythagoras' Theorem
 
 Pythagoras' theorem states that with a triangle with sides labelled $a$, $b$ and $c$, where $c$ is that triangles hypotenuse:
 
@@ -83,7 +83,7 @@ If we subtract $13^2\mathrm{cm}$, we get $b^2=21^2\mathrm{cm}-13^2\mathrm{cm}$. 
 
 $$b=\sqrt{21^2\mathrm{cm}-13^2\mathrm{cm}}=16.492$$
 
-##### The Sine Rule
+### The Sine Rule
 
 $$\frac{sin(A)}{a}=\frac{sin(B)}{b}=\frac{sin(C)}{c}$$
 
@@ -94,13 +94,13 @@ Let's use this rule to solve for x in this triangle.
 
 ![Incomplete triangle](./images/trig_triangle_2.png){width=70%}
 
-###### Substituting known values
+#### Substituting known values
 
 The first step is to substitute our known values into this rule. It is useful to note that $sin(90)=1$.
 
 $$\frac{1}{15\mathrm{cm}}=\frac{sin(38 )}{x\mathrm{cm}}$$
 
-###### Taking the reciprocal
+#### Taking the reciprocal
 
 Next, we can take the reciprocal (flip the fraction) of each side. This still fits our one rule as it is the same as raising the expression on each side by a power of $-1$.
 
@@ -109,7 +109,7 @@ i.e.
 > 
 >$\frac{4}{x}^{-1}=\frac{1}{x}\times4=\frac{4}{x}$
 
-###### Move known terms to one side
+#### Move known terms to one side
 
 $$15\mathrm{cm}=\frac{x\mathrm{cm}}{sin(38)}$$
 
@@ -117,7 +117,7 @@ We can do this by multiplying each side by $sin(38)$, leaving us with a single e
 
 $$15sin(38)=x\mathrm{cm}=9.235\mathrm{cm}$$
 
-###### Using the inverse sine function
+#### Using the inverse sine function
 
 When solving for an angle using the sine rule you are left with an unknown in the sine function, after using the standard operators. Here is an example:
 
@@ -164,13 +164,13 @@ $$
 Matrices
 -------------
 
-#### Addition
+### Addition
 
 Adding and subtracting matrices from other matrices is only possible for matrices with the same dimensions. Here we will add two 2 by 2 matrices together. It is as simple as just finding the sum of each corresponding value.
 
 $$\begin{pmatrix}3&7\\-9&8\end{pmatrix}+\begin{pmatrix}-1&-3\\5&6\end{pmatrix}=\begin{pmatrix}3-1&7-3\\-9+5&8+6\end{pmatrix}=\begin{pmatrix}2&4\\-4&14\end{pmatrix}$$
 
-#### Multiplication
+### Multiplication
 
 Multiplication is a little more difficult. The number of rows in matrix 1 must match the number of columns in the second matrix. You solve them each row/column pair at a time.
 
@@ -210,7 +210,7 @@ $$\begin{pmatrix}3&-5&2\end{pmatrix}\times
 
 $$\begin{pmatrix}3&-5&2\end{pmatrix}\times\begin{pmatrix}6\\8\\2\end{pmatrix}=(3\times6)+(-5\times8)+(2\times2)=-18$$
 
-###### The result:
+#### The result:
 
 $$\begin{pmatrix}4&2&-1\\3&-5&2\\\end{pmatrix}\times
 \begin{pmatrix}2&6\\1&8\\1&2\end{pmatrix}=\begin{pmatrix}9&38\\3&-18\end{pmatrix}$$
@@ -220,13 +220,15 @@ $$\begin{pmatrix}4&2&-1\\3&-5&2\\\end{pmatrix}\times
 Mechanics
 -------------
 
-##### Equations of motion
+### Equations of motion
 
-$v=at+u$
-$s=ut+\frac{1}{2}at^2$
-$s=\frac{1}{2}(v+u)t$
-$v^2=u^2+2as$
-$s=vt-\frac{1}{2}at^2$
+|SUVAT equations|
+|--|
+|$v=at+u$|
+|$s=ut+\frac{1}{2}at^2$|
+|$s=\frac{1}{2}(v+u)t$|
+|$v^2=u^2+2as$|
+
 
 These equations of motion, usually called SUVAT equations, can be used to model motion under constant acceleration. The letters $s$, $u$, $v$, $a$ & $t$ are used to form these equations (hence SUVAT). This is what each letter means:
 

@@ -343,12 +343,14 @@ The default user, ```root```, automatically has access to every file, with no re
 
 #### File Permissions
 
-Every file in Linux file system has its own properties, one of which being its own permission levels, which is used to restrict access to certain files and directories. There are three types of access you can to a file: read, write and execute. An easy way to see a file's attributes is to use the command ```ls -l```.
+Every file in Linux file system has its own properties, one of which being its own permission levels, which is used to restrict access to certain files and directories. There are three types of access you can to a file: read, write and execute. An easy way to see a file's attributes is to use the command ```ls -l```:
 
 ```
 ~ >>> ls -lh
 -rw-r--r-- 1 root root 2.3K Mar  5 20:49 hasans_medical_records.csv
 ```
+
+![```ls -l``` command in a terminal.](./images/terminal_environment.png){width=70%}
 
 Here we can see multiple columns each with different data about the file. In order, these columns describe, in this order:
 

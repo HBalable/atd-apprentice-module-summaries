@@ -41,7 +41,11 @@ print "Hallo Welt!"
 Python
 -------------
 
-Python is an interpreted programming language, which means that it doesn't need to be compiled into machine code before it is run, as opposed to compiled programming languages. One advantage of it is that it reads very similar to pseudocode (explained in module 7), which makes it fairly easy to understand at a glance. Let me show you an example, I will define two identical functions: One in C++ and then one in Python.
+Python is an interpreted programming language, which means that it doesn't need to be compiled into machine code before it is run, as opposed to compiled programming languages. One advantage of it is that it reads very similar to pseudocode (explained in module 7), which makes it fairly easy to understand at a glance. 
+
+### Comparision with C++
+
+Let me show you an example, I will define two identical functions: One in C++ and then one in Python,
 
 #### C++ Implemenation
 

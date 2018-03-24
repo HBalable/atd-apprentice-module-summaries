@@ -35,17 +35,17 @@ In this section, I will cover the main departments involved in asset design.
 
 Modellers create pretty much all of the 3d assets (with the exception of 3d geometry created by FX TDs) required by a project. They have to meet not just artistic goals set by a combination of client notes and reference, but also technical specifications, some likely examples being:
 
-##### Correct and consistent detail level (or LOD for Level of Detail)
+- *Correct and consistent detail level (or LOD for Level of Detail)*
 
-Models will often be created with a number of LODS, so that the full detailed object doesn't always need to be rendered when it isn't required, for example when it is in the far distance of a shot. One workflow for creating these models is by starting from reference (or, if fortunate enough, a LIDAR scan) and, starting from a simple shape, building in progressively more detail so that the highest LOD is the last to be created.
+>Models will often be created with a number of LODS, so that the full detailed object doesn't always need to be rendered when it isn't required, for example when it is in the far distance of a shot. One workflow for creating these models is by starting from reference (or, if fortunate enough, a LIDAR scan) and, starting from a simple shape, building in progressively more detail so that the highest LOD is the last to be created.
 
-##### Efficient UVs, so that the ratio between the UV space area and the 3D surface area is consistent throughout the model.
+- *Efficient UVs, so that the ratio between the UV space area and the 3D surface area is consistent throughout the model.*
 
-Unless some parts of the model are more likely to have attention paid to than other parts. e.g. character models, where faces often have higher resolution textures.
+>Unless some parts of the model are more likely to have attention paid to than other parts. e.g. character models, where faces often have higher resolution textures.
 
-##### Efficient mesh topology, so its structure deforms well.
+- *Efficient mesh topology, so its structure deforms well.*
 
-This is very important in the games industry. They don't have the luxury of being able to sub-divide their meshes until they deform well, as the resource cost is exponentially expensive with each iteration.
+>This is very important in the games industry. They don't have the luxury of being able to sub-divide their meshes until they deform well, as the resource cost is exponentially expensive with each iteration.
 
 #### Types of Modelling
 
