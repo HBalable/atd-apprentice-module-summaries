@@ -30,4 +30,4 @@ When you run ```./build_pdf.py``` you have the option of which task to run.
 >>> 
 ```
 
-Enjoy.
+Thanks for reading.
