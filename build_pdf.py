@@ -48,7 +48,7 @@ def main():
             os.popen(ffmpeg_cmd.format(image, image.split(".")[-2]))
 
         print "Starting pandoc commands:"
-        print "{0}\n{1}\n{0}".format("_"*20,"\n{0}".join(units))
+        print "{0}\n{1}\n{0}".format("_"*20,"\n".join(units))
         
         # -fmarkdown-implicit_figures
         full_cmd = pandoc_cmd(units, "md", "md", "--wrap=none ")
